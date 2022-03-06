@@ -6,18 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>서귀포잠수함 이벤트</title>
 
-  <!------------------ fontawesome ------------------->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-      
   <!-- css 연결 -->
   <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/isu_style.css">
-  <link rel="stylesheet" href="css/isu_main_style.css">
-  
+  <link rel="stylesheet" href="css/style.css">
+
   <!-- js 연결 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/isu_script.js"></script>
-  
+  <script src="js/common.js"></script>
+
   <!-- HTML5shiv ie6~8 -->
   <!--
     [if lt Ie 9]
@@ -29,13 +25,141 @@
 </head>
 <body>
   <header>
-    
-    
+   <h1>
+     <p>서귀포</p>
+     <img src="images/main_text.png" alt="잠수함">
+<!--     <span>Event</span>-->
+   </h1>
+    <video class="mainBg" autoplay loop muted poster="aaa" preload="bbb">
+      <source src="images/main_bg.mp4" type="video/mp4">
+    </video>
   </header> <!-- end of header -->
   
+  <nav>
+    <ol class="container clearfix">
+      <li class="current"><a href="#event1">이벤트1</a></li>
+      <li class=""><a href="#event2">이벤트2</a></li>
+      <li class=""><a href="#preview">잠수함 미리보기</a></li>
+    </ol>
+  </nav> <!-- end of nav -->
   
-  <footer>
-    
+  <section id="event1" class="">
+    <article class="explain">
+      <div class="container">
+        <h1>사랑하는 사람에게 감동의 <span>수중</span> 메세지를 전하세요!</h1>
+        <h2>20자이내의 간단한 축하글과 함께 아래 내용을 <strong>메일</strong>로 보내주세요</h2>
+        <table>
+          <caption>참여방법</caption>
+            <tbody>
+              <tr>
+                <th>이벤트 내용</th>
+                <td>생일, 회갑, 결혼기념일 등 그외 일상 이벤트</td>
+              </tr>
+              <tr>
+                <th>대상자 성함</th>
+                <td>해당기념일 또는 일상 이벤트 맞으신분의 성함</td>
+              </tr>
+              <tr>
+                <th>신청자 성함</th>
+                <td>신청 해주시는 분 (예: 가족일동, 사랑하는 남편)</td>
+              </tr>
+              <tr>
+                <th>예약자 성함</th>
+                <td>예약날짜, 항차시간, 전화번호</td>
+              </tr>
+            </tbody>
+        </table>
+      </div>
+    </article> <!-- end of explain -->
+    <article class="notice">
+     <div class="clearfix container">
+        <h1>수중 메세지 이벤트<br>신청전 꼭 알아두세요!!</h1>
+        <p>
+          ・ 이 이벤트는 서귀포 잠수함 홈페이지를 통해 구매 손님에게만 적용됩니다.<br>
+          ・ 이벤트는 1항차당 1이벤트만 가능하며 E-Mail 신청 선착순으로 진행됩니다!<br>
+          ・ 기상악화시 안전상의 문제로 이벤트는 진행되지 않습니다.<br>
+        </p>
+     </div>
+    </article> <!-- end of notice -->
+  </section> <!-- end of event1 -->
+  
+  <section id="event2">
+    <article class="container">
+      <h1><span>홈페이지</span> 구매 고객 혜택!</h1>
+      <h2>홈페이지를 통해 잠수함 티켓을 구매하고 아래의 혜택을 모두 누리세요</h2>
+      <ul class="clearfix">
+        <li class="">
+          <p>
+            승선권 할인<br>
+            <small>65,000원<br></small>
+            <strong>52,000원</strong>
+          </p>
+          <img src="images/event2_bg1.jpg" alt="">
+        </li>
+        <li class="">
+          <p>
+            왈종미술관 할인<br>
+            <strong>40%</strong>
+          </p>
+          <img src="images/event2_bg2.jpg" alt="">
+        </li>
+        <li class="">
+          <p>
+            일마레비아 커피<br>
+            <strong>무료<br></strong>
+            쿠폰 증정
+          </p>
+          <img src="images/event2_bg3.jpg" alt="">
+        </li>
+      </ul>
+      <p><a href="">홈페이지 예약 바로가기</a></p>
+    </article>
+  </section> <!-- end of event2 -->
+  
+  <section id="preview">
+    <article class="container">
+      <div class="tit">
+        <h2>서귀포 잠수함과 함께 <strong>인생샷</strong>을 남겨보세요</h2>
+        <ul class="sns clearfix">
+          <li class="">
+            <a href=""><img src="images/facebook.png" alt=""></a>
+          </li>
+          <li class="">
+            <a href=""><img src="images/instagram.png" alt=""></a>
+          </li>
+          <li class="">
+            <a href=""><img src="images/kakaostory.png" alt=""></a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="img">
+        <ul class="clearfix">
+          <li class="left"><img src="images/preview1.jpg" alt=""></li>
+          <li class="right"><img src="images/preview2.jpg" alt=""></li>
+          <li class="right"><img src="images/preview3.jpg" alt=""></li>
+          <li class="bottom"><img src="images/preview4.jpg" alt=""></li>
+          <li class="bottom"><img src="images/preview5.jpg" alt=""></li>
+          <li class="bottom"><img src="images/preview6.jpg" alt=""></li>
+        </ul>
+      </div>
+    </article>
+  </section> <!-- end of preview -->
+  
+  <footer class="clearfix">
+   <div class="container">
+      <address class="">
+        제주특별자치도 서귀포시 남성중로 40 서귀포잠수함<br>
+        Seoqwipo Submarine, 40 Namsungjungro Seogwipo Jeju, Korea
+      </address>
+      <p class="">
+        <img src="images/logo_w.png" alt="서귀포잠수함 로고">
+      </p>
+   </div>
   </footer>
+  
+  <div class="event1Bg">
+    <img src="images/event1_bg2.jpg" alt="">
+  </div>
 </body>
 </html>
