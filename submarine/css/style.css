@@ -6,7 +6,7 @@ html,body {height: 100%; font-family: 'Nanum Gothic', sans-serif; text-align: ce
 h1 {font-size: 1.65rem;}
 h2 {margin: 5px 0 30px; font-size: 1.15rem; font-weight: 400;}
 section ul li {float: left;}
-.600px_only {display: none;}
+.mobile_only {display: none;}
 
 /* header */
 header {overflow: hidden; position: relative; width: 100vw; height: 100vh; background-color: #fff;}
@@ -147,7 +147,7 @@ footer {padding: 30px 0; text-align: left;  color: #fff; background-color: #001B
 }
 
 @media screen and (max-width: 600px) {
-  .600px_only {display: block;}
+  .mobile_only {display: block;}
   #event1 .explain td {display: block; margin-top: 10px;}
 }
 
