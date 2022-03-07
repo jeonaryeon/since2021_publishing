@@ -8,14 +8,22 @@ $(function(){
     }else{
       $('nav').removeClass('fix');
     }
+    
+    if(currentST < $('#event2').offset().top-80){
+      $('nav li:nth-child(1)').addClass('current').siblings().removeClass('current');
+    }else if(currentST < $('#preview').offset().top-80){
+      $('nav li:nth-child(2)').addClass('current').siblings().removeClass('current');
+    }else{
+      $('nav li:nth-child(3)').addClass('current').siblings().removeClass('current');
+    }
   });
   
-  $('nav li a').on('click',function(){
+  $('nav li').on('click',function(){
     event.preventDefault();
-    $(this).addClass('current').siblings().removeClass('current');
-    var sect=$(this).attr('href');
+//    $(this).addClass('current').siblings().removeClass('current');
+    var sect=$(this).children('a').attr('href');
     var topPosition=Math.round($(sect).offset().top);
-    $('html,body').animate({scrollTop:topPosition},500);
+    $('html,body').animate({scrollTop:topPosition - 80},500);
   });
 }); 
 

@@ -1,18 +1,19 @@
 @charset "utf-8";
 
 /* 공통 */
-html,body {height: 100%; font-family: 'Nanum Gothic', sans-serif; font-size: 25px; text-align: center; background-repeat: no-repeat;}
+html,body {height: 100%; font-family: 'Nanum Gothic', sans-serif; text-align: center; background-repeat: no-repeat;}
 .container {width: 90%; margin: 0 auto;}
 h1 {font-size: 1.65rem;}
 h2 {margin: 5px 0 30px; font-size: 1.15rem; font-weight: 400;}
 section ul li {float: left;}
+.600px_only {display: none;}
 
 /* header */
 header {overflow: hidden; position: relative; width: 100vw; height: 100vh; background-color: #fff;}
 header h1 {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -65%); color: #fff; font-size: 5rem; font-weight: 400; z-index: 1;}
 header h1 p::before {content:'Event'; display: block; position: absolute; right: -90px; top: -70px; color: #FFFFC4; font-family: 'Waterfall', cursive;}
 header h1 img {width: inherit; margin-top: -20px;}
-header .mainBg {width: 110vw; height: 97vh; object-fit: cover; transform: translateX(-5vw); border-radius: 0 0 100% 100% / 0 0 80% 80%; box-shadow: 20px 2.5vh 0px 0px #E5EEF5;}
+header .mainBg {width: 110vw; height: 100vh; object-fit: cover;}
 /* end of header */
 
 /* nav */
@@ -26,25 +27,23 @@ nav ol li.current::after {content:''; display: block; position: absolute; left: 
 
 /* event1 */
 #event1 {color: #fff;}
-#event1 .explain {position: relative; height: calc(72vh - 50px);}
-#event1 .explain>div {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); }
+#event1 .explain {position: relative;}
 #event1 .explain h1 {}
 #event1 .explain h1 span {color: #97CADB;}
 #event1 .explain table {margin: 6vh auto 0; text-align: left;}
-#event1 .explain tr {display: block; margin-bottom: 15px;}
+#event1 .explain tr {display: block; margin-bottom: 30px;}
 #event1 .explain th {display: inline-block; margin-right: 30px; padding: 5px 30px; font-weight: 600; background-color: #02457A; border-radius: 50px;}
 #event1 .explain td {display: inline-block; text-align: left;}
 
-#event1 .notice {position: relative; height: calc(28vh + 50px);  text-align: left; border-top: 1px solid #E5EEF5;}
-#event1 .notice>div {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding-top: 50px;}
-#event1 .notice h1 {float: left; position: relative; margin-left: 12%;}
-#event1 .notice h1::before {content: ''; position: absolute; left: -25%; top: -65%; width: 127px; height: 125px; background-image: url(../images/megaphone.png); background-size: contain; background-repeat: no-repeat;}
-#event1 .notice p {float: left; margin-left: 60px; line-height: 1.65rem;}
+#event1 .notice {position: relative; text-align: left; border-top: 1px solid #E5EEF5;}
+#event1 .notice h1 {position: relative;}
+#event1 .notice h1 img {display: block; width: 127px; height: 125px;}
+#event1 .notice p {line-height: 1.65rem;}
 .event1Bg {position: fixed; top: 0; left: 0; z-index: -100;}
 /* end of event1 */
 
 /* event2 */
-#event2 {padding: 80px 0 50px; background-color: #fff;}
+#event2 {padding-top: 80px; background-color: #fff;}
 #event2 h1 span {color: #018ABE;}
 #event2 ul li {position: relative; width: 32%; margin-right: 2%; color: #fff; font-size: 1.15rem; line-height: 1.65rem;}
 #event2 ul li p {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
@@ -55,7 +54,7 @@ nav ol li.current::after {content:''; display: block; position: absolute; left: 
 #event2 ul li:nth-child(1) strong {margin-top: 30px;}
 #event2 ul li:nth-child(3) {margin-right: 0;}
 
-#event2 .container>p {display: inline-block; margin-top: 50px; padding: 15px 30px; background-color: #02457A; border-radius: 50px;}
+#event2 .container>p {display: inline-block; padding: 15px 30px; background-color: #02457A; border-radius: 50px;}
 #event2 .container>p>a {color: #fff;}
 /* end of event2 */
 
@@ -77,16 +76,78 @@ nav ol li.current::after {content:''; display: block; position: absolute; left: 
 
 /* footer */
 footer {padding: 30px 0; text-align: left;  color: #fff; background-color: #001B48;}
-footer address {float: left; font-size: 14px;}
-footer p {float: right; margin-top: 4.5px;}
 
+/* pc */
+@media screen and (min-width: 1025px) {
+  html,body {font-size: 25px;}
+  header .mainBg {height: 97vh; transform: translateX(-5vw); border-radius: 0 0 100% 100% / 0 0 80% 80%; box-shadow: 20px 2.5vh 0px 0px #E5EEF5;}
+  
+  #event1 .explain {position: relative; height: calc(72vh - 50px);}
+  #event1 .explain>div, #event1 .notice>div {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+  #event1 .notice {height: calc(28vh + 50px);}
+  #event1 .notice>div {padding-top: 50px;}
+  #event1 .notice h1 {float: left; margin-left: 12%;}
+  #event1 .notice h1 img {position: absolute; left: -25%; top: -65%;}
+  #event1 .notice p {float: left; margin-left: 60px;}
+  
+  #event2 .container>p {margin-top: 50px;}
+  
+  footer address {float: left; font-size: 14px;}
+  footer p {float: right; margin-top: 4.5px;}
+}
+
+@media screen and (max-width: 1615px) and (min-width: 1451px){
+  #event1 .notice h1 {margin-left: 4.5%;}
+  #event1 .notice p {margin-left: 2%;}
+}
 
 @media screen and (max-width: 1450px) {
-  html,body {font-size: 19px;}
-  header h1 p::before {right: -70px; top: -50px;}
-  header h1 img {width: 300px;}
+  html,body {font-size: 17px;}
+  header h1 p::before {right: -60px; top: -45px;}
+  header h1 img {width: 270px;}
   
-  #event1 .notice h1::before {left: -20%; top: -55%; width: 80px; height: 79px;}
+  #event1 .notice>div {padding-top: 0;}
+  #event1 .notice h1 {margin-left: 5%;}
+  #event1 .notice h1 img {left: -20%; top: -55%; width: 80px; height: 79px;}
+  #event1 .notice p {margin-left: 5%;}
   
   #event2 ul li:nth-child(1) small::after {top: 30px;}
 }
+
+
+/* 모바일 */
+@media screen and (max-width: 1024px) {
+  html,body {font-size: 15px;}
+  h2 {margin-bottom: 20px;}
+  
+  header h1 img {width: 240px;}
+  
+  #event1 .explain>div, #event1 .notice>div {padding: 50px 0;}
+  #event1 .explain table {margin-top: 0;}
+  #event1 .explain tr {margin-bottom: 20px;}
+  #event1 .notice h1 {margin-bottom: 20px;}
+  #event1 .notice h1 img {margin-bottom: 10px;}
+  .event1Bg {left: 50%; transform: translateX(-60%);}
+  .event1Bg img {width: inherit;}
+  
+  #event2 {padding-top: 50px;}
+  
+  #preview {padding: 50px 0;}
+  #preview h2 {padding-bottom: 20px;}
+  #preview .sns li {width: 15px; height: 15px;}
+  #preview .img {margin-top: 15px;}
+  
+  footer address {font-size: 12px;}
+  footer p {width: 104px; margin-bottom: 10px;}
+}
+
+@media screen and (max-width: 960px) {
+  #event2 ul li {float: inherit; width: 80%; margin: 0 auto 30px;}
+  #event2 ul li:nth-child(3) {margin-right: auto;}
+}
+
+@media screen and (max-width: 600px) {
+  .600px_only {display: block;}
+  #event1 .explain td {display: block; margin-top: 10px;}
+}
+
