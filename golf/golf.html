@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>레드베터아카데미</title>
+  
+  <!-- css 연결 -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- js 연결 -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/loadHTML.js"></script>
+  <script src="js/common.js"></script>
+
+<!--
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+      $(document).ready(function(){
+         $("#header").load("header.html")
+        /* id 지정을 통해서도 가능합니다. 
+         $("#header").load("header.html #head")
+         */       
+      });
+</script> 
+-->
+ 
+ 
+  <!-- HTML5shiv ie6~8 -->
+  <!--
+    [if lt Ie 9]
+    <script src="js/html5shiv.min.js"></script>
+    <script type="text/javascript">
+     alert("현재 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트 해주세요!");
+    </script>
+   -->
+</head>
+<body>
+  <div id="header"></div>
+   
+   
+  <script>
+    $(document).ready(function() {
+      //includeHTML() 함수 실행
+      includeHTML();
+    });
+  </script>
+</body>
+</html>

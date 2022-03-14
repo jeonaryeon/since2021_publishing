@@ -31,7 +31,7 @@ nav ol li.current::after {content:''; display: block; position: absolute; left: 
 #event1 .explain h1 {}
 #event1 .explain h1 span {color: #97CADB;}
 #event1 .explain table {margin: 6vh auto 0; text-align: left;}
-#event1 .explain tr {display: block; margin-bottom: 30px;}
+#event1 .explain tr {display: block; margin-bottom: 15px;}
 #event1 .explain th {display: inline-block; margin-right: 30px; padding: 5px 30px; font-weight: 600; background-color: #02457A; border-radius: 50px;}
 #event1 .explain td {display: inline-block; text-align: left;}
 
