@@ -23,7 +23,6 @@ $(function(){
   });
   */
   
-  $('#Allmenu').hide();
   $('.open').on('click',function(){
 //    $(this).removeClass('open').addClass('close');
 //    $('#Allmenu').removeClass('hidden');
