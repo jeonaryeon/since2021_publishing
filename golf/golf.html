@@ -160,7 +160,7 @@
   <div data-include-path="footer.html"></div> 
    
   <script>
-    // include html
+    // include html js
     window.addEventListener('load', function() {
         var allElements = document.getElementsByTagName('*');
         Array.prototype.forEach.call(allElements, function(el) {
@@ -176,6 +176,25 @@
                 xhttp.send();
             }
         });
+    }); // end of include html js
+    
+    $(function(){
+        // 모바일버전 메뉴
+        el.outerHTML = this.responseText;
+        var documentW = $(document).width();
+        if(documentW <= 961){
+          $('body').on('click', '#rnb>ul>li>p', function(){
+            if($(this).next().css('display')=='none'){
+              $('#rnb .lnb').slideUp();
+              $('#rnb>ul>li>p').removeClass('current');
+              $(this).siblings('#rnb .lnb').slideDown();
+              $(this).addClass('current');
+            }else{
+              $('#rnb .lnb').slideUp();
+              $(this).removeClass('current');
+            }
+          });
+        }
     });
   </script>
 </body>
