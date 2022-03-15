@@ -12,13 +12,13 @@ header .Hmenu.open:hover span{width: 100%; transition: all ease 0.4s 0s;}
 header .Hmenu.close {height: 28px; z-index: 100; z-index: 0}
 header .Hmenu.close span {display: block; bottom: 14px; width: 110%; background-color: #222; opacity: 0;transform: rotate(45deg);}
 header .Hmenu.close span:last-child {transform: rotate(-45deg);}
-header .Hmenu.close.rotate {z-index: 10002;}
+header .Hmenu.close.rotate {z-index: 10010;}
 header .Hmenu.close.rotate span {transform: rotate(-45deg); transition: all ease 0.3s 0s; opacity: 1;}
 header .Hmenu.close.rotate span:last-child {transform: rotate(45deg);}
 
 
 /* 헤더 header #Allmenu */
-header #Allmenu {overflow: auto; position: fixed; left: 0; top: 0; color: #222; background-color: #fff;}
+header #Allmenu {overflow: auto; position: fixed; left: 0; top: 0; color: #222; background-color: #fff; z-index: 10005;}
 header #Allmenu .menu_container a {display: block; color: #222;}
 header #rnb>ul>li>p {font-weight: 600; cursor: pointer;}
 header #rnb .lnb ul li {float: inherit; margin-bottom: 20px;}
