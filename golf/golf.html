@@ -13,9 +13,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--  <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>-->
   <script type="text/javascript" src="js/main.js?ver=123"></script>
-<!--  <script type="text/javascript" src="js/include.js?ver=123"></script>-->
+  <script type="text/javascript" src="js/include.js?ver=123"></script>
 </head>
 <body>
+<!--  <div data-include-path="header.html"></div> -->
   <div id="header"></div>
   
   <nav id="navigation" class="pc_only">
@@ -158,24 +159,16 @@
   <!-- 본문 end -->
   
   <div id="footer"></div>
+<!--  <div data-include-path="footer.html"></div> -->
    
   <script>
-    fetch("header.html")
-      .then(response => {
-      return response.text()
-      })
-      .then(data => {
-      document.querySelector("#header").innerHTML = data;
+    $(function(){
+      $('#header').load('header.html');
+      return false
+      
+      $('#footer').load('footer.html');
+      return false
     });
-    
-    fetch("footer.html")
-      .then(response => {
-      return response.text()
-      })
-      .then(data => {
-      document.querySelector("#footer").innerHTML = data;
-    });
-    
     // include html js
 //    window.addEventListener('load', function() {
 //        var allElements = document.getElementsByTagName('*');
