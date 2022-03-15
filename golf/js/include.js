@@ -23,15 +23,18 @@ $(function(){
   });
   */
   
+  $('#Allmenu').hide();
   $('.open').on('click',function(){
 //    $(this).removeClass('open').addClass('close');
-    $('#Allmenu').removeClass('hidden');
+//    $('#Allmenu').removeClass('hidden');
+    $('#Allmenu').show();
     $('.close').addClass('rotate');
   });
   
   $('.close').on('click',function(){
 //    $(this).removeClass('close').addClass('open');
-    $('#Allmenu').addClass('hidden');
+//    $('#Allmenu').addClass('hidden');
+    $('#Allmenu').hide();
     $('.close').removeClass('rotate');
   });
   
