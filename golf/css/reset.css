@@ -19,6 +19,7 @@ body{
   font-size:16px; 
   line-height: 1.6;
   font-family:'Noto Sans KR', sans-serif;
+  letter-spacing: -0.05rem;
   background-color:#222;
   cursor: default;
 }

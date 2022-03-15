@@ -1,5 +1,5 @@
 $(function(){
-  $('.Hmenu').on('click', function(){
+  /*$('.Hmenu').on('click', function(){
     if($(this).hasClass('open')){
       $('#Allmenu').removeClass('hidden');
       $('.Hmenu').addClass('close');
@@ -20,6 +20,19 @@ $(function(){
         transform: 'rotate(0)',
       });
     }
+  });
+  */
+  
+  $('.open').on('click',function(){
+//    $(this).removeClass('open').addClass('close');
+    $('#Allmenu').removeClass('hidden');
+    $('.close').addClass('rotate');
+  });
+  
+  $('.close').on('click',function(){
+//    $(this).removeClass('close').addClass('open');
+    $('#Allmenu').addClass('hidden');
+    $('.close').removeClass('rotate');
   });
   
   // 모바일버전

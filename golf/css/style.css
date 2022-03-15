@@ -1,5 +1,17 @@
 @charset "utf-8";
 
 /* 공통 */
-/*.hidden {display: none;}*/
+a {display: block;}
+.hidden {display: none;}
+.ico {display: inline-block; width: 24px; height: 24px; text-indent: -9999px; background-size: cover; background-repeat: no-repeat;}
+.sns_ico {background-image: url(../images/sns_ico.png);}
+.arrow_ico {background-image: url(../images/arrow_ico.png);}
+.container {width: 95%; max-width: 1520px; margin: 0 auto;}s
+
+/* mobile 버전 */
+@media screen and (max-width: 960px){
+  html, body {font-size: 14px;}
+  .pc_only {display: none;}
+}
+
 

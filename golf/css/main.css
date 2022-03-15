@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+/* 공통 */
+#mainpage {overflow: hidden;}
+#mainpage article:not(#main_vision) {margin-top: 100px;}
+#mainpage article h3, #mainpage article h4 {color: #C31724; font-size: 1.15rem; font-weight: 400;}
+#mainpage article h4 {font-size: 1.3rem;}
+#main_vision figure figcaption, #mainpage article .explain {font-size: 2.5rem;}
+#mainpage article .explain {display: inline-block; position: relative; z-index: 20;}
+.content li p {font-size: 2rem; font-weight: 600;}
+
+/* article#main_vision */
+#main_vision {position: relative;}
+#main_vision figure {position: relative;}
+#main_vision figure img {}
+#main_vision figure figcaption {position: absolute; left: 5vw; top: 50%; transform: translateY(-50%);}
+
+#main_vision .scroll {position: absolute; left: 50%; bottom: 40px; transform: translate(-50%); font-size: 0.9rem;}
+#main_vision .scroll::after {content: ''; position: absolute; left: 50%; bottom: -40px; transform: translate(-50%);  width: 1px; height: 30px; background-color: #fff;}
+
+/* article#main_program */
+#main_program .content {position: relative; left: 10vw; z-index: 10;}
+#main_program .content  ul {}
+#main_program .content  ul li {float: left; margin-right: 6vw;}
+#main_program .content  ul li:last-child {margin-right: 0;}
+
+/* article#main_award */
+#main_award .content .text p span {display: block; font-weight: 400;}
+#main_award .content .text .date {font-size: 1.3rem;}
+#main_award .content .text .date strong {display: block; font-size: 2.4rem; transform: translateY(10px);}
+#main_award .content .text ul li {float: left;}
+#main_award .content .text .award_btn {}
+
+/* article#main_membership */
+#main_membership .explain a {font-size: 1.15rem; font-weight: 600;}
+#main_membership .explain .arrow_ico {position: relative; left: 20px; top: 9px; width: 22px; height: 14px; background-position: 0 -77px;}
+#main_membership .explain a:hover .arrow_ico {left: 30px; transition: all ease 0.4s 0s;}
+#main_membership .explain a:hover .arrow_ico::after {content: ''; position: absolute; right: -5px; top: -8px; z-index: -1; width: 21px; height: 21px; background-color: #C31725; border-radius: 50%;}
+#main_membership .content li p {position: absolute;}
+
+/* pc버전 */
+@media screen and (min-width: 961px){
+  /* nav#navigation */
+  nav#navigation {position: fixed; right: 30px; top: 50%; transform: translateY(-50%); z-index: 1000; font-size: 0.75rem;}
+  nav#navigation li a {display: inline-block; width: 90px; color: rgba(0,0,0,0); line-height: 23px;}
+  nav#navigation li a.current {color: #C31724;}
+  nav#navigation li a::before {content: ''; display: inline-block; width: 8px; height: 8px; margin-right: 10px; background-color: #fff; border-radius: 50%; opacity: 0.6;}
+  nav#navigation li a.current::before {transform: scale(1.5); background-color: #C31724; opacity: 1;}
+  
+  #mainpage article h3 {margin-bottom: 30px;}
+  #main_program .content {top: -30px;}
+  #main_program .content  ul {margin-top: 50px;}
+  #main_program .content  ul {margin-top: 50px;}
+  
+  #main_award {}
+  #main_award .content {margin: 30px 0 0 20%;}
+  #main_award .content>p {float: left;}
+  #main_award .content .text {float: left; margin: 20% 0 0 80px;}
+  #main_award .content .text .date {margin-bottom: 20px;}
+  #main_award .content .text .txt {margin: 10px 0 30px;}
+  #main_award .content .text .award_btn .arrow_ico {width: 32px; height: 32px; background-position: 0 -42px;}
+  #main_award .content .text .award_btn .arrow_ico.right {margin-left: 30px; background-position: 0 -77px;}
+  
+  #main_membership .explain a {width: 250px;}
+  #main_membership .explain a:first-of-type {margin: 50px 0 20px;}
+  #main_membership .content {position: relative; top: -110px; height: 1200px;}
+  #main_membership .content li {position: absolute;}
+  #main_membership .content li:nth-child(1) {right: 3vw; top: 0; width: 26.5%;}
+  #main_membership .content li:nth-child(2) {left: 6vw; top: 180px; width: 40%;}
+  #main_membership .content li:nth-child(3) {right: 7vw; bottom: 0; width: 32%;}
+  #main_membership .content li p {top: 60px; left: -50px;}
+  #main_membership .content li:nth-child(2) p {left: initial; right: -50px;}
+}
+
+/* mobile버전 */
+@media screen and (max-width: 960px){
+  #mainpage article h3 {margin-bottom: 20px;}
+}
