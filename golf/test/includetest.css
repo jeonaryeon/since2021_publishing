@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/* 헤더 header 공통 */
+header {position: sticky; left: 0; top: 0; width: 100vw; background-color: #222; z-index: 10000;}
+header h1, .Allmenu  h2 {display: inline-block;}
+header .Hmenu {position: fixed; width: 28px; height: 16px; z-index: 10001; cursor: pointer;}
+header .Hmenu span{position: absolute; right: 0; top: 0; width: 100%; height: 1px; text-indent: -9999px; background-color: #fff;}
+header .Hmenu span:nth-child(2){top: 50%; transform: translateY(-50%); width: 85%;}
+header .Hmenu span:nth-child(3){top: initial; bottom: 0; width: 70%;}
+header .Hmenu:hover span{width: 100%; transition: all ease 0.4s 0s;}
+
+#Allmenu:checked ~ .Hmenu {height: 28px; z-index: 10010;}
+#Allmenu:checked ~ .Hmenu span {top: 13px; width: 100%; background-color: #222; transform: rotate(45deg); transition: transform ease 0.3s 0s;}
+#Allmenu:checked ~ .Hmenu span:nth-child(2) {display: none;}
+#Allmenu:checked ~ .Hmenu span:nth-child(3) {bottom: 14px; transform: rotate(-45deg);}
+/*
+header .Hmenu.close {height: 28px; z-index: -1;}
+header .Hmenu.close span {display: block; bottom: 14px; width: 110%; background-color: #222; opacity: 0;transform: rotate(45deg);}
+header .Hmenu.close span:last-child {transform: rotate(-45deg);}
+header .Hmenu.close.rotate {z-index: 10010;}
+header .Hmenu.close.rotate span {transform: rotate(-45deg); transition: all ease 0.3s 0s; opacity: 1;}
+header .Hmenu.close.rotate span:last-child {transform: rotate(45deg);}
+*/
+
+
+/* 헤더 header #Allmenu */
+#Allmenu {width: 0; height: 0; margin: 0; padding: 0;}
+.Allmenu {display: none;}
+#Allmenu:checked ~ .Allmenu {display: block; overflow: auto; position: fixed; left: 0; top: 0; color: #222; background-color: #fff; z-index: 10005;}
+header .Allmenu .menu_container a {display: block; color: #222;}
+header #rnb>ul>li>p {font-weight: 600; cursor: pointer;}
+header #rnb .lnb ul li {float: inherit; margin-bottom: 20px;}
+
+
+/* pc버전 */
+@media screen and (min-width: 961px){
+  header ul li {float: left;}
+  header h1 {float: left; margin: 15px 0 0 30px;}
+  header h1 img {width: auto; height: 50px;}
+  header .Hmenu {right: 30px; top: 32px;}
+  header #gnb {line-height: 80px;}
+  header #gnb>ul>li {margin-left: 25px;}
+  header #gnb .lnb {position: absolute; left: 0; top: 80px; width: 100vw; line-height: 50px; background-color: #787878;}
+  header #gnb .lnb ul {margin-left: 180px;}
+  header #gnb .lnb ul li {margin-right: 60px;}
+  header #gnb ul li:hover .lnb {display: block;}
+  header .Allmenu {width: calc(100vw - 6vw); height: calc(100vh - 10vh); padding: 5vh 3vw;}
+  header .Allmenu .menu_container h2 {float: left; width: 50%;}
+  header .Allmenu .menu_container h2 a {width: 40%;}
+  header .Allmenu .menu_container #rnb {float: right; width: 50%;}
+  header #rnb>ul>li {width: 45%;}
+  header #rnb>ul>li:nth-child(odd) {margin-right: 10%;}
+  header #rnb>ul>li:last-child {margin-right: 0;}
+  header #rnb>ul>li>p {margin-bottom: 30px; font-size: 2.6rem;}
+  header #rnb .lnb ul li.mb160 {margin-bottom: 160px;}
+  header #rnb .lnb ul li a {font-size: 2.3rem;}
+}
+
+/* 모바일버전 */
+@media screen and (max-width: 960px){
+  html, body {font-size: 14px;}
+  .pc_only {display: none;}
+  header {padding: 20px;}
+  header h2 {margin-bottom: 20px;}
+  header h1 img, header h2 img {width: auto; height: 40px;}
+  header .Hmenu {right: 20px; top: 34px;}
+  header .Hmenu.close {top: 30px;}
+  header .Allmenu {width: 100%; height: 100%; padding-top: 20px;}
+  header .Allmenu .menu_container {width: 95%; margin: 0 auto;}
+  header #rnb>ul>li>p {display: inline-block; margin-bottom: 10px; padding: 10px 0; font-size: 1.5rem;}
+  header #rnb>ul>li>p.current {position: relative;}
+  header #rnb>ul>li>p.current::after {content: ''; position: absolute; right: -7px; bottom: 10px; width: 12px; height: 12px; background-color: #C31724; border-radius: 50%;}
+  header #rnb .lnb {display: none;}
+  header #rnb .lnb ul li a {font-size: 1.2rem;}
+}
+
+
+/* 풋터 footer */
+footer {margin-top: 100px; border-top: 1px solid #727272;}
+footer .container {padding: 50px 0;}
+footer h1 img {width: 75%;}
+
+footer #logo_sns {}
+footer #logo_sns a {}
+footer #logo_sns a.insta {background-position: 0 -27px;}
+
+#fnb p, #fnb button {float: left; font-weight: 600;}
+#fnb button {color: #fff; font-size: 16px; line-height: 1.6;}
+
+footer address {display: inline-block;}
+footer address span {margin-left: 10px; padding-left: 10px; border-left: 1px solid #fff;}
+
+/* pc버전 */
+@media screen and (min-width: 961px){
+  footer #logo_sns {float: left; width: 20%;}
+  #footer_right {float: right; width: 80%;}
+  #fnb {float: left;}
+  #fnb>ul {float: left;}
+  #fnb>ul>li {float: left; margin-right: 3.5vw;}
+  #fnb>ul>li:last-child {margin-right: 0;}
+  #fnb>ul>li>p {font-weight: 600; margin-bottom: 15px;}
+  #fnb>ul>li:nth-child(3)>p {width: 65px;}
+  #fnb .lnb li {margin-bottom: 5px;}
+  
+  #footer_right #fnb>p {margin: 0 5.5vw;}
+  
+  footer address {margin: 45px 0 10px;}
+}
+
+/* 모바일버전 */
+@media screen and (max-width: 960px){
+  footer #logo_sns {margin-bottom: 20px;}
+  #fnb button {margin-left: 20px;}
+  footer address {margin: 10px 0;}
+  footer address span:nth-child(2) {display: block;}
+  footer address span:nth-child(2), footer address span:nth-child(3) {margin-left: 0; padding-left: 0; border: none;}
+}
