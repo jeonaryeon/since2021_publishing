@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* 헤더 header 공통 */
-header {position: sticky; left: 0; top: 0; width: 100vw; background-color: #222; z-index: 10000;}
+header, #header {position: sticky; left: 0; top: 0; width: 100vw; background-color: #222; z-index: 10000;}
 header h1, .Allmenu  h2 {display: inline-block;}
 #Allmenu {display: none; width: 0; height: 0; margin: 0; padding: 0;}
 .Allmenu {display: none;}
@@ -68,10 +68,6 @@ header .Allmenu .menu_container a {display: block; color: #222;}
 /* 풋터 footer */
 footer {margin-top: 100px; border-top: 1px solid #727272;}
 footer .container {padding: 50px 0;}
-footer h1 img {width: 75%;}
-
-footer #logo_sns {}
-footer #logo_sns a {}
 footer #logo_sns a.insta {background-position: 0 -27px;}
 
 #fnb p, #fnb button {float: left; font-weight: 600;}
@@ -82,6 +78,7 @@ footer address span {margin-left: 10px; padding-left: 10px; border-left: 1px sol
 
 /* pc버전 */
 @media screen and (min-width: 961px){
+  footer h1 img {width: 75%;}
   footer #logo_sns {float: left; width: 20%;}
   #footer_right {float: right; width: 80%;}
   #fnb {float: left;}
@@ -99,6 +96,7 @@ footer address span {margin-left: 10px; padding-left: 10px; border-left: 1px sol
 
 /* 모바일버전 */
 @media screen and (max-width: 960px){
+  footer h1 img {width: 50%;}
   footer #logo_sns {margin-bottom: 20px;}
   #fnb button {margin-left: 20px;}
   footer address {margin: 10px 0;}
