@@ -13,8 +13,6 @@
 
   <!-- js 연결 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/include.js"></script>
-  
   <!-- HTML5shiv ie6~8 -->
   <!--
     [if lt Ie 9]
@@ -69,17 +67,15 @@
       </ul>
     </div>
     
-    <button class="Hmenu open">
-      <span>line</span>
-      <span>line</span>
-      <span>line</span>
-    </button>
-    <button class="Hmenu close">
-      <span>line</span>
-      <span>line</span>
-    </button>
+    <input id="Allmenu" type="checkbox" />
     
-    <div id="Allmenu" class="hidden">
+    <label class="Hmenu" for="Allmenu">
+      <span>line</span>
+      <span>line</span>
+      <span>line</span>
+    </label>
+    
+    <div class="Allmenu">
       <div class="menu_container clearfix">
         <h2><a href="golf.html"><img src="images/logo.png" alt="레드베터아카데미"></a></h2>
         
@@ -123,11 +119,28 @@
             </li>
           </ul>
         </div>
-        
-        
-        
       </div>
     </div>
   </header>
+  
+  <script>
+    $(function(){
+      // 모바일버전
+      var documentW = $(document).width();
+      if(documentW <= 961){
+        $('#rnb>ul>li>p').on('click', function(){
+          if($(this).next().css('display')=='none'){
+            $('#rnb .lnb').slideUp();
+            $('#rnb>ul>li>p').removeClass('current');
+            $(this).siblings('#rnb .lnb').slideDown();
+            $(this).addClass('current');
+          }else{
+            $('#rnb .lnb').slideUp();
+            $(this).removeClass('current');
+          }
+        });
+      }
+    }); 
+  </script>
 </body>
 </html>
