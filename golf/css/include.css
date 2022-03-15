@@ -10,7 +10,7 @@ header .Hmenu.open span {top: 0; background-color: #fff;}
 header .Hmenu.open span:nth-child(2){top: 50%; transform: translateY(-50%); width: 85%;}
 header .Hmenu.open span:nth-child(3){top: initial; bottom: 0; width: 70%;}
 header .Hmenu.open:hover span{width: 100%; transition: all ease 0.4s 0s;}
-header .Hmenu.close {height: 28px; z-index: 100; z-index: 0}
+header .Hmenu.close {height: 28px; z-index: -1;}
 header .Hmenu.close span {display: block; bottom: 14px; width: 110%; background-color: #222; opacity: 0;transform: rotate(45deg);}
 header .Hmenu.close span:last-child {transform: rotate(-45deg);}
 header .Hmenu.close.rotate {z-index: 10010;}
