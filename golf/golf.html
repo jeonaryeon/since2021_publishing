@@ -13,10 +13,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!--  <script type="text/javascript" src="js/jquery.mousewheel.min.js"></script>-->
   <script type="text/javascript" src="js/main.js?ver=123"></script>
-  <script type="text/javascript" src="js/include_html.js"></script>
+<!--  <script type="text/javascript" src="js/include.js?ver=123"></script>-->
 </head>
 <body>
-  <header role="header" data-include="header.html"></header>
+  <div id="header"></div>
   
   <nav id="navigation" class="pc_only">
     <ul>
@@ -157,6 +157,15 @@
   </section>
   <!-- 본문 end -->
   
-  <footer role="footer" data-include="footer.html"></footer>
+  <div id="footer"></div>
+   
+  <script>
+    $(function(){
+      $('#header').load('header.html');
+      
+      $('#footer').load('footer.html');
+      return false
+    });
+  </script>
 </body>
 </html>
