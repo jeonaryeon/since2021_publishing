@@ -3,10 +3,10 @@ $(function(){
   var documentW = $(document).width();
   if(documentW <= 961){
     $('#rnb>ul>li>p').on('click', function(){
-      $(this).parent().siblings().find('.lnb').slideUp();
-      $(this).siblings().slideToggle();
+      $(this).parent().siblings().find('.lnb').hide();
+      $(this).siblings().toggle();
       $(this).parent().siblings().find('p').removeClass('current');
-      $(this).toggleClass('current');
+      $(this).addClass('current');
     });
   }
 }); 
