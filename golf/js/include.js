@@ -6,7 +6,7 @@ $(function(){
       $(this).parent().siblings().find('.lnb').hide();
       $(this).siblings().toggle();
       $(this).parent().siblings().find('p').removeClass('current');
-      $(this).addClass('current');
+      $(this).toggleClass('current');
     });
   }
 }); 
