@@ -4,9 +4,9 @@ $(function(){
   if(documentW <= 961){
     $('#rnb>ul>li>p').on('click', function(){
       $(this).parent().siblings().find('.lnb').slideUp();
-      $(this).siblings().stop().slideToggle();
+      $(this).siblings().slideToggle();
       $(this).parent().siblings().find('p').removeClass('current');
-      $(this).stop().toggleClass('current');
+      $(this).toggleClass('current');
     });
   }
 }); 
