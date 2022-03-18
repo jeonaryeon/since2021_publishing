@@ -17,7 +17,7 @@
 <!--  <script type="text/javascript" src="js/include.js?ver=123"></script>-->
 </head>
 <body>
-  <div id="header"></div>
+  <div role="header" data-include="https://jeonaryeon.github.io/since2021_publishing/golf/header.html"></div>
   
   <nav id="navigation" class="pc_only">
     <ul>
@@ -160,15 +160,25 @@
   </section>
   <!-- 본문 end -->
   
-  <div id="footer"></div>
+  <div role="footer" data-include="https://jeonaryeon.github.io/since2021_publishing/golf/footer.html"></div>
    
+
+  
   <script>
-    $(function(){
-      $('#header').load('https://jeonaryeon.github.io/since2021_publishing/golf/header.html');
-      
-      $('#footer').load('https://jeonaryeon.github.io/since2021_publishing/golf/footer.html');
-      return false
-    });
-  </script>
+$(function(){
+includeLayout();
+});
+function includeLayout(){
+var includeArea = $('[data-include]');
+var self, url;
+$.each(includeArea, function() {
+self = $(this);
+url = self.data("include");
+self.load(url, function() {
+self.removeAttr("data-include");
+});
+});
+}
+</script>
 </body>
 </html>
