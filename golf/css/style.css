@@ -30,6 +30,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 
 /* pc버전 */
 @media screen and (min-width: 961px){
+  .sub_common .go_right {margin-top: 30px;}
   .go_right .arrow_ico {top: 9px;}
   
   /* font-size */
@@ -46,9 +47,14 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   
   #intro_vision #jump>div {float: right;}
   #intro_vision #jump>div>p {margin: 50px 0 80px;}
+  #intro_vision #jump figure {}
+  #intro_vision #jump figure figcaption {margin: -15px 0 0 5%;}
   #intro_vision #solution {}
+  #intro_vision #solution h4 {margin-bottom: 40px;}
   #intro_vision #solution li {float: left; width: 31%;}
-  #intro_vision #solution li:nth-child(2) {margin: 0 3.5%;}
+  #intro_vision #solution li:nth-child(2) {margin: 80px 3.5% 0;}
+  #intro_vision #solution li:nth-child(3) {margin-top: 160px;}
+  #intro_vision #solution li strong {margin: 35px 0 25px;}
 }
 
 /* tablet 버전 */
@@ -57,13 +63,14 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .pc_only {display: none;}
   .go_right .arrow_ico {top: 5px;}
   
-   /* font-size */
-   .font72 {font-size: 4.5rem;}
-   .font40 {font-size: 1.4rem;}
-   .font36 {font-size: 2.25rem;}
-   .font32 {font-size: 1.3rem;}
-   .font21 {font-size: 1.28rem;}
+  /* font-size */
+  .font72 {font-size: 4.5rem;}
+  .font40 {font-size: 1.4rem;}
+  .font36 {font-size: 2.25rem;}
+  .font32 {font-size: 1.3rem;}
+  .font21 {font-size: 1.28rem;}
   
+  .sub_common .go_right {margin-top: 15px;}
   .sub_common article:not(first-child) {margin-top: 50px;}
 }
 
