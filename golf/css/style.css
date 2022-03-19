@@ -6,12 +6,39 @@ a {display: block;}
 .ico {display: inline-block; width: 24px; height: 24px; text-indent: -9999px; background-size: cover; background-repeat: no-repeat;}
 .sns_ico {background-image: url(../images/sns_ico.png);}
 .arrow_ico {background-image: url(../images/arrow_ico.png);}
-.container {width: 95%; max-width: 1520px; margin: 0 auto;}s
+.container {width: 90%; max-width: 1520px; margin: 0 auto;}
+.mobile_only {display: none;}
 
-/* mobile 버전 */
+/* 공통 - scroll event */
+.ready {position: relative; top: 50px; opacity: 0;}
+.active {top: 0; opacity: 1; transition: all 1s;}
+
+/* pc버전 */
+@media screen and (min-width: 961px){
+  /* font-size */
+  #main_vision figure figcaption, #mainpage article .explain {font-size: 2.5rem;}
+  #main_award .content .text .date strong {font-size: 2.4rem;}
+  .content li p {font-size: 2rem;}
+  #mainpage article h4, #main_award .content .text .date {font-size: 1.3rem;}
+  #mainpage article h3, #mainpage article h4, #main_membership .explain a {font-size: 1.15rem;}
+}
+
+/* tablet 버전 */
 @media screen and (max-width: 960px){
   html, body {font-size: 14px;}
   .pc_only {display: none;}
+  
+   /* font-size */
+  #main_vision figure figcaption, #mainpage article .explain {font-size: 1.4rem;}
+  #main_award .content .text .date strong {font-size: 2.1rem;}
+  .content li p, #mainpage article h4, #main_award .content .text .date {font-size: 1.3rem;}
+  #mainpage article h3, #mainpage article h4, #main_membership .explain a {font-size: 1rem;}
 }
 
+/* mobile 버전 */
+@media screen and (max-width: 490px){
+  .pc_only {display: none;}
+  .no_mobile {display: none;}
+  .mobile_only {display: block;}
+}
 
