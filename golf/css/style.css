@@ -24,9 +24,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 .active {top: 0; opacity: 1; transition: all 1s;}
 
 /* sub #intro_vision */
-#intro_vision #solution li {text-align: center;}
-#intro_vision #solution li strong {display: block;}
-
+#intro_vision #jump figure figcaption {margin: -15px 0 0 5%;}
 
 /* pc버전 */
 @media screen and (min-width: 961px){
@@ -34,11 +32,11 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .go_right .arrow_ico {top: 9px;}
   
   /* font-size */
-  .font72 {font-size: 4.5rem;}
-  .font40 {font-size: 2.5rem;}
-  .font36 {font-size: 2.25rem;}
-  .font32 {font-size: 2rem;}
-  .font21 {font-size: 1.31rem;}
+  .font72 {font-size: 72px;}
+  .font40 {font-size: 40px;}
+  .font36 {font-size: 36px;}
+  .font32 {font-size: 32px;}
+  .font21 {font-size: 21px;}
   
   .sub_top {height: 350px; margin-bottom: 130px;}
   .sub_top.promote {background-position: center -400px;}
@@ -47,14 +45,12 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   
   #intro_vision #jump>div {float: right;}
   #intro_vision #jump>div>p {margin: 50px 0 80px;}
-  #intro_vision #jump figure {}
-  #intro_vision #jump figure figcaption {margin: -15px 0 0 5%;}
-  #intro_vision #solution {}
-  #intro_vision #solution h4 {margin-bottom: 40px;}
-  #intro_vision #solution li {float: left; width: 31%;}
+  
+  #intro_vision #solution h4 {margin-bottom: 50px;}
+  #intro_vision #solution li {float: left; width: 31%; text-align: center;}
   #intro_vision #solution li:nth-child(2) {margin: 80px 3.5% 0;}
   #intro_vision #solution li:nth-child(3) {margin-top: 160px;}
-  #intro_vision #solution li strong {margin: 35px 0 25px;}
+  #intro_vision #solution li strong {display: block; margin: 35px 0 25px;}
 }
 
 /* tablet 버전 */
@@ -64,14 +60,22 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .go_right .arrow_ico {top: 5px;}
   
   /* font-size */
-  .font72 {font-size: 4.5rem;}
-  .font40 {font-size: 1.4rem;}
-  .font36 {font-size: 2.25rem;}
-  .font32 {font-size: 1.3rem;}
-  .font21 {font-size: 1.28rem;}
+  .font72 {font-size: 32px;}
+  .font40 {font-size: 21px;}
+  .font36 {font-size: 19px;}
+  .font32 {font-size: 18px;}
+  .font21 {font-size: 16px;}
   
+  .sub_top {height: 200px; margin-bottom: 70px;}
   .sub_common .go_right {margin-top: 15px;}
   .sub_common article:not(first-child) {margin-top: 50px;}
+  
+  #intro_vision #jump>div>p {margin: 20px 0 30px;}
+  #intro_vision #solution h4 {margin-bottom: 20px;}
+  #intro_vision #solution li {}
+  #intro_vision #solution li p {width: 90%; margin: 15px auto 30px;}
+  #intro_vision #solution li strong {display: inline-block; transform: translateY(-18px); margin-right: 5%;}
+  #intro_vision #solution li span {display: inline-block;}
 }
 
 /* mobile 버전 */
