@@ -29,7 +29,6 @@
 #mainpage article .explain {display: inline-block; position: relative; z-index: 20;}
 .content li p {font-weight: 600;}
 
-
 /* article#main_vision */
 #main_vision {overflow: scroll; height: calc(100vh - 80px); -ms-overflow-style: none; /* IE and Edge */ scrollbar-width: none; /* Firefox */}
 #main_vision::-webkit-scrollbar {display: none; /* Chrome, Safari, Opera*/}
@@ -62,9 +61,6 @@
 
 /* article#main_membership */
 #main_membership .explain a {font-weight: 600; max-width: 250px;}
-#main_membership .explain .arrow_ico {position: relative; left: 20px; top: 9px; width: 22px; height: 14px; background-position: 0 -77px;}
-#main_membership .explain a:hover .arrow_ico {left: 30px; transition: all ease 0.4s 0s;}
-#main_membership .explain a:hover .arrow_ico::after {content: ''; position: absolute; right: -5px; top: -8px; z-index: -1; width: 21px; height: 21px; background-color: #C31725; border-radius: 50%;}
 #main_membership .content li p {position: absolute;}
 
 /* pc 버전 */
@@ -95,7 +91,6 @@
   #main_award .content .text .award_btn .arrow_ico {width: 32px; height: 32px; background-position: 0 -42px;}
   #main_award .content .text .award_btn .arrow_ico.right {margin-left: 30px; background-position: 0 -77px;}
   
-/* #main_membership .explain a {width: 250px;}*/
   #main_membership .explain a:first-of-type {margin: 50px 0 20px;}
   #main_membership .content {position: relative; top: -110px; height: 110vh;}
   #main_membership .content li {position: absolute;}
@@ -149,10 +144,6 @@
 
 /* galaxy fold 포함 3800px 이하 */
 @media screen and (max-width: 380px){
-/*
-  #main_award .content .text {}
-  #main_award .content .text li>div {margin-left: 10px;}
-*/
   #main_program .content ul li {width: 50%;}
   #main_program .content ul li:nth-child(4), #main_program .content ul li:nth-child(4), #main_program .content ul li:nth-child(5) {width: 100%; margin-top: 20px;}
 }
