@@ -42,6 +42,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .sub_top {height: 350px; margin-bottom: 130px;}
   .sub_top.promote {background-position: center -400px;}
   .sub_top.notice {background-position: center -800px;}
+  .sub_common article:not(first-child) {margin-top: 100px;}
   
   #intro_vision #jump>div {float: right;}
   #intro_vision #jump>div>p {margin: 50px 0 80px;}
@@ -62,6 +63,8 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
    .font36 {font-size: 2.25rem;}
    .font32 {font-size: 1.3rem;}
    .font21 {font-size: 1.28rem;}
+  
+  .sub_common article:not(first-child) {margin-top: 50px;}
 }
 
 /* mobile 버전 */
