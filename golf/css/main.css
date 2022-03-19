@@ -69,6 +69,12 @@
 }
 
 @media screen and (min-width: 961px){
+  /* font-size */
+  #main_vision figure figcaption, #mainpage article .explain {font-size: 2.5rem;}
+  #main_award .content .text .date strong {font-size: 2.4rem;}
+  .content li p {font-size: 2rem;}
+  #mainpage article h4, #main_award .content .text .date {font-size: 1.31rem;}
+  
   #mainpage article:not(#main_vision) {margin-top: 100px;}
   
   /* nav#navigation */
@@ -121,6 +127,11 @@
 
 /* tablet 버전 */
 @media screen and (max-width: 960px){
+  /* font-size */
+  #main_vision figure figcaption, #mainpage article .explain {font-size: 1.4rem;}
+  #main_award .content .text .date strong {font-size: 2.1rem;}
+  .content li p, #mainpage article h4, #main_award .content .text .date {font-size: 1.3rem;}
+  
   #mainpage article:not(#main_vision) {margin-top: 50px;}
   #mainpage article h3, #mainpage article .explain {margin-bottom: 20px;}
   #main_membership .explain a:first-of-type {margin: 20px 0 10px;}
