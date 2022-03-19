@@ -11,8 +11,13 @@ a.go_right:hover .arrow_ico {left: 30px; transition: all ease 0.4s 0s;}
 a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px; top: -8px; z-index: -1; width: 21px; height: 21px; background-color: #C31725; border-radius: 50%;}
 .container {width: 90%; max-width: 1520px; margin: 0 auto;}
 .mobile_only {display: none;}
-.sub_top {background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/sub_top.png); background-position: center top; background-repeat: no-repeat;}
+
+/* 공통 - 서브 sub */
+.sub_top {position: relative; background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/sub_top.png); background-position: center top; background-repeat: no-repeat;}
 .sub_top.apply {background-position: center bottom;}
+.sub_top div {position: absolute; left: 50%; bottom: -30px; transform: translateX(-50%);}
+.sub_top h2 {display: inline-block; position: relative;}
+.sub_top h2::after {content: ''; position: absolute; right: -8px; bottom: 0; width: 12px; height: 12px; background-color: #C31725; border-radius: 50%;}
 
 /* 공통 - scroll event */
 .ready {position: relative; top: 50px; opacity: 0;}
@@ -28,17 +33,26 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .go_right .arrow_ico {top: 9px;}
   
   /* font-size */
+  .font72 {font-size: 4.5rem;}
+  .font40 {font-size: 2.5rem;}
+  .font36 {font-size: 2.25rem;}
+  .font32 {font-size: 2rem;}
+  .font21 {font-size: 1.31rem;}
+/*
   .sub_common .font72 {font-size: 4.5rem;}
   #main_vision figure figcaption, #mainpage article .explain, .sub_common h4 {font-size: 2.5rem;}
   #main_award .content .text .date strong {font-size: 2.4rem;}
   .content li p, .sub_common .font32 {font-size: 2rem;}
   #mainpage article h4, #main_award .content .text .date {font-size: 1.3rem;}
-  #mainpage article h3, #mainpage article h4, a.go_right {font-size: 1.15rem;}
+*/
+/*  #mainpage article h3, #mainpage article h4, a.go_right {font-size: 1.15rem;}*/
   
   .sub_top {height: 350px; margin-bottom: 130px;}
   .sub_top.promote {background-position: center -400px;}
   .sub_top.notice {background-position: center -800px;}
   
+  #intro_vision #jump>div {float: right;}
+  #intro_vision #jump>div>p {margin: 50px 0 80px;}
   #intro_vision #solution {}
   #intro_vision #solution li {float: left; width: 31%;}
   #intro_vision #solution li:nth-child(2) {margin: 0 3.5%;}
@@ -51,10 +65,12 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .go_right .arrow_ico {top: 5px;}
   
    /* font-size */
+/*
   #main_vision figure figcaption, #mainpage article .explain {font-size: 1.4rem;}
   #main_award .content .text .date strong {font-size: 2.1rem;}
   .content li p, #mainpage article h4, #main_award .content .text .date {font-size: 1.3rem;}
-  #mainpage article h3, #mainpage article h4, #main_membership .explain a {font-size: 1rem;}
+*/
+/*  #mainpage article h3, #mainpage article h4, #main_membership .explain a {font-size: 1rem;}*/
 }
 
 /* mobile 버전 */
