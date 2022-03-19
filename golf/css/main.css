@@ -97,7 +97,7 @@
   
 /* #main_membership .explain a {width: 250px;}*/
   #main_membership .explain a:first-of-type {margin: 50px 0 20px;}
-  #main_membership .content {position: relative; top: -110px; height: 1200px;}
+  #main_membership .content {position: relative; top: -110px; height: 110vh;}
   #main_membership .content li {position: absolute;}
   #main_membership .content li:nth-child(1) {right: 3vw; width: 26.5%;}
   #main_membership .content li:nth-child(2) {left: 6vw; width: 40%;}
