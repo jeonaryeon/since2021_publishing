@@ -64,6 +64,10 @@
 #main_membership .content li p {position: absolute;}
 
 /* pc 버전 */
+@media screen and (min-width: 1700px){
+  #main_program .content>span>img {width: 1700px;}
+}
+
 @media screen and (min-width: 961px){
   #mainpage article:not(#main_vision) {margin-top: 100px;}
   
@@ -79,9 +83,9 @@
   #main_vision figure {height: calc(100vh - 80px);}
   #main_vision figure figcaption {left: 5vw; top: 50%; transform: translateY(-50%);}
   
-  #main_program .content {left: 10vw; top: -30px;}
+  #main_program .content {left: 6vw; top: -30px;}
   #main_program .content ul {margin-top: 50px;}
-  #main_program .content ul li {margin-right: 6vw;}
+  #main_program .content ul li {margin-right: 4vw;}
   
   #main_award .content {margin: 30px 0 0 13%;}
   #main_award .content>p {float: left;}
@@ -92,21 +96,27 @@
   #main_award .content .text .award_btn .arrow_ico.right {margin-left: 30px; background-position: 0 -77px;}
   
   #main_membership .explain a:first-of-type {margin: 50px 0 20px;}
-  #main_membership .content {position: relative; top: -110px; height: 110vh;}
+  #main_membership .content {position: relative; height: 110vh;}
   #main_membership .content li {position: absolute;}
   #main_membership .content li:nth-child(1) {right: 3vw; width: 26.5%;}
   #main_membership .content li:nth-child(2) {left: 6vw; width: 40%;}
   #main_membership .content li:nth-child(3) {right: 7vw; width: 32%;}
   
-  #main_membership .content li:nth-child(1).ready {top: 50px; opacity: 0;}
+  #main_membership .content li:nth-child(1).ready {top: -60px; opacity: 0;}
   #main_membership .content li:nth-child(2).ready {top: 230px; opacity: 0;}
   #main_membership .content li:nth-child(3).ready {top: initial; bottom: -50px; opacity: 0;}
-  #main_membership .content li:nth-child(1).active {top: 0; opacity: 1; transition: all 1s;}
+  #main_membership .content li:nth-child(1).active {top: -110px; opacity: 1; transition: all 1s;}
   #main_membership .content li:nth-child(2).active {top: 180px; opacity: 1; transition: all 1s;}
   #main_membership .content li:nth-child(3).active {top: initial; bottom: 0; opacity: 1; transition: all 1s;}
   
   #main_membership .content li p {top: 60px; left: -50px;}
   #main_membership .content li:nth-child(2) p {left: initial; right: -50px;}
+}
+
+@media screen and (max-width: 1300px) and (min-width: 961px){
+  #main_award .content {margin-left: 0;}
+  #main_award .content>p {width: 40%;}
+  #main_award .content .text {float: right; width: 56%; margin: inherit; transform: translateY(20%);}
 }
 
 /* tablet 버전 */
@@ -150,5 +160,6 @@
 
 /* 비율 */
 @media (max-aspect-ratio: 16 / 9){
-  #main_vision figure img {width: auto; max-width: 100%; height: 100vh;}
+  #main_vision figure img {width: auto; height: 100vh;}
+  #main_vision figure:nth-child(1) img {position: relative; left: 50%; transform: translateX(-50%);}
 }

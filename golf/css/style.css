@@ -6,9 +6,9 @@ a {display: block;}
 .ico {display: inline-block; width: 24px; height: 24px; text-indent: -9999px; background-size: cover; background-repeat: no-repeat;}
 .sns_ico {background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/sns_ico.png);}
 .arrow_ico {background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/arrow_ico.png);}
-.arrow_ico.go_right {position: relative; left: 20px; width: 22px; height: 14px; background-position: 0 -77px;}
-a:hover .arrow_ico.go_right {left: 30px; transition: all ease 0.4s 0s;}
-a:hover .arrow_ico.go_right::after {content: ''; position: absolute; right: -5px; top: -8px; z-index: -1; width: 21px; height: 21px; background-color: #C31725; border-radius: 50%;}
+.go_right .arrow_ico {position: relative; left: 20px; width: 22px; height: 14px; background-position: 0 -77px;}
+a.go_right:hover .arrow_ico {left: 30px; transition: all ease 0.4s 0s;}
+a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px; top: -8px; z-index: -1; width: 21px; height: 21px; background-color: #C31725; border-radius: 50%;}
 .container {width: 90%; max-width: 1520px; margin: 0 auto;}
 .mobile_only {display: none;}
 .sub_top {background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/sub_top.png); background-position: center top; background-repeat: no-repeat;}
@@ -18,9 +18,14 @@ a:hover .arrow_ico.go_right::after {content: ''; position: absolute; right: -5px
 .ready {position: relative; top: 50px; opacity: 0;}
 .active {top: 0; opacity: 1; transition: all 1s;}
 
+/* sub #intro_vision */
+#intro_vision #solution li {text-align: center;}
+#intro_vision #solution li strong {display: block;}
+
+
 /* pc버전 */
 @media screen and (min-width: 961px){
-  .arrow_ico.go_right {top: 9px;}
+  .go_right .arrow_ico {top: 9px;}
   
   /* font-size */
   .sub_common .font72 {font-size: 4.5rem;}
@@ -28,22 +33,22 @@ a:hover .arrow_ico.go_right::after {content: ''; position: absolute; right: -5px
   #main_award .content .text .date strong {font-size: 2.4rem;}
   .content li p, .sub_common .font32 {font-size: 2rem;}
   #mainpage article h4, #main_award .content .text .date {font-size: 1.3rem;}
-  #mainpage article h3, #mainpage article h4, #main_membership .explain a {font-size: 1.15rem;}
+  #mainpage article h3, #mainpage article h4, a.go_right {font-size: 1.15rem;}
   
   .sub_top {height: 350px; margin-bottom: 130px;}
   .sub_top.promote {background-position: center -400px;}
   .sub_top.notice {background-position: center -800px;}
   
   #intro_vision #solution {}
-  #intro_vision #solution li {float: left; width: 32%;}
-  #intro_vision #solution li:nth-child(2) {margin: 0 2%;}
+  #intro_vision #solution li {float: left; width: 31%;}
+  #intro_vision #solution li:nth-child(2) {margin: 0 3.5%;}
 }
 
 /* tablet 버전 */
 @media screen and (max-width: 960px){
   html, body {font-size: 14px;}
   .pc_only {display: none;}
-  .arrow_ico.go_right {top: 5px;}
+  .go_right .arrow_ico {top: 5px;}
   
    /* font-size */
   #main_vision figure figcaption, #mainpage article .explain {font-size: 1.4rem;}

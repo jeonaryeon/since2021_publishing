@@ -76,6 +76,11 @@ footer address {display: inline-block;}
 footer address span {margin-left: 10px; padding-left: 10px; border-left: 1px solid #fff;}
 
 /* pc 버전 */
+@media screen and (min-width: 1170px){
+  #fnb>ul>li {float: left; margin-right: 3.5vw;}
+  #footer_right #fnb>p {margin: 0 5.5vw;}
+}
+
 @media screen and (min-width: 961px){
   footer {margin-top: 100px;}
   footer .container {padding: 50px 0;}
@@ -84,13 +89,13 @@ footer address span {margin-left: 10px; padding-left: 10px; border-left: 1px sol
   #footer_right {float: right; width: 80%;}
   #fnb {float: left;}
   #fnb>ul {float: left;}
-  #fnb>ul>li {float: left; margin-right: 3.5vw;}
+  #fnb>ul>li {float: left; margin-right: 2vw;}
   #fnb>ul>li:last-child {margin-right: 0;}
   #fnb>ul>li>p {font-weight: 600; margin-bottom: 15px;}
   #fnb>ul>li:nth-child(3)>p {width: 65px;}
   #fnb .lnb li {margin-bottom: 5px;}
   
-  #footer_right #fnb>p {margin: 0 5.5vw;}
+  #footer_right #fnb>p {margin: 0 3vw;}
   
   footer address {margin: 45px 0 10px;}
 }
