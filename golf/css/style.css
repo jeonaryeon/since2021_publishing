@@ -15,7 +15,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 /* 공통 - 서브 sub */
 .sub_top {position: relative; background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/sub_top.png); background-position: center top; background-repeat: no-repeat;}
 .sub_top.apply {background-position: center bottom;}
-.sub_top div {position: absolute; left: 50%; bottom: -30px; transform: translateX(-50%);}
+.sub_top div {position: absolute; left: 50%; transform: translateX(-50%);}
 .sub_top h2 {display: inline-block; position: relative;}
 .sub_top h2::after {content: ''; position: absolute; right: -8px; bottom: 0; width: 12px; height: 12px; background-color: #C31725; border-radius: 50%;}
 
@@ -41,6 +41,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .sub_top {height: 350px; margin-bottom: 130px;}
   .sub_top.promote {background-position: center -400px;}
   .sub_top.notice {background-position: center -800px;}
+  .sub_top div {bottom: -30px;}
   .sub_common article:not(first-child) {margin-top: 100px;}
   
   #intro_vision #jump>div {float: right;}
@@ -66,7 +67,8 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .font32 {font-size: 18px;}
   .font21 {font-size: 16px;}
   
-  .sub_top {height: 200px; margin-bottom: 70px;}
+  .sub_top {height: 200px; margin-bottom: 70px; background-size: 1093px 1110px;}
+  .sub_top div {bottom: -18px;}
   .sub_common .go_right {margin-top: 15px;}
   .sub_common article:not(first-child) {margin-top: 50px;}
   
@@ -83,5 +85,11 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .pc_only {display: none;}
   .no_mobile {display: none;}
   .mobile_only {display: block;}
+  
+  .sub_top.intro {background-position: 20% top;}
+  #intro_vision #solution li:nth-child(2) strong {display: block; transform: inherit; margin-bottom: 10px;}
+  
+  #intro_vision #jump figure {overflow: hidden;}
+  #intro_vision #jump figure img {width: auto; height: 315px; transform: translateX(-53%);}
 }
 
