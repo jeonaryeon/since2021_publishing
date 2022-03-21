@@ -2,7 +2,7 @@
 
 /* 공통 */
 a {display: block;}
-.hidden {display: none;}
+.hidden {display: none !important;}
 .ico {display: inline-block; width: 24px; height: 24px; text-indent: -9999px; background-size: cover; background-repeat: no-repeat;}
 .sns_ico {background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/sns_ico.png);}
 .arrow_ico {background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/arrow_ico.png);}
@@ -10,7 +10,10 @@ a {display: block;}
 a.go_right:hover .arrow_ico {left: 30px; transition: all ease 0.4s 0s;}
 a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px; top: -8px; z-index: -1; width: 21px; height: 21px; background-color: #C31725; border-radius: 50%;}
 .container {width: 90%; max-width: 1520px; margin: 0 auto;}
-.mobile_only {display: none;}
+.mobile_only {display: none !important;}
+.max649 {display: none !important;}
+.font72 {font-weight: 600; line-height: 1.3;}
+.font40 {font-weight: 600; line-height: 1.45;}
 
 /* 공통 - 서브 sub */
 .sub_top {position: relative; background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/sub_top.png); background-position: center top; background-repeat: no-repeat;}
@@ -18,6 +21,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 .sub_top div {position: absolute; left: 50%; transform: translateX(-50%);}
 .sub_top h2 {display: inline-block; position: relative;}
 .sub_top h2::after {content: ''; position: absolute; right: -8px; bottom: 0; width: 12px; height: 12px; background-color: #C31725; border-radius: 50%;}
+.sub_common button {color: #fff; font-size: 18px;}
 
 /* 공통 - scroll event */
 .ready {position: relative; top: 50px; opacity: 0;}
@@ -26,36 +30,64 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 /* sub - intro */
 #intro_vision #jump figure figcaption {margin: -15px 0 0 5%;}
 #intro_ceo .key {position: relative;}
-#intro_ceo .key figure figcaption {font-weight: 600;}
 #intro_ceo .message p {text-align: justify;}
+#intro_staff .coach {display: inline-block; position: relative; left: 50%; transform: translateX(-50%);}
+#intro_staff .coach p {z-index: -1; opacity: 0.3;}
+#intro_staff .coach p span {display: block;}
+#intro_staff .coach h3 {position: absolute; left: 0;}
+#intro_staff .coach li::before {content:'・'; margin-right: 10px;}
+#intro_staff .staff button {float: right;}
+#intro_staff .staff button.on {color: #C31724;}
+#intro_staff .staff li {float: left;}
+#intro_staff .staff li .tit p {display: inline; padding: 5px 20px 7px; background-color: #C31724; border-radius: 5px;}
+#intro_staff .staff li .tit p::after {}
+#intro_staff .staff li figure {position: relative; background-color: #fff; border-top: 5px solid #C31724;}
+#intro_staff .staff li figure img {width: auto; position: relative; left: 50%; transform: translateX(-50%);}
+#intro_staff .staff li figcaption {position: absolute; right: 20px; bottom: 10px; color: #222;}
+#intro_staff .staff li figcaption strong {margin-right: 10px;}
+
+/* sub - info */
+#info_program .professional .process, #info_program .schedule .popup_btn {position: relative; background-size: cover; background-position: center; background-repeat: no-repeat;}
+#info_program .schedule section {position: fixed; left: 50%; top: 50%; width: 90%; max-width: 1100px; height: 90%; transform: translate(-50%,-50%); z-index: 20001;}
+#info_program .schedule .popup {overflow-y: auto; height: 100%;}
+#info_program .schedule .popup .close {position: absolute; right: 0;}
+#info_program .schedule .popup .close span {display: block; text-indent: -9999px; height: 1px; background-color: #fff; transform: rotate(45deg);}
+#info_program .schedule .popup .close span:last-child {transform: rotate(-45deg);}
+#info_program .schedule h4 {display: inline-block; position: relative; background-color: #C31724; border-radius: 5px;}
+#info_program .schedule h4::after {content: ''; position: absolute; right: -54px; top: 0; width: 0; height: 0; border-bottom: 33px solid #C31724; border-top: 37px solid transparent; border-left: 30px solid #C31724; border-right: 26px solid transparent;  border-radius: 5px;}
+#info_program .schedule table, #info_program .schedule .popup div {display: block; background-color: #fff; border-top: 5px solid #C31724;}
+#info_program .schedule tr {display: block;}
+#info_program .schedule thead {display: block; background-color: #171717;}
+#info_program .schedule thead tr th:first-child {border-color: #fff;}
+#info_program .schedule tbody {display: block; color: #222;}
+#info_program .schedule tbody tr:nth-child(even) {background-color: #E3E3E3;}
+#info_program .schedule thead th:first-child, #info_program .schedule tbody td:first-child {display: inline-block; width: calc(30% - 60px); border-right: 1px solid #707070;}
+#info_program .schedule thead th:last-child, #info_program .schedule tbody td:last-child {display: inline-block; width: calc(70% - 65px);}
+#info_program .schedule tbody td:first-child {text-align: center;}
+#info_program .schedule tbody .blank {text-indent: -9999px;}
+#info_program .schedule tr.team td:last-child {display: inline-table; table-layout: fixed;}
+#info_program .schedule tr.team td:last-child span {display: table-cell; vertical-align: middle; text-align: center;}
+#info_program .schedule .popup_btn button {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 1px solid #fff;}
+#info_program .schedule .popup_bg {position: fixed; left: 0; top: 0; z-index: 20000; width: 100%; height: 100%; text-indent: -9999px; background-color: #000; opacity: 0.3;}
+
 
 /* pc 버전 */
-@media screen and (min-width: 1400px){
-  #intro_ceo .key figure, #intro_ceo .key figure img {height: 500px;}
-  #intro_ceo .key figure figcaption {transform: translateY(calc(90% - 90px)); font-size: 72px;}
-  #intro_ceo .key figure figcaption::before, #intro_ceo .key figure figcaption::after {font-size: 12rem;}
-  #intro_ceo .key figure figcaption::before {left: -25%;}
-  #intro_ceo .seong .key figure figcaption::before {left: -20%;}
-  #intro_ceo .seong .key figure figcaption::after {right: -20%;}
-}
-@media screen and (min-width: 1182px){
-  .no1182 {}
-}
 @media screen and (min-width: 961px){
-  .no_pc {display: none;}
+  .no_pc {display: none !important;}
   .sub_common .go_right {margin-top: 30px;}
   .go_right .arrow_ico {top: 9px;}
   
   /* font-size */
-  .font72 {font-size: 72px; line-height: 1.3;}
+  .font72 {font-size: 72px;}
   .font40 {font-size: 40px;}
   .font36 {font-size: 36px;}
   .font32 {font-size: 32px;}
   .font21 {font-size: 21px;}
   
   .sub_top {height: 350px; margin-bottom: 130px;}
-  .sub_top.promote {background-position: center -400px;}
-  .sub_top.notice {background-position: center -800px;}
+  .sub_top.info {background-position: center -400px;}
+  .sub_top.promote {background-position: center -800px;}
+  .sub_top.notice {background-position: center -1200px;}
   .sub_top div {bottom: -30px;}
   .sub_common article:not(first-child) {margin-top: 100px;}
   
@@ -79,7 +111,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #intro_ceo .seong .key figure figcaption {float: left;}
   #intro_ceo .seong .key figure figcaption::before {left: -15%;}
   #intro_ceo .seong .key figure figcaption::after {right: -15%;}
-  #intro_ceo .key .ceo_bg {display: inline-block; position: absolute; left: 0; bottom: 7px; z-index: -1; width: 100%; height: calc(100% - 90px); text-indent: -9999px; background-color: #787878;}
+  #intro_ceo .key .ceo_bg {display: inline-block; position: absolute; left: 0; bottom: 8px; z-index: -1; width: 100%; height: calc(100% - 90px); text-indent: -9999px; background-color: #787878;}
   #intro_ceo .david .message div {margin: 50px 0 30px;}
   #intro_ceo .david .message div p {float: left; width: 47.5%;}
   #intro_ceo .david .message div p:first-child {margin-right: 5%;}
@@ -90,22 +122,64 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #intro_location .txt p {float: left;}
   #intro_location .txt p:nth-of-type(1) {margin: 0 50px;}
   #intro_location #map iframe {height: 600px;}
+  #intro_staff .certification img {margin-top: 50px;}
+  #intro_staff .coach p {float: left; position: relative; margin-top: 12%; font-size: 60px;}
+  #intro_staff .coach p span {margin-left: 45px;}
+  #intro_staff .coach img {float: left; width: 275px; margin-left: -115px; margin-bottom: 20px;}
+  #intro_staff .coach h3 {top: 400px;}
+  #intro_staff .staff button:nth-child(1) {margin-left: 50px;}
+  #intro_staff .staff li {width: 31%; margin-top: 50px;}
+  #intro_staff .staff li:nth-child(3n-1) {margin: 50px 3.5% 0;}
+  #intro_staff .staff li figure {padding-top: 40px;}
+  #intro_staff .staff li figure img {height: 260px;}
+  
+  #info_program h4 {margin-bottom: 30px;}
+  #info_program .professional {}
+  #info_program .professional .txt {margin-bottom: 50px;}
+  #info_program .professional .txt>div {float: right;}
+  #info_program .professional .process {padding: 250px 0;}
+  #info_program .professional .process .line {top: 370px;}
+  #info_program .schedule h4 {margin-bottom: -4px; padding: 5px 20px 8px;}
+  #info_program .schedule .popup .close {top: 20px; height: 30px;}
+  #info_program .schedule .popup .close span {width: 30px;}
+  #info_program .schedule table {display: block; padding: 30px 50px;}
+  #info_program .schedule table th, #info_program .schedule table td {padding: 7px 30px;}
+  #info_program .schedule .popup_btn {margin-bottom: -100px; padding: 150px 0; background-image: url(../images/info_program2.jpg);}
+  #info_program .schedule .popup_btn button {padding: 20px 40px;}
+}
+@media screen and (min-width: 1400px){
+  #intro_ceo .key figure, #intro_ceo .key figure img {height: 500px;}
+  #intro_ceo .key figure figcaption {transform: translateY(calc(90% - 90px)); font-size: 72px;}
+  #intro_ceo .key figure figcaption::before, #intro_ceo .key figure figcaption::after {font-size: 12rem;}
+  #intro_ceo .key figure figcaption::before {left: -25%;}
+  #intro_ceo .seong .key figure figcaption::before {left: -20%;}
+  #intro_ceo .seong .key figure figcaption::after {right: -20%;}
+  #intro_staff .staff li figure img {height: 380px;}
+}
+@media screen and (min-width: 1150px){
+  #intro_staff .coach p {margin-top: 7%;}
+  #intro_staff .coach img {margin: 0 50px 0 -115px;}
+  #intro_staff .coach .profile {float: left; margin-top: 60px;}
+  #intro_staff .coach h3 {position: relative; top: 0; margin-bottom: 30px;}
 }
 
 /* tablet 버전 */
 @media screen and (max-width: 960px){
   html, body {font-size: 14px;}
-  .pc_only {display: none;}
+  .pc_only {display: none !important;}
   .go_right .arrow_ico {top: 5px;}
   
   /* font-size */
-  .font72 {font-size: 32px; line-height: 1.3;}
+  .font72 {font-size: 32px;}
   .font40 {font-size: 21px;}
   .font36 {font-size: 19px;}
   .font32 {font-size: 18px;}
   .font21 {font-size: 16px;}
   
   .sub_top {height: 200px; margin-bottom: 70px; background-size: 1093px 1110px;}
+  .sub_top.info {background-position: center -228px;}
+  .sub_top.promote {background-position: center -456px;}
+  .sub_top.notice {background-position: center -683px;}
   .sub_top div {bottom: -18px;}
   .sub_common .go_right {margin-top: 15px;}
   .sub_common article:not(first-child) {margin-top: 50px;}
@@ -121,20 +195,66 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #intro_ceo .seong .key figure img {right: inherit; left: 0;}
   #intro_ceo .key figure figcaption {padding: 460px 0 20px;}
   #intro_ceo .key>h3 {position: absolute; right: calc(433px / 1.6); bottom: 32%;}
-  #intro_ceo .seong .key>h3 {left: calc(287px / 1.6); right: inherit;}
+  #intro_ceo .seong .kevy>h3 {left: calc(287px / 1.6); right: inherit;}
   #intro_ceo .david .message div p:first-child {margin-bottom: 20px;}
   
   #intro_location .txt address {margin: 15px 0 10px;}
   #intro_location .txt p {margin-bottom: 10px;}
   #intro_location .txt p:last-child {margin-bottom: 20px;}
   #intro_location #map iframe {height: 350px;}
+  
+  #intro_staff .certification img {margin-top: 20px;}
+  #intro_staff .coach {position: relative;}
+  #intro_staff .coach p {position: absolute; left: 0; top: 8%;}
+  #intro_staff .coach p span {margin-left: 20px;}
+  #intro_staff .coach img {position: absolute; top: 0; right: 0; width: 155px;}
+  #intro_staff .coach h3 {top: 240px;}
+  #intro_staff .coach .profile {margin-top: 286.5px; padding-right: 25px;}
+  #intro_staff .staff button:nth-child(1) {margin-left: 20px;}
+  #intro_staff .staff li {width: 47.5%; margin-top: 20px;}
+  #intro_staff .staff li:nth-child(even) {margin-left: 5%;}
+  #intro_staff .staff li figure {padding-top: 15px;}
+  #intro_staff .staff li figure img {height: 200px;}
+  
+  #info_program h4 {margin-bottom: 15px;}
+  #info_program .professional .txt {margin-bottom: 20px;}
+  #info_program .professional .process {padding: 120px 0;}
+  #info_program .professional .process .line {top: 240px;}
+  #info_program .lesson .no_pc {margin-top: 20px;}
+  #info_program .schedule h4 {margin-bottom: -4px; padding: 5px 10px 8px;}
+  #info_program .schedule h4::after {right: -29px; top: 0; border-width: 18px 18px 25px 13px;}
+  #info_program .schedule .popup .close {top: 12.5px; height: 20px;}
+  #info_program .schedule .popup .close span {width: 20px;}
+  #info_program .schedule table {display: block; padding: 15px 20px;}
+  #info_program .schedule table th, #info_program .schedule table td {padding: 5px 10px;}
+  #info_program .schedule thead th:first-child, #info_program .schedule tbody td:first-child {width: 20%;}
+  #info_program .schedule thead th:last-child, #info_program .schedule tbody td:last-child {width: 69%;}
+  #info_program .schedule tr.team td:last-child {width: 72%;}
+  #info_program .schedule .popup_btn {margin-bottom: -50px; padding: 70px 0; background-image: url(../images/info_program2_m.jpg);}
+  #info_program .schedule .popup_btn button {padding: 10px 20px;}
 }
 
 /* mobile 버전 */
+@media screen and (min-width: 650px){
+  #info_program .professional .process {background-image: url(../images/info_program1.jpg);}
+  #info_program .professional .process ul {display: table; width: 100%; table-layout: fixed;}
+  #info_program .professional .process li {display: table-cell; vertical-align: middle; text-align: center;}
+  #info_program .professional .process li img {width: 90px; height: auto;}
+  #info_program .professional .process li p {position: relative; margin-top: 25px; padding-top: 25px;}
+  #info_program .professional .process li p::after {content: ''; position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 10px; height: 10px; background-color: #fff; border-radius: 50%;}
+  #info_program .professional .process .line {display: block; position: absolute; left: 0; width: 100%; height: 1px; text-indent: -9999px; background-color: #fff;}
+}
+@media screen and (max-width: 649px){
+  .no649 {display: none !important;}
+  .max649 {display: block !important;}
+  
+  #info_program .professional .process {padding: 50px 0; background-image: url(../images/info_program1_m.jpg);}
+  #info_program .professional .process .max649 {width: 95%; height: auto;}
+}
 @media screen and (max-width: 490px){
-  .pc_only {display: none;}
-  .no_mobile {display: none;}
-  .mobile_only {display: block;}
+  .pc_only {display: none !important;}
+  .no_mobile {display: none !important;}
+  .mobile_only {display: block !important;}
   
   .sub_top.intro {background-position: 20% top;}
   #intro_vision #solution li:nth-child(2) strong {display: block; transform: inherit; margin-bottom: 10px;}
@@ -145,5 +265,10 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #intro_ceo .key figure img {height: 233px;}
   #intro_ceo .key>h3 {right: calc(230px / 1.6); bottom: 52%;}
   #intro_ceo .seong .key>h3 {left: calc(152px / 1.6); right: inherit;}
+  
+  #intro_staff .staff li {float: none; width: 100%;}
+  #intro_staff .staff li:nth-child(even) {margin-left: 0;}
+  
+  #info_program .schedule .popup div {padding: 15px 20px;}
 }
 
