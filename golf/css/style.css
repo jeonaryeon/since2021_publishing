@@ -82,6 +82,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .font40 {font-size: 40px;}
   .font36 {font-size: 36px;}
   .font32 {font-size: 32px;}
+  .font26 {font-size: 26px;}
   .font21 {font-size: 21px;}
   
   .sub_top {height: 350px; margin-bottom: 130px;}
@@ -139,6 +140,19 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #info_program .professional .txt>div {float: right;}
   #info_program .professional .process {padding: 250px 0;}
   #info_program .professional .process .line {top: 370px;}
+  #info_program .lesson {}
+  #info_program .lesson .part {}
+  #info_program .lesson .part h5 {width: 75%; margin: 0 auto 20px; padding-bottom: 20px; text-align: center; font-weight: 400; border-bottom: 1px solid #fff;}
+  #info_program .lesson .part h5::before {content: ''; display: block; width: 100px; height: 100px; margin: 50px auto 10px; background-image: url(../images/info_program9.png);}
+  #info_program .lesson .part h5::after {content: ''; display: block; width: 1px; height: 30px; margin: 20px auto -20px; background-color: #fff;}
+  #info_program .lesson .part div>ul {display: table; table-layout: fixed; width: 100%;}
+  #info_program .lesson .part div>ul>li {display: table-cell; width: 25%; text-align: center;}
+  #info_program .lesson .part div>ul>li::before {content: ''; display: block; width: 1px; height: 30px; margin: -20px auto 30px; background-color: #fff;}
+  #info_program .lesson .part div>ul>li>h6 {width: 80%; margin: 0 auto 20px; padding: 3px 0; font-weight: 400; background-color: #C31725; border-radius: 30px;}
+  #info_program .lesson .part div>ul>li>ul {display: inline-block; text-align: left;}
+  #info_program .lesson .part div>ul>li>ul>li {}
+
+  
   #info_program .schedule h4 {margin-bottom: -4px; padding: 5px 20px 8px;}
   #info_program .schedule .popup .close {top: 20px; height: 30px;}
   #info_program .schedule .popup .close span {width: 30px;}
