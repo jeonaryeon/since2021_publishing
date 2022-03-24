@@ -24,7 +24,7 @@
 }
 
 /* 공통 */
-#mainpage {overflow: hidden;}
+#mainpage {overflow: hidden; line-height: 1.45;}
 #mainpage article h3, #mainpage article h4 {color: #C31724; font-weight: 400;}
 #mainpage article .explain {display: inline-block; position: relative; z-index: 20;}
 .content li p {font-weight: 600;}
