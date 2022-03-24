@@ -11,7 +11,7 @@
 
   <!-- js 연결 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script type="text/javascript" src="https://jeonaryeon.github.io/since2021_publishing/golf/js/include.js"></script>
+  
 </head>
 <body>
   <header id="header" class="clearfix">
@@ -113,5 +113,25 @@
       </div>
     </div>
   </header>
+  
+  <script>
+    $(function(){
+      // 모바일버전
+      var documentW = $(document).width();
+      if(documentW <= 961){
+        $('#rnb>ul>li>p').on('click', function(){
+          if(!$(this).hasClass('current')){
+            $(this).parent().siblings().find('.lnb').hide();
+            $(this).parent().siblings().find('p').removeClass('current');
+            $(this).addClass('current');
+            $(this).siblings('.lnb').show();
+          }else{
+            $(this).removeClass('current');
+            $(this).siblings('.lnb').hide();
+          }
+        });
+      }
+    }); 
+  </script>
 </body>
 </html>
