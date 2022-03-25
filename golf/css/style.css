@@ -12,7 +12,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 .container {width: 90%; max-width: 1520px; margin: 0 auto;}
 .mobile_only {display: none !important;}
 .max649 {display: none !important;}
-.font72 {font-weight: 600; line-height: 1.3;}
+.font72, .font60 {font-weight: 600; line-height: 1.3;}
 .font40 {font-weight: 600; line-height: 1.45;}
 
 /* 공통 - 서브 sub */
@@ -40,14 +40,13 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 #intro_staff .staff button.on {color: #C31724;}
 #intro_staff .staff li {float: left;}
 #intro_staff .staff li .tit p {display: inline; padding: 5px 20px 7px; background-color: #C31724; border-radius: 5px;}
-#intro_staff .staff li .tit p::after {}
 #intro_staff .staff li figure {position: relative; background-color: #fff; border-top: 5px solid #C31724;}
 #intro_staff .staff li figure img {width: auto; position: relative; left: 50%; transform: translateX(-50%);}
 #intro_staff .staff li figcaption {position: absolute; right: 20px; bottom: 10px; color: #222;}
 #intro_staff .staff li figcaption strong {margin-right: 10px;}
 
 /* sub - info */
-#info_program .professional .process, #info_program .schedule .popup_btn {position: relative; background-size: cover; background-position: center; background-repeat: no-repeat;}
+#info_program .professional .process, #info_program .schedule .popup_btn, #info_membership #experience .btn {position: relative; background-size: cover; background-position: center; background-repeat: no-repeat;}
 #info_program .schedule section {position: fixed; left: 50%; top: 50%; width: 90%; max-width: 1100px; height: 90%; transform: translate(-50%,-50%); z-index: 20001;}
 #info_program .schedule .popup {overflow-y: auto; height: 100%;}
 #info_program .schedule .popup .close {position: absolute; right: 0;}
@@ -67,18 +66,35 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 #info_program .schedule tbody .blank {text-indent: -9999px;}
 #info_program .schedule tr.team td:last-child {display: inline-table; table-layout: fixed;}
 #info_program .schedule tr.team td:last-child span {display: table-cell; vertical-align: middle; text-align: center;}
-#info_program .schedule .popup_btn button {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 1px solid #fff;}
+#info_program .schedule .popup_btn button, #info_membership #experience .btn a {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); border: 1px solid #fff;}
 #info_program .schedule .popup_bg {position: fixed; left: 0; top: 0; z-index: 20000; width: 100%; height: 100%; text-indent: -9999px; background-color: #000; opacity: 0.3;}
-
+#info_facility #studio .analysis li, #info_membership #experience li {position: relative; padding-left: 20px;}
+#info_facility #studio .analysis li::before, #info_membership #experience li::before {content: '・'; position: absolute; left: 0;}
+#info_facility #studio .procedure li, #info_membership #benefit .procedure li {float: left; position: relative; width: 27%;}
+#info_facility #studio .procedure li.training, #info_membership #benefit .procedure li:last-child {width: 18%;}
+#info_facility #studio .procedure li p, #info_membership #benefit .procedure li p {text-align: center;}
+#info_facility #studio .procedure li .next, #info_membership #benefit .procedure li .next {position: absolute; top: 50%; transform: translateY(-50%);}
+#info_facility #short_game img {position: relative; top: -45px; z-index: -1;}
+#info_membership #tuition .txt>ul>li {position: relative; padding-left: 20px;}
+#info_membership #tuition .txt>ul>li::before {content: '・'; position: absolute; left: 0;}
+#info_membership #tuition table {text-align: center; border-top: 2px solid #fff; border-bottom: 2px solid #fff;}
+#info_membership #tuition thead {border-bottom: 1px solid #fff;}
+#info_membership #tuition th:nth-child(2), #info_membership #tuition td:nth-child(2) {border-right: 1px solid #fff; border-left: 1px solid #fff;}
+#info_membership #benefit .explain {text-align: justify;}
+#info_membership #benefit .procedure li:nth-child(3) .next {top: 45%;}
+#info_membership #benefit .r_txt>ul>li>span {display: inline-block; text-align: center; border: 1px solid #fff; border-radius: 40px;}
+#info_membership #experience div.btn {background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership8.jpg);}
 
 /* pc 버전 */
 @media screen and (min-width: 961px){
   .no_pc {display: none !important;}
   .sub_common .go_right {margin-top: 30px;}
   .go_right .arrow_ico {top: 9px;}
+  .sub_common .r_txt {float: right; width: 80%;}
   
   /* font-size */
   .font72 {font-size: 72px;}
+  .font60 {font-size: 60px;}
   .font40 {font-size: 40px;}
   .font36 {font-size: 36px;}
   .font32 {font-size: 32px;}
@@ -96,10 +112,10 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #intro_vision #jump>div>p {margin: 50px 0 80px;}
   
   #intro_vision #solution h4 {margin-bottom: 50px;}
-  #intro_vision #solution li {float: left; width: 31%; text-align: center;}
-  #intro_vision #solution li:nth-child(2) {margin: 80px 3.5% 0;}
-  #intro_vision #solution li:nth-child(3) {margin-top: 160px;}
-  #intro_vision #solution li strong {display: block; margin: 35px 0 25px;}
+  #intro_vision #solution li, #info_facility #gdr li {float: left; width: 31%; text-align: center;}
+  #intro_vision #solution li:nth-child(2), #info_facility #gdr li:nth-child(2) {margin: 80px 3.5% 0;}
+  #intro_vision #solution li:nth-child(3), #info_facility #gdr li:nth-child(3) {margin-top: 160px;}
+  #intro_vision #solution li strong, #info_facility #gdr li strong {display: block; margin: 35px 0 25px;}
 
   #intro_ceo .key figure {display: inline-block; position: relative; left: 53%; transform: translateX(-50%); height: 380px;}
   #intro_ceo .key figure img {float: right; position: relative; z-index: 5; width: auto; height: 380px;}
@@ -135,31 +151,70 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #intro_staff .staff li figure img {height: 260px;}
   
   #info_program h4 {margin-bottom: 30px;}
-  #info_program .professional {}
   #info_program .professional .txt {margin-bottom: 50px;}
-  #info_program .professional .txt>div {float: right;}
+  #info_program .professional .txt>div {float: right; width: 50%;}
   #info_program .professional .process {padding: 250px 0;}
   #info_program .professional .process .line {top: 370px;}
-  #info_program .lesson {}
-  #info_program .lesson .part {}
   #info_program .lesson .part h5 {width: 75%; margin: 0 auto 20px; padding-bottom: 20px; text-align: center; font-weight: 400; border-bottom: 1px solid #fff;}
-  #info_program .lesson .part h5::before {content: ''; display: block; width: 100px; height: 100px; margin: 50px auto 10px; background-image: url(../images/info_program9.png);}
+  #info_program .lesson .part h5::before {content: ''; display: block; width: 100px; height: 100px; margin: 50px auto 10px; background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/info_program9.png);}
   #info_program .lesson .part h5::after {content: ''; display: block; width: 1px; height: 30px; margin: 20px auto -20px; background-color: #fff;}
   #info_program .lesson .part div>ul {display: table; table-layout: fixed; width: 100%;}
   #info_program .lesson .part div>ul>li {display: table-cell; width: 25%; text-align: center;}
   #info_program .lesson .part div>ul>li::before {content: ''; display: block; width: 1px; height: 30px; margin: -20px auto 30px; background-color: #fff;}
   #info_program .lesson .part div>ul>li>h6 {width: 80%; margin: 0 auto 20px; padding: 3px 0; font-weight: 400; background-color: #C31725; border-radius: 30px;}
   #info_program .lesson .part div>ul>li>ul {display: inline-block; text-align: left;}
-  #info_program .lesson .part div>ul>li>ul>li {}
-
-  
   #info_program .schedule h4 {margin-bottom: -4px; padding: 5px 20px 8px;}
   #info_program .schedule .popup .close {top: 20px; height: 30px;}
   #info_program .schedule .popup .close span {width: 30px;}
   #info_program .schedule table {display: block; padding: 30px 50px;}
   #info_program .schedule table th, #info_program .schedule table td {padding: 7px 30px;}
-  #info_program .schedule .popup_btn {margin-bottom: -100px; padding: 150px 0; background-image: url(../images/info_program2.jpg);}
-  #info_program .schedule .popup_btn button {padding: 20px 40px;}
+  #info_program .schedule .popup_btn, #info_membership #experience .btn {margin-bottom: -100px; padding: 150px 0; background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/info_program2.jpg);}
+  #info_program .schedule .popup_btn button, #info_membership #experience .btn a {padding: 20px 40px;}
+  #info_facility .explain, #info_membership .explain {margin: 30px 0 50px;}
+  #info_facility .r_txt .explain {text-align: justify;}
+  #info_facility #studio .r_txt {margin-top: 50px;}
+  #info_facility #studio .analysis {margin-bottom: 80px;}
+  #info_facility #studio .procedure li img {width: 90px;}
+  #info_facility #studio .procedure li p {width: 90px; margin-top: 25px;}
+  #info_facility #studio .procedure li .next, #info_membership #benefit .procedure li .next {position: absolute; right: 20%; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; background-position: 0 -78px;}
+  #info_facility #fitness h5 {margin-top: 30px;}
+  #info_facility #fitness .explain {margin-top: 20px;}
+  #info_facility #fitness .img img {width: 31%;}
+  #info_facility #fitness .img img:nth-child(2) {margin: 0 3%;}
+  #info_facility #short_game .explain {margin-bottom: 0;}
+  #info_membership .r_txt {width: 75%;}
+  #info_membership #education table {position: relative; width: 901px; height: 401px; margin: 0 auto; background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership2.png); background-repeat: no-repeat;}
+  #info_membership #education th {line-height: 401px;}
+  #info_membership #education td {position: absolute;}
+  #info_membership #education tbody tr:nth-child(1) td {left: 0; top: 0;}
+  #info_membership #education tbody tr:nth-child(2) td {right: 0; top: 0;}
+  #info_membership #education tbody tr:nth-child(3) td {left: 0; bottom: 0;}
+  #info_membership #education tbody tr:nth-child(4) td {right: 0;bottom: 0;}
+  #info_membership #tuition h4 {margin-bottom: 30px;}
+  #info_membership #tuition .txt {float: left; width: 47.5%; margin-right: 5%;}
+  #info_membership #tuition table {float: right; width: 47.5%; margin-top: 32.4px;}
+  #info_membership #tuition th, #info_membership #tuition td {padding: 20px 0;}
+  #info_membership #benefit h4 {margin: 100px 0 40px;}
+  #info_membership #benefit .r_txt {float: inherit;}
+  #info_membership #benefit .r_txt>ul>li {margin-bottom: 20px;}
+  #info_membership #benefit .r_txt>ul>li>span {width: 135px; margin-right: 30px; line-height: 45px;}
+  #info_membership #benefit .procedure {margin-top: 20px;}
+  #info_membership #benefit .procedure li img, #info_membership #benefit .procedure li p {width: 120px; margin-top: 25px;}
+  #info_membership #benefit .procedure li .next {right: 6%;}
+  #info_membership #benefit figure {margin-top: 50px;}
+  #info_membership #benefit figure figcaption {width: 45%; margin: -15px 0 0 5%;}
+  #info_membership #benefit .procedure li img, #info_membership #benefit .procedure li p {width: 120px;}
+}
+@media screen and (min-width: 1150px){
+  .sub_common .r_txt {width: 50%;}
+  #intro_staff .coach p {margin-top: 7%;}
+  #intro_staff .coach img {margin: 0 50px 0 -115px;}
+  #intro_staff .coach .profile {float: left; margin-top: 60px;}
+  #intro_staff .coach h3 {position: relative; top: 0; margin-bottom: 30px;}
+  #info_program .professional .txt>div {width: initial;}
+  #info_membership #benefit .explain {float: left; width: 37.5%; margin: 0 2.5% 0 0;}
+  #info_membership #benefit .r_txt {float: right; width: 60%;}
+  #info_membership #benefit .procedure li .next {right: 0;}
 }
 @media screen and (min-width: 1400px){
   #intro_ceo .key figure, #intro_ceo .key figure img {height: 500px;}
@@ -169,13 +224,10 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #intro_ceo .seong .key figure figcaption::before {left: -20%;}
   #intro_ceo .seong .key figure figcaption::after {right: -20%;}
   #intro_staff .staff li figure img {height: 380px;}
+  #info_membership .r_txt {width: 50%;}
+  #info_membership #benefit .procedure li .next {right: 15%;}
 }
-@media screen and (min-width: 1150px){
-  #intro_staff .coach p {margin-top: 7%;}
-  #intro_staff .coach img {margin: 0 50px 0 -115px;}
-  #intro_staff .coach .profile {float: left; margin-top: 60px;}
-  #intro_staff .coach h3 {position: relative; top: 0; margin-bottom: 30px;}
-}
+
 
 /* tablet 버전 */
 @media screen and (max-width: 960px){
@@ -184,7 +236,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .go_right .arrow_ico {top: 5px;}
   
   /* font-size */
-  .font72 {font-size: 32px;}
+  .font72, .font60 {font-size: 32px;}
   .font40 {font-size: 21px;}
   .font36 {font-size: 19px;}
   .font32 {font-size: 18px;}
@@ -200,9 +252,9 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   
   #intro_vision #jump>div>p {margin: 20px 0 30px;}
   #intro_vision #solution h4 {margin-bottom: 20px;}
-  #intro_vision #solution li p {width: 90%; margin: 15px auto 30px;}
-  #intro_vision #solution li strong {display: inline-block; transform: translateY(-18px); margin-right: 5%;}
-  #intro_vision #solution li span {display: inline-block;}
+  #intro_vision #solution li p, #info_facility #gdr li p {width: 90%; margin: 15px auto 30px;}
+  #intro_vision #solution li strong, #info_facility #gdr li strong {display: inline-block; transform: translateY(-18px); margin-right: 5%;}
+  #intro_vision #solution li span, #info_facility #gdr li span {display: inline-block;}
   
   #intro_ceo .key {width: 90%; margin: 0 auto;}
   #intro_ceo .key figure img {position: absolute; right: 0; top: 0; width: auto; height: 440px;}
@@ -244,13 +296,34 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #info_program .schedule thead th:first-child, #info_program .schedule tbody td:first-child {width: 20%;}
   #info_program .schedule thead th:last-child, #info_program .schedule tbody td:last-child {width: 69%;}
   #info_program .schedule tr.team td:last-child {width: 72%;}
-  #info_program .schedule .popup_btn {margin-bottom: -50px; padding: 70px 0; background-image: url(../images/info_program2_m.jpg);}
-  #info_program .schedule .popup_btn button {padding: 10px 20px;}
+  #info_program .schedule .popup_btn, #info_membership #experience .btn {margin-bottom: -50px; padding: 70px 0; background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/info_program2_m.jpg);}
+  #info_program .schedule .popup_btn button, #info_membership #experience .btn a {padding: 10px 20px;}
+  
+  #info_facility .explain, #info_membership .explain {margin: 15px 0 20px;}
+  #info_facility #studio .r_txt {margin-top: 20px;}
+  #info_facility #studio .analysis {margin-bottom: 30px;}
+  #info_facility #studio .procedure li img, #info_facility #studio .procedure li p {width: 60px; margin-top: 10px;}
+  #info_facility #studio .procedure {width: 450px;}
+  #info_facility #studio .procedure li .next, #info_membership #benefit .procedure li .next {right: 20px; width: 20px; height: 20px; background-position: 0 -48px;}
+  #info_facility #putting img, #info_facility #short_game img {left: 50%; transform: translateX(-50%); width: auto; height: 210px;}
+  #info_facility #fitness h5 {margin-top: 15px;}
+  #info_facility #fitness .img img:not(:last-child) {margin-bottom: 15px;}
+  #info_membership #tuition .txt>p {margin-top: 15px;}
+  #info_membership #tuition table {width: 100%; margin-top: 15px;}
+  #info_membership #tuition th, #info_membership #tuition td {padding: 10px 0;}
+  #info_membership #benefit h4 {margin: 50px 0 15px;}
+  #info_membership #benefit .r_txt>ul>li {margin-bottom: 15px; line-height: 30px;}
+  #info_membership #benefit .r_txt>ul>li>span {width: 70px; margin-right: 10px;}
+  #info_membership #benefit .procedure {margin-top: 15px;}
+  #info_membership #benefit .procedure li img, #info_membership #benefit .procedure li p {width: 90px; margin-top: 10px;}
+  #info_membership #benefit .procedure li .next, #info_membership #benefit .procedure li:nth-child(3) .next {right: 25%; top: 50px; transform: initial;}
+  #info_membership #benefit figure {margin-top: 20px;}
+  #info_membership #benefit figcaption {width: 95%; margin: -15px auto 0;}
 }
 
 /* mobile 버전 */
 @media screen and (min-width: 650px){
-  #info_program .professional .process {background-image: url(../images/info_program1.jpg);}
+  #info_program .professional .process {background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/info_program1.jpg);}
   #info_program .professional .process ul {display: table; width: 100%; table-layout: fixed;}
   #info_program .professional .process li {display: table-cell; vertical-align: middle; text-align: center;}
   #info_program .professional .process li img {width: 90px; height: auto;}
@@ -262,8 +335,12 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .no649 {display: none !important;}
   .max649 {display: block !important;}
   
-  #info_program .professional .process {padding: 50px 0; background-image: url(../images/info_program1_m.jpg);}
+  #info_program .professional .process {padding: 50px 0; background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/info_program1_m.jpg);}
   #info_program .professional .process .max649 {width: 95%; height: auto;}
+  
+  #info_facility #studio>img {width: auto; height: 210px;}
+  #info_membership #benefit .procedure li {width: 50%;}
+  #info_membership #benefit .procedure li .next {right: initial; left: 62%;}
 }
 @media screen and (max-width: 490px){
   .pc_only {display: none !important;}
@@ -284,5 +361,11 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #intro_staff .staff li:nth-child(even) {margin-left: 0;}
   
   #info_program .schedule .popup div {padding: 15px 20px;}
+  
+  #info_facility #studio .procedure, #info_membership #benefit .procedure {width: 100%; max-width: 280px;}
+  #info_facility #studio .procedure li img, #info_facility #studio .procedure li p {width: 40px;}
+  #info_facility #studio .procedure li .next, #info_membership #benefit .procedure li .next {right: -3px;}
+  #info_facility #short_game img {left: -50%; transform: inherit;}
+  #info_membership #benefit .procedure li .next {left: 100px;}
 }
 
