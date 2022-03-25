@@ -22,6 +22,10 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 .sub_top h2 {display: inline-block; position: relative;}
 .sub_top h2::after {content: ''; position: absolute; right: -8px; bottom: 0; width: 12px; height: 12px; background-color: #C31725; border-radius: 50%;}
 .sub_common button {color: #fff; font-size: 18px;}
+.sub_common .select {position: relative; border: 1px solid #fff; border-radius: 5px; box-sizing: border-box;}
+.sub_common .select span {position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 15px; height: 9px; background-position: 0 -10px;}
+.sub_common select {display: block; width: 100%; height: 100%; padding: 0 10px; color: #fff; background-color: transparent; border: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; cursor: pointer;}
+
 
 /* 공통 - scroll event */
 .ready {position: relative; top: 50px; opacity: 0;}
@@ -85,12 +89,34 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 #info_membership #benefit .r_txt>ul>li>span {display: inline-block; text-align: center; border: 1px solid #fff; border-radius: 40px;}
 #info_membership #experience div.btn {background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership8.jpg);}
 
+/* sub_promote */
+#promote_HOF .button {color: #fff;}
+#promote_HOF #list .select {position: relative;}
+#promote_HOF #list .HOF_list tr {text-align: left; line-height: 1.5;}
+#promote_HOF #list .HOF_list th {font-weight: 500;}
+#promote_media {}
+#promote_media .find {position: relative;}
+#promote_media .find .select {display: inline-block;}
+#promote_media .find .input {position: absolute; right: 0; bottom: 0;}
+#promote_media .find input {width: 100%; height: 100%; padding: 0 10px; background-color: transparent; border: 1px solid #fff; border-radius: 5px; box-sizing: border-box;}
+#promote_media .find .input img {position: absolute; right: 10px; height: auto;}
+#promote_media .contents {}
+#promote_media .contents li {float: left;}
+#promote_media .contents li figcaption {}
+#promote_media .contents li figcaption p {overflow: hidden; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+#promote_media .contents li figcaption span {display: block;}
+#promote_media .pagenation {text-align: center;}
+#promote_media .contents li:hover figcaption p, #promote_media .pagenation .num.on {color: #C31724;}
+#promote_media .pagenation .prev {margin-right: 2px; background-position: 0 -31px;}
+#promote_media .pagenation .next {margin-left: 20px; background-position: 0 -58px;}
+
 /* pc 버전 */
 @media screen and (min-width: 961px){
   .no_pc {display: none !important;}
   .sub_common .go_right {margin-top: 30px;}
   .go_right .arrow_ico {top: 9px;}
   .sub_common .r_txt {float: right; width: 80%;}
+  .sub_common .select {width: 135px; height: 45px;}
   
   /* font-size */
   .font72 {font-size: 72px;}
@@ -204,6 +230,28 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #info_membership #benefit figure {margin-top: 50px;}
   #info_membership #benefit figure figcaption {width: 45%; margin: -15px 0 0 5%;}
   #info_membership #benefit .procedure li img, #info_membership #benefit .procedure li p {width: 120px;}
+  
+  #promote_HOF #list .select {left: calc(100% - 135px);}
+  #promote_HOF #list .HOF_list {display: block;}
+  #promote_HOF #list .HOF_list tr {float: left; width: 47.5%; margin: 50px 5% 0 0; padding: 30px; text-overflow: ellipsis; border: 1px solid #6C6C6C; box-sizing: border-box;}
+  #promote_HOF #list .HOF_list tr:nth-child(2n) {margin-right: 0;}
+  #promote_HOF #list .HOF_list tr.bg {background-color: #6C6C6C;}
+  #promote_HOF #list .HOF_list th, #promote_HOF #list .HOF_list td {display: block;}
+  #promote_HOF #list .HOF_list th {overflow: hidden; display: -webkit-box; height: 96px; margin-bottom: 30px; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+  #promote_HOF #list .HOF_list .date, #promote_HOF #list .HOF_list .name {margin-bottom: 10px;}
+  #promote_media .find .font21 {display: inline-block; line-height: 45px;}
+  #promote_media .find .select {position: relative; left: calc(100% - 598px);}
+  #promote_media .find .input {width: 350px; height: 45px;}
+  #promote_media .find .input img {top: 6.5px; width: 32px;}
+  #promote_media .contents li {width: 31%; margin: 50px 3.5% 0 0;}
+  #promote_media .contents li:nth-child(3n) {margin-right: 0;}
+  #promote_media .contents li figcaption {padding: 30px 15px;}
+  #promote_media .contents li figcaption p {height: 76px;}
+  #promote_media .contents li figcaption span {margin-top: 50px;}
+  #promote_media .pagenation {margin-top: 100px;}
+  #promote_media .pagenation button:nth-child(3) {margin: 0 50px;}
+  #promote_media .pagenation .prev {margin-right: 32px;}
+  #promote_media .pagenation .next {margin-left: 50px;}
 }
 @media screen and (min-width: 1150px){
   .sub_common .r_txt {width: 50%;}
@@ -215,6 +263,9 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #info_membership #benefit .explain {float: left; width: 37.5%; margin: 0 2.5% 0 0;}
   #info_membership #benefit .r_txt {float: right; width: 60%;}
   #info_membership #benefit .procedure li .next {right: 0;}
+  #promote_HOF #list .HOF_list tr {float: left; width: 23.5%; margin-right: 2%;}
+  #promote_HOF #list .HOF_list tr:nth-child(2n) {margin-right: 2%;}
+  #promote_HOF #list .HOF_list tr:nth-child(4n) {margin-right: 0;}
 }
 @media screen and (min-width: 1400px){
   #intro_ceo .key figure, #intro_ceo .key figure img {height: 500px;}
@@ -234,6 +285,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   html, body {font-size: 14px;}
   .pc_only {display: none !important;}
   .go_right .arrow_ico {top: 5px;}
+  .sub_common .select {width: 100px; height: 30px;}
   
   /* font-size */
   .font72, .font60 {font-size: 32px;}
@@ -319,9 +371,35 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #info_membership #benefit .procedure li .next, #info_membership #benefit .procedure li:nth-child(3) .next {right: 25%; top: 50px; transform: initial;}
   #info_membership #benefit figure {margin-top: 20px;}
   #info_membership #benefit figcaption {width: 95%; margin: -15px auto 0;}
+  
+  #promote_HOF #list .select {left: calc(100% - 100px);}
+  #promote_HOF #list .HOF_list {width: 100%; margin-top: 20px;}
+  #promote_HOF #list .HOF_list tr {display: block; position: relative; padding: 10px; border-top: 1px solid #6C6C6C;}
+  #promote_HOF #list .HOF_list tr:last-child {border-bottom: 1px solid #6C6C6C;}
+  #promote_HOF #list .HOF_list .date {display: inline-block; margin-right: 10px;}
+  #promote_HOF #list .HOF_list th {display: inline-block;}
+  #promote_media .contents li {width: 48%; margin-right: 4%; margin-top: 20px;}
+  #promote_media .contents li:nth-child(2n) {margin-right: 0;}
+  #promote_media .contents li figcaption {padding: 15px 10px;}
+  #promote_media .contents li figcaption p {height: 58px;}
+  #promote_media .contents li figcaption span {margin-top: 20px;}
+  #promote_media .pagenation {margin-top: 50px;}
+  #promote_media .pagenation button:nth-child(3) {margin: 0 20px;}
+  #promote_media .pagenation .prev {margin-right: 2px;}
+  #promote_media .pagenation .next {margin-left: 20px;}
+  #promote_media .find .select {margin: 10px 0;}
+  #promote_media .find .input {width: 50%; height: 28px; margin: 10px 0;}
+  #promote_media .find .input img {top: 5px; width: 18px;}
+  
 }
 
 /* mobile 버전 */
+@media screen and (min-width: 650px) and (max-width: 960px){
+  #promote_HOF #list .HOF_list td:not(:first-child) {position: absolute; top: 50%; transform: translateY(-50%);}
+  #promote_HOF #list .HOF_list .name {right: 100px;}
+  #promote_HOF #list .HOF_list .cc {right: 10px;}
+  #promote_HOF #list .HOF_list th {overflow: hidden; width: 55%; white-space: nowrap; text-overflow: ellipsis;}
+}
 @media screen and (min-width: 650px){
   #info_program .professional .process {background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/info_program1.jpg);}
   #info_program .professional .process ul {display: table; width: 100%; table-layout: fixed;}
@@ -341,6 +419,10 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #info_facility #studio>img {width: auto; height: 210px;}
   #info_membership #benefit .procedure li {width: 50%;}
   #info_membership #benefit .procedure li .next {right: initial; left: 62%;}
+  
+  #promote_HOF #list .HOF_list th {display: block; margin: 5px 0 15px;}
+  #promote_HOF #list .HOF_list td {display: block;}
+  #promote_HOF #list .HOF_list .cc {margin-top: 2px;}
 }
 @media screen and (max-width: 490px){
   .pc_only {display: none !important;}
