@@ -30,8 +30,7 @@
 .content li p {font-weight: 600;}
 
 /* article#main_vision */
-#main_vision {/*overflow: scroll;*/ height: calc(100vh - 80px);/*  -ms-overflow-style: none; IE and Edge */ /*scrollbar-width: none;  Firefox */}
-#main_vision::-webkit-scrollbar {display: none; /* Chrome, Safari, Opera*/}
+#main_vision {/height: calc(100vh - 80px);}
 #main_vision>div {position: relative;}
 #main_vision figure {overflow: hidden; position: relative;}
 #main_vision figure figcaption {position: absolute;}
