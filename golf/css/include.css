@@ -76,7 +76,7 @@ footer #logo_sns a.insta {background-position: 0 -27px;}
 footer address {display: inline-block;}
 footer address span {margin-left: 10px; padding-left: 10px; border-left: 1px solid #fff;}
 
-#back_to_top {position: fixed; right: 2%; bottom: 2%;} 
+#back_to_top {position: fixed; right: 2%; bottom: 5%; z-index: 10000;} 
 #back_to_top button {color: #fff;} 
 #back_to_top span {position: absolute; left: 50%; bottom: 20px; transform: translate(-50%); background-position: center bottom;} 
 

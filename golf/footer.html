@@ -22,6 +22,9 @@
      alert("현재 브라우저는 지원하지 않습니다. 최신 브라우저로 업데이트 해주세요!");
     </script>
    -->
+   <style>
+     footer {height: 4000px;}
+  </style>
 </head>
 <body>
 <footer id="footer">
@@ -97,6 +100,16 @@
 
 <script>
   $(function(){
+    $('#back_to_top').hide();
+    $(window).scroll(function(){
+      var windowH = $(window).height();
+      if($(this).scrollTop() > windowH){
+        $('#back_to_top').fadeIn();
+      }else{
+        $('#back_to_top').fadeOut();
+      }
+    });
+    
     $('#back_to_top').on('click',function(){
       $('html,body').animate({scrollTop:0},600);
     });
