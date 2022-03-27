@@ -25,7 +25,15 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 .sub_common .select {position: relative; border: 1px solid #fff; border-radius: 5px; box-sizing: border-box;}
 .sub_common .select span {position: absolute; right: 10px; top: 50%; transform: translateY(-50%); width: 15px; height: 9px; background-position: 0 -10px;}
 .sub_common select {display: block; width: 100%; height: 100%; padding: 0 10px; color: #fff; background-color: transparent; border: none; -webkit-appearance: none; -moz-appearance: none; appearance: none; cursor: pointer;}
-
+.sub_common .find {position: relative;}
+.sub_common .find .select {display: inline-block;}
+.sub_common .find .input {position: absolute; right: 0; bottom: 0;}
+.sub_common .find input {width: 100%; height: 100%; padding: 0 10px; background-color: transparent; border: 1px solid #fff; border-radius: 5px; box-sizing: border-box;}
+.sub_common .find .input img {position: absolute; right: 10px; height: auto;}
+.sub_common .pagenation {text-align: center;}
+.sub_common .pagenation .num.on {color: #C31724;}
+.sub_common .pagenation .prev {margin-right: 2px; background-position: 0 -31px;}
+.sub_common .pagenation .next {margin-left: 20px; background-position: 0 -58px;}
 
 /* 공통 - scroll event */
 .ready {position: relative; top: 50px; opacity: 0;}
@@ -43,7 +51,8 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 #intro_staff .staff button {float: right;}
 #intro_staff .staff button.on {color: #C31724;}
 #intro_staff .staff li {float: left;}
-#intro_staff .staff li .tit p {display: inline; padding: 5px 20px 7px; background-color: #C31724; border-radius: 5px;}
+#intro_staff .staff li .tit p {display: inline; position: relative; padding: 5px 20px 7px; background-color: #C31724; border-radius: 5px;}
+#intro_staff .staff li .tit p::after {content: ''; position: absolute; right: -54px; top: 0; width: 0; height: 0; border-bottom: 33px solid #C31724; border-top: 37px solid transparent; border-left: 30px solid #C31724; border-right: 26px solid transparent;  border-radius: 5px;}
 #intro_staff .staff li figure {position: relative; background-color: #fff; border-top: 5px solid #C31724;}
 #intro_staff .staff li figure img {width: auto; position: relative; left: 50%; transform: translateX(-50%);}
 #intro_staff .staff li figcaption {position: absolute; right: 20px; bottom: 10px; color: #222;}
@@ -94,21 +103,36 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 #promote_HOF #list .select {position: relative;}
 #promote_HOF #list .HOF_list tr {text-align: left; line-height: 1.5;}
 #promote_HOF #list .HOF_list th {font-weight: 500;}
-#promote_media {}
-#promote_media .find {position: relative;}
-#promote_media .find .select {display: inline-block;}
-#promote_media .find .input {position: absolute; right: 0; bottom: 0;}
-#promote_media .find input {width: 100%; height: 100%; padding: 0 10px; background-color: transparent; border: 1px solid #fff; border-radius: 5px; box-sizing: border-box;}
-#promote_media .find .input img {position: absolute; right: 10px; height: auto;}
-#promote_media .contents {}
 #promote_media .contents li {float: left;}
-#promote_media .contents li figcaption {}
 #promote_media .contents li figcaption p {overflow: hidden; display: -webkit-box; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
 #promote_media .contents li figcaption span {display: block;}
-#promote_media .pagenation {text-align: center;}
-#promote_media .contents li:hover figcaption p, #promote_media .pagenation .num.on {color: #C31724;}
-#promote_media .pagenation .prev {margin-right: 2px; background-position: 0 -31px;}
-#promote_media .pagenation .next {margin-left: 20px; background-position: 0 -58px;}
+#promote_media .contents li:hover figcaption p {color: #C31724;}
+
+/* notice */
+#notice .notice_list {overflow: hidden;}
+#notice .notice_list table, #notice .notice_list thead, #notice .notice_list tbody {display: block; width: 100%;}
+#notice .notice_list thead tr {border-top: 2px solid #fff;}
+#notice .notice_list tr {display: block; text-align: center; border-bottom: 1px solid #fff;}
+#notice .notice_list th, #notice .notice_list td {display: inline-block;}
+#notice .notice_list td.tit {text-align: left;}
+#notice .notice_list .num {width: 15%;}
+#notice .notice_list .tit {width: 63.5%;}
+#notice .notice_list .date {width: 20%;}
+
+/* apply */
+#apply {}
+#apply article {border-top: 2px solid #fff;}
+#apply article section {border-bottom: 1px solid #fff;}
+#apply article section table, #apply article section tbody {display: block;}
+#apply article section tr {display: block;}
+#apply article section th {width: 15%; text-align: left;}
+#apply article section td {}
+#apply article section input, #apply article section textarea {padding: 10px; color: #fff; background-color: transparent; border: 1px solid #fff; border-radius: 5px; box-sizing: border-box;}
+#apply article section td.clearfix input {float: left; width: initial;}
+#apply article section td.clearfix label {float: left;}
+#apply article section textarea {width: 100%;}
+#apply article section .select {display: inline-block;}
+#apply button {display: block; margin: 0 auto; text-align: center; background-color: #C31724;}
 
 /* pc 버전 */
 @media screen and (min-width: 961px){
@@ -117,6 +141,14 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .go_right .arrow_ico {top: 9px;}
   .sub_common .r_txt {float: right; width: 80%;}
   .sub_common .select {width: 135px; height: 45px;}
+  .sub_common .find .font21 {display: inline-block; line-height: 45px;}
+  .sub_common .find .select {position: relative; left: calc(100% - 598px);}
+  .sub_common .find .input {width: 350px; height: 45px;}
+  .sub_common .find .input img {top: 6.5px; width: 32px;}
+  .sub_common .pagenation {margin-top: 80px;}
+  .sub_common .pagenation button:nth-child(3) {margin: 0 50px;}
+  .sub_common .pagenation .prev {margin-right: 32px;}
+  .sub_common .pagenation .next {margin-left: 50px;}
   
   /* font-size */
   .font72 {font-size: 72px;}
@@ -239,19 +271,27 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #promote_HOF #list .HOF_list th, #promote_HOF #list .HOF_list td {display: block;}
   #promote_HOF #list .HOF_list th {overflow: hidden; display: -webkit-box; height: 96px; margin-bottom: 30px; text-overflow: ellipsis; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
   #promote_HOF #list .HOF_list .date, #promote_HOF #list .HOF_list .name {margin-bottom: 10px;}
-  #promote_media .find .font21 {display: inline-block; line-height: 45px;}
-  #promote_media .find .select {position: relative; left: calc(100% - 598px);}
-  #promote_media .find .input {width: 350px; height: 45px;}
-  #promote_media .find .input img {top: 6.5px; width: 32px;}
   #promote_media .contents li {width: 31%; margin: 50px 3.5% 0 0;}
   #promote_media .contents li:nth-child(3n) {margin-right: 0;}
   #promote_media .contents li figcaption {padding: 30px 15px;}
   #promote_media .contents li figcaption p {height: 76px;}
   #promote_media .contents li figcaption span {margin-top: 50px;}
-  #promote_media .pagenation {margin-top: 100px;}
-  #promote_media .pagenation button:nth-child(3) {margin: 0 50px;}
-  #promote_media .pagenation .prev {margin-right: 32px;}
-  #promote_media .pagenation .next {margin-left: 50px;}
+  
+  #notice .notice_list {margin-top: 50px;}
+  #notice .notice_list tr {width: calc(100% - 40px); padding: 15px 20px;}
+  
+  #apply>p {margin-top: 50px;}
+  #apply article section {padding: 50px;}
+  #apply article section h4 {margin-bottom: 60px;}
+  #apply article section tr {margin-top: 30px;}
+  #apply article section th {display: inline-block; width: 15%;}
+  #apply article section td {display: inline-block; width: calc(85% - 30px);}
+  #apply article section input {height: 45px; margin-left: 30px;}
+  #apply article section input.input2, #apply article section .special, #apply article section .select {margin-left: 10px;}
+  #apply article section td.clearfix label {margin-left: 20px; line-height: 45px;}
+  #apply article section textarea {height: 250px; margin-left: 30px;}
+  #apply #collect p span {padding-left: 20px;}
+  #apply button {margin-top: 50px; padding: 20px 100px;}
 }
 @media screen and (min-width: 1150px){
   .sub_common .r_txt {width: 50%;}
@@ -266,6 +306,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #promote_HOF #list .HOF_list tr {float: left; width: 23.5%; margin-right: 2%;}
   #promote_HOF #list .HOF_list tr:nth-child(2n) {margin-right: 2%;}
   #promote_HOF #list .HOF_list tr:nth-child(4n) {margin-right: 0;}
+  #apply article section input.input2, #apply article section .special, #apply article section .select {margin-left: 30px;}
 }
 @media screen and (min-width: 1400px){
   #intro_ceo .key figure, #intro_ceo .key figure img {height: 500px;}
@@ -286,6 +327,13 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .pc_only {display: none !important;}
   .go_right .arrow_ico {top: 5px;}
   .sub_common .select {width: 100px; height: 30px;}
+  .sub_common .find .select {margin: 10px 0;}
+  .sub_common .find .input {width: 50%; height: 28px; margin: 10px 0;}
+  .sub_common .find .input img {top: 5px; width: 18px;}
+  .sub_common .pagenation {margin-top: 30px;}
+  .sub_common .pagenation button:nth-child(3) {margin: 0 20px;}
+  .sub_common .pagenation .prev {margin-right: 2px;}
+  .sub_common .pagenation .next {margin-left: 20px;}
   
   /* font-size */
   .font72, .font60 {font-size: 32px;}
@@ -351,6 +399,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #info_program .schedule .popup_btn, #info_membership #experience .btn {margin-bottom: -50px; padding: 70px 0; background-image: url(https://jeonaryeon.github.io/since2021_publishing/golf/images/info_program2_m.jpg);}
   #info_program .schedule .popup_btn button, #info_membership #experience .btn a {padding: 10px 20px;}
   
+  #info_facility {overflow: hidden;}
   #info_facility .explain, #info_membership .explain {margin: 15px 0 20px;}
   #info_facility #studio .r_txt {margin-top: 20px;}
   #info_facility #studio .analysis {margin-bottom: 30px;}
@@ -383,14 +432,24 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #promote_media .contents li figcaption {padding: 15px 10px;}
   #promote_media .contents li figcaption p {height: 58px;}
   #promote_media .contents li figcaption span {margin-top: 20px;}
-  #promote_media .pagenation {margin-top: 50px;}
-  #promote_media .pagenation button:nth-child(3) {margin: 0 20px;}
-  #promote_media .pagenation .prev {margin-right: 2px;}
-  #promote_media .pagenation .next {margin-left: 20px;}
-  #promote_media .find .select {margin: 10px 0;}
-  #promote_media .find .input {width: 50%; height: 28px; margin: 10px 0;}
-  #promote_media .find .input img {top: 5px; width: 18px;}
   
+  #notice .notice_list {margin-top: 20px;}
+  #notice .notice_list tr {width: calc(100% - 20px); padding: 10px;}
+  #notice .notice_list td.tit {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+  
+  #apply>p {margin-top: 20px;}
+  #apply article section {padding: 20px;}
+  #apply article section h4 {margin-bottom: 25px;}
+  #apply article section tr {margin-top: 15px;}
+  #apply article section th, #apply article section td {display: block; width: 100%;}
+  #apply article section input {height: 28px; margin-top: 10px;}
+  #apply article section td.clearfix label {margin: 10px 0 0 10px; line-height: 28px;}
+  #apply article section td.clearfix label:first-of-type {margin-right: 15px;}
+  #apply article section textarea {height: 150px; margin-top: 10px;}
+  #apply article section .special {margin: 0 10px;}
+  #apply article section .select {margin-left: 15px;}
+  #apply #collect p span {padding-left: 15px;}
+  #apply button {margin-top: 20px; padding: 10px 50px;}
 }
 
 /* mobile 버전 */
@@ -449,5 +508,13 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #info_facility #studio .procedure li .next, #info_membership #benefit .procedure li .next {right: -3px;}
   #info_facility #short_game img {left: -50%; transform: inherit;}
   #info_membership #benefit .procedure li .next {left: 100px;}
+  
+  #notice .notice_list .num {display: none;}
+  #notice .notice_list .tit, #notice .notice_list .date {display: block; width: 100%; text-align: left;}
+  #notice .notice_list td.tit {width: 90%;}
+  
+  #apply article section input {width: 100%;}
+  #apply article section .special {margin: 10px 0 0;}
+  #apply article section .select {display: block; margin: 10px 0 0;}
 }
 

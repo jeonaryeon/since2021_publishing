@@ -79,7 +79,6 @@
         <button>FAMILY SITE +</button>
       </div>
 
-
       <address>
         (주)골프존
         <span>레드베터아카데미</span>
@@ -90,6 +89,19 @@
       <p class="copyright">COPYRIGHT &copy; GOLFZON. CO.,LTD. ALL RIGHTS RESERVED</p>
     </div>
   </div>
+  
+  <div id="back_to_top">
+    <button><span class="ico arrow_ico">top</span>Back to Top</button>
+  </div>
 </footer>
+
+<script>
+  $(function(){
+    $('#back_to_top').on('click',function(){
+      $('html,body').animate({scrollTop:0},600);
+    });
+  });
+</script>
+
 </body>
 </html>
