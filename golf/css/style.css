@@ -40,7 +40,6 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 .active {top: 0; opacity: 1; transition: all 1s;}
 
 /* sub - intro */
-#intro_vision #jump figure figcaption {margin: -15px 0 0 5%;}
 #intro_ceo .key {position: relative;}
 #intro_ceo .message p {text-align: justify;}
 #intro_staff .coach {display: inline-block; position: relative; left: 50%; transform: translateX(-50%);}
@@ -120,7 +119,6 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
 #notice .notice_list .date {width: 20%;}
 
 /* apply */
-#apply {}
 #apply article {border-top: 2px solid #fff;}
 #apply article section {border-bottom: 1px solid #fff;}
 #apply article section table, #apply article section tbody {display: block;}
@@ -169,6 +167,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #intro_vision #jump>div {float: right;}
   #intro_vision #jump>div>p {margin: 50px 0 80px;}
   
+  #intro_vision #jump figure figcaption {margin: -15px 0 0 5%;}
   #intro_vision #solution h4 {margin-bottom: 50px;}
   #intro_vision #solution li, #info_facility #gdr li {float: left; width: 31%; text-align: center;}
   #intro_vision #solution li:nth-child(2), #info_facility #gdr li:nth-child(2) {margin: 80px 3.5% 0;}
@@ -326,6 +325,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   html, body {font-size: 14px;}
   .pc_only {display: none !important;}
   .go_right .arrow_ico {top: 5px;}
+  .explain {text-align: justify;}
   .sub_common .select {width: 100px; height: 30px;}
   .sub_common .find .select {margin: 10px 0;}
   .sub_common .find .input {width: 50%; height: 28px; margin: 10px 0;}
@@ -351,6 +351,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   .sub_common article:not(first-child) {margin-top: 50px;}
   
   #intro_vision #jump>div>p {margin: 20px 0 30px;}
+  #intro_vision #jump figure figcaption {width: 90%; margin: -15px auto 0; text-align: justify;}
   #intro_vision #solution h4 {margin-bottom: 20px;}
   #intro_vision #solution li p, #info_facility #gdr li p {width: 90%; margin: 15px auto 30px;}
   #intro_vision #solution li strong, #info_facility #gdr li strong {display: inline-block; transform: translateY(-18px); margin-right: 5%;}
@@ -400,7 +401,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #info_program .schedule .popup_btn button, #info_membership #experience .btn a {padding: 10px 20px;}
   
   #info_facility {overflow: hidden;}
-  #info_facility .explain, #info_membership .explain {margin: 15px 0 20px;}
+  #info_facility .explain, #info_membership .explain {margin: 15px 0 20px; text-align: justify;}
   #info_facility #studio .r_txt {margin-top: 20px;}
   #info_facility #studio .analysis {margin-bottom: 30px;}
   #info_facility #studio .procedure li img, #info_facility #studio .procedure li p {width: 60px; margin-top: 10px;}
@@ -437,6 +438,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #notice .notice_list tr {width: calc(100% - 20px); padding: 10px;}
   #notice .notice_list td.tit {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
   
+  #apply p {text-align: justify;}
   #apply>p {margin-top: 20px;}
   #apply article section {padding: 20px;}
   #apply article section h4 {margin-bottom: 25px;}
