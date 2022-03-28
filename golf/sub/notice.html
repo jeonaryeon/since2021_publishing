@@ -2,8 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <title>레드베터아카데미 공지사항</title>
   
   <!-- css 연결 -->
@@ -12,7 +11,6 @@
 
   <!-- js 연결 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://jeonaryeon.github.io/since2021_publishing/golf/js/common.js"></script>
 </head>
 <body>
@@ -25,29 +23,30 @@
   
   <!-- 본문 start -->
   <section id="notice" class="sub_common container">
-    <div class="find">
+    <h3 class="hidden">공지사항</h3>
+    <div class="find ready">
       <p class="font21">전체 27건</p>
       <div class="select">
-        <select name="searchStyle" id="">
+        <select name="searchStyle" id="searchStyle">
           <option value="title" selected>제목</option>
           <option value="content">내용</option>
         </select>
         <span class="ico arrow_ico">select style</span>
       </div>  
-      <p class="input"><input type="text" name="search" id="search" placeholder="Search"><img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/magnifying-glass.png" alt=""></p>
+      <p class="input"><input type="text" name="search" id="search" placeholder="Search"><img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/magnifying-glass.png" alt="돋보기 아이콘"></p>
     </div>
     
-    <div class="notice_list ">
+    <div class="notice_list">
       <table>
         <caption>공지사항</caption>
-        <thead>
+        <thead class="ready">
           <tr class="font21">
             <th class="num">번호</th>
             <th class="tit">제목</th>
             <th class="date">날짜</th>
           </tr>
         </thead>
-        <tbody>
+        <tbody class="ready">
           <tr>
             <td class="num">27</td>
             <td class="tit">개인정보처리방침 변경내용 공지</td>

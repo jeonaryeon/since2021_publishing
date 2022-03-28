@@ -30,12 +30,12 @@
 .content li p {font-weight: 600;}
 
 /* article#main_vision */
-#main_vision {/height: calc(100vh - 80px);}
+#main_vision {height: calc(100vh - 80px);}
 #main_vision>div {position: relative;}
 #main_vision figure {overflow: hidden; position: relative;}
 #main_vision figure figcaption {position: absolute;}
 
-#main_vision .scroll {position: absolute; left: 50%; bottom: 40px; transform: translate(-50%); font-size: 0.9rem;}
+#main_vision .scroll {position: absolute; left: 50%; bottom: 40px; transform: translate(-50%); font-size: 0.9rem; z-index: 5000;}
 #main_vision .scroll::after {content: ''; position: absolute; left: 50%; bottom: -40px; transform: translate(-50%);  width: 1px; height: 30px; background-color: #fff; animation: mainScrollLine 1.5s infinite ease-in-out reverse;}
 
 /* article#main_program */

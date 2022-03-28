@@ -2,8 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <title>레드베터아카데미 입회안내</title>
   
   <!-- css 연결 -->
@@ -24,13 +23,14 @@
   
   <!-- 본문 start -->
   <section id="info_membership" class="sub_common">
+    <h3 class="hidden">입회안내</h3>
     <article id="" class="container clearfix">
       <div class="r_txt">
         <h3 class="font60 ready">최적의 환경과 <br class="no_mobile">정교한 교육 프로그램으로 <br class="no_mobile">세계적인 프로 골퍼 양성</h3>
         <p class="explain ready">골프아카데미의 새로운 패러다임인 골프존 레드베터아카데미를 만들고 세계적인 골프선수 및 지도자를 육성하여 전세계를 대표하는 아카데미 브랜드로 성장하는 것을 목표로 합니다.<br><br>
         골프존 레드베터아카데미는 체계적이고 전문적인 교육 프로그램 및 골프존의 기술력과 노하우를 집대성한 골프 토탈솔루션을 기반으로 세계 무대에 설 수 있는 우수한 선수들을 발굴하고 키워내는 역할을 하고 있습니다.<br><br>
         세계 최고의 골프 토탈솔루션과 우수한 코칭스탭, 그리고 선수들을 체계적으로 관리 성장시키는 매니지먼트 프로그램을 지속적으로 개발하고 연구하며 글로벌 골프산업의 한 축을 담당할 것입니다. 골프존 레드베터아카데미와 함께 대한민국 골프의 미래를 이끌어 세계 무대의 주인공인 당신을 기다립니다.</p>
-        <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership1.jpg" alt="" class="ready">
+        <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership1.jpg" alt="신청서 작성 이미지" class="ready">
       </div>
     </article>
     
@@ -59,7 +59,7 @@
           </tr>
         </tbody>
       </table>
-      <div class="no_pc ready"><img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership2_m.png" alt=""></div>
+      <div class="no_pc ready"><img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership2_m.png" alt="기본 소양 골프존 핵심가치 스포츠 mental 마인드 컨트롤 국제 매너"></div>
     </article>
     
     <article id="tuition" class="container">
@@ -109,22 +109,22 @@
               <span>선발 절차</span>
               <ul class="procedure clearfix">
                 <li>
-                  <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership3.png" alt="">
+                  <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership3.png" alt="신청접수 아이콘">
                   <p>신청접수</p>
                   <span class="ico arrow_ico next">next</span>
                 </li>
                 <li>
-                  <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership4.png" alt="">
+                  <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership4.png" alt="서류 전형 아이콘">
                   <p>1차 서류 전형</p>
                   <span class="ico arrow_ico next">next</span>
                 </li>
                 <li>
-                  <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership5.png" alt="">
+                  <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership5.png" alt="가정 방문 및 부모님 면담 아이콘">
                   <p>2차 가정 방문 및 <br>부모님 면담</p>
                   <span class="ico arrow_ico next">next</span>
                 </li>
                 <li>
-                  <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership6.png" alt="">
+                  <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership6.png" alt="최종 선발 서류 아이콘">
                   <p>최종 선발</p>
                 </li>
               </ul>
@@ -133,17 +133,17 @@
         </div>
       </div>
       <figure>
-        <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership7.jpg" alt="" class="ready">
+        <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/info_membership7.jpg" alt="장학금 관련 이미지" class="ready">
         <figcaption class="ready">
           유원 골프재단에서는 골프 꿈나무 발굴의 일환으로 연간 선수별 1,500만원 ~. 4,500만원의 장학금을 지급하고 있습니다. 
           <p>
-            <a href="" class="go_right ready">유원골프재단 바로가기<span class="ico arrow_ico">right arrow</span></a>
+            <a href="#" class="go_right ready">유원골프재단 바로가기<span class="ico arrow_ico">right arrow</span></a>
           </p>
         </figcaption>
       </figure>
     </article>
     
-    <article id="experience" class="">
+    <article id="experience">
       <div class="container">
           <h3 class="font40 ready">일일체험</h3>
           <ul class="explain ready">
@@ -164,6 +164,12 @@
       
       $('#footer').load('https://jeonaryeon.github.io/since2021_publishing/golf/footer.html');
       return false
+    });
+    
+    $(function(){
+      $('#benefit figure a').on('click',function(){
+        event.preventDefault();
+      });
     });
   </script>
 </body>

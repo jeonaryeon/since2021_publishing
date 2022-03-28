@@ -2,8 +2,7 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
   <title>레드베터아카데미 체험신청</title>
   
   <!-- css 연결 -->
@@ -12,7 +11,6 @@
 
   <!-- js 연결 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="https://jeonaryeon.github.io/since2021_publishing/golf/js/common.js"></script>
 </head>
 <body>
@@ -25,27 +23,27 @@
   
   <!-- 본문 start -->
   <section id="apply" class="sub_common container">
-    <h3 class="font72">아래 내용을 작성해 신청해주시면, <br class="pc_only">연락드리도록 하겠습니다.</h3>
-    <p>골프존 레드베터아카데미만의 최적의 환경과 <br class="pc_only">교육시스템에 대해 궁금하신 학부모님과 학생들을 위해 체험을 진행하고 있습니다.</p>
+    <h3 class="font72 ready">아래 내용을 작성해 신청해주시면, <br class="pc_only">연락드리도록 하겠습니다.</h3>
+    <p class="ready">골프존 레드베터아카데미만의 최적의 환경과 <br class="pc_only">교육시스템에 대해 궁금하신 학부모님과 학생들을 위해 체험을 진행하고 있습니다.</p>
     <article>
-      <section class="">
+      <section class="ready">
         <h4 class="font32">학부모 정보를 입력하세요.</h4>
         <table>
           <caption>학부모 정보</caption>
           <tbody>
             <tr>
               <th>성함</th>
-              <td><input type="text" name="" id="" size="30"></td>
+              <td><input type="text" name="Pname" id="Pname" size="30"></td>
             </tr>
             <tr>
               <th>연락처</th>
-              <td><input type="text" name="" id="" size="30"></td>
+              <td><input type="text" name="phone" id="phone" size="30"></td>
             </tr>
             <tr>
               <th>이메일</th>
               <td>
-                <input type="text" name="" id="" size="30"> <span class="special">@</span>
-                <input type="text" name="" id="" size="30" class="input2"> 
+                <input type="text" name="email1" id="email1" size="30"> <span class="special">@</span>
+                <input type="text" name="email2" id="email2" size="30" class="input2"> 
                 <div class="select">
                   <select name="searchStyle" id="">
                     <option value="title" selected>직접입력</option>
@@ -62,18 +60,18 @@
         </table>
       </section>
       
-      <section class="">
+      <section class="ready">
         <h4 class="font32">학생 정보를 입력하세요.</h4>
         <table>
           <caption></caption>
           <tbody>
             <tr>
               <th>성함</th>
-              <td><input type="text" name="" id="" size="30"></td>
+              <td><input type="text" name="Sname" id="Sname" size="30"></td>
             </tr>
             <tr>
               <th>연락처</th>
-              <td><input type="text" name="" id="" size="30"></td>
+              <td><input type="text" name="phone" id="phone" size="30"></td>
             </tr>
             <tr>
               <th>성별</th>
@@ -86,17 +84,17 @@
             </tr>
             <tr>
               <th>선수정보 및 경력</th>
-              <td><textarea name="memo" id="memo">내용을 입력하세요</textarea></td>
+              <td><textarea name="career" id="career">내용을 입력하세요</textarea></td>
             </tr>
             <tr>
               <th>신청 사유 및 기타</th>
-              <td><textarea name="memo" id="memo">내용을 입력하세요</textarea></td>
+              <td><textarea name="reason" id="reason">내용을 입력하세요</textarea></td>
             </tr>
           </tbody>
         </table>
       </section>
       
-      <section id="collect">
+      <section id="collect" class="ready">
         <h4 class="font32">개인정보 수집 및 이용 동의</h4>
         <p>
           (주) 골프존은 골프존 레드베터아카데미 체험 신청을 원하는 고객님을 대상으로 아래와 같은 개인정보를 수집하고 있습니다.<br><br>
@@ -112,7 +110,7 @@
         </p>
       </section>
     </article>
-    <button class="font32">신청하기</button>
+    <button class="font32 ready">신청하기</button>
   </section>
   <!-- 본문 end -->
   

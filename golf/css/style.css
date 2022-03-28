@@ -195,7 +195,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #intro_location .txt address span {color: #9B9B9B; margin-right: 20px;}
   #intro_location .txt p {float: left;}
   #intro_location .txt p:nth-of-type(1) {margin: 0 50px;}
-  #intro_location #map iframe {height: 600px;}
+  #intro_location .map iframe {height: 600px;}
   #intro_staff .certification img {margin-top: 50px;}
   #intro_staff .coach p {float: left; position: relative; margin-top: 12%; font-size: 60px;}
   #intro_staff .coach p span {margin-left: 45px;}
@@ -368,7 +368,7 @@ a.go_right:hover .arrow_ico::after {content: ''; position: absolute; right: -5px
   #intro_location .txt address {margin: 15px 0 10px;}
   #intro_location .txt p {margin-bottom: 10px;}
   #intro_location .txt p:last-child {margin-bottom: 20px;}
-  #intro_location #map iframe {height: 350px;}
+  #intro_location .map iframe {height: 350px;}
   
   #intro_staff .certification img {margin-top: 20px;}
   #intro_staff .coach {position: relative;}
