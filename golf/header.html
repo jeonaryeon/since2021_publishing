@@ -59,13 +59,11 @@
       </ul>
     </div>
     
-    <input id="Allmenu" type="checkbox" />
-    
-    <label class="Hmenu" for="Allmenu">
+    <button class="Hmenu">
       <span>line</span>
       <span>line</span>
       <span>line</span>
-    </label>
+    </button>
     
     <div class="Allmenu">
       <div class="menu_container clearfix">
@@ -120,15 +118,24 @@
       // 모바일버전
       var documentW = $(document).width();
       if(documentW <= 961){
+        $('.Hmenu').on('click',function(){
+          $('.Allmenu').toggleClass('show');
+          $(this).toggleClass('close');
+          if(!$(this).hasClass('close')){
+            $('.lnb').hide();
+            $('#rnb>ul>li>p').removeClass('current');
+          }
+        });
+        
         $('#rnb>ul>li>p').on('click', function(){
           if(!$(this).hasClass('current')){
-            $(this).parent().siblings().find('.lnb').hide();
+            $(this).parent().siblings().find('.lnb').slideUp();
             $(this).parent().siblings().find('p').removeClass('current');
             $(this).addClass('current');
-            $(this).siblings('.lnb').show();
+            $(this).siblings('.lnb').slideDown();
           }else{
             $(this).removeClass('current');
-            $(this).siblings('.lnb').hide();
+            $(this).siblings('.lnb').slideUp();
           }
         });
       }

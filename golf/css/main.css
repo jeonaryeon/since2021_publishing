@@ -30,7 +30,7 @@
 .content li p {font-weight: 600;}
 
 /* article#main_vision */
-#main_vision {height: calc(100vh - 80px);}
+#main_vision {overflow: hidden; height: calc(100vh - 80px);}
 #main_vision>div {position: relative;}
 #main_vision figure {overflow: hidden; position: relative;}
 #main_vision figure figcaption {position: absolute;}
@@ -141,6 +141,7 @@
   #main_vision figure img {transform: translateX(-50%); width: auto; height: 100%;}
   #main_vision figure:nth-child(2) img, #main_vision figure:nth-child(3) img {position: relative; left: 50%;}
   #main_vision figure figcaption {left: 5%; top: 22%; width: 90%;}
+  #main_vision .scroll {bottom: 47px;}
   
   #main_program .content {left: 5vw; top: -35px;}
   #main_program .content ul {margin-top: 30px;}
