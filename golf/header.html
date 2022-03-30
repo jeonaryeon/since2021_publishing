@@ -117,13 +117,13 @@
     $(function(){
       // 모바일버전
       var documentW = $(document).width();
+      $('.Hmenu').on('click',function(){
+        $('.Allmenu').toggleClass('show');
+        $(this).toggleClass('close');
+      });
+      
       function menu(){
-        $('.Hmenu').on('click',function(){
-          $('.Allmenu').toggleClass('show');
-          $(this).toggleClass('close');
-        });
-
-        if(documentW <= 961){
+        if(documentW <= 960){
           $('.Hmenu').on('click',function(){
             if(!$(this).hasClass('close')){
               $('.lnb').hide();
@@ -133,13 +133,13 @@
 
           $('#rnb>ul>li>p').on('click', function(){
             if(!$(this).hasClass('current')){
-              $(this).parent().siblings().find('.lnb').slideUp();
+              $(this).parent().siblings().find('.lnb').stop().slideUp();
               $(this).parent().siblings().find('p').removeClass('current');
               $(this).addClass('current');
-              $(this).siblings('.lnb').slideDown();
+              $(this).siblings('.lnb').stop().slideDown();
             }else{
               $(this).removeClass('current');
-              $(this).siblings('.lnb').slideUp();
+              $(this).siblings('.lnb').stop().slideUp();
             }
           });
         }
@@ -148,6 +148,7 @@
       menu();
       
       $(window).resize(function(){
+        var documentW = $(document).width();
         menu();
       });
     }); 
