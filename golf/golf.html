@@ -182,24 +182,50 @@
   
   <script>
     // #main_vision scroll slide
-    var swiper = new Swiper('.swiper-container', {
-      speed: 500,
-      direction: 'vertical',
-      mousewheel: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      on: {
-        reachEnd: function () {
-          swiper.mousewheel.disable();
-        }
+    
+    // pc버전
+    $(function(){
+      var documentW = $(document).width();
+      if(documentW > 960){
+        var swiper = new Swiper('.swiper-container', {
+          speed: 500,
+          direction: 'vertical',
+          mousewheel: true,
+          on: {
+            reachEnd: function () {
+              swiper.mousewheel.disable();
+            }
+          }
+        });
+        window.addEventListener('wheel', function (event) {
+          if (event.deltaY < 0) {
+            swiper.mousewheel.enable();
+          } else if (event.deltaY > 0) {
+          }
+        });
       }
     });
-    window.addEventListener('wheel', function (event) {
-      if (event.deltaY < 0) {
-        swiper.mousewheel.enable();
-      } else if (event.deltaY > 0) {
+    
+    // mobile버전
+    $(function(){
+      var documentW = $(document).width();
+      if(documentW <= 960){
+      var swiper = new Swiper('.swiper-container', {
+        speed: 500,
+        direction: 'vertical',
+        mousewheel: true,
+        on: {
+          reachEnd: function () {
+            swiper.touchmove.disable();
+          }
+        }
+      });
+      window.addEventListener('touchmove', function (event) {
+        if (event.deltaY < 0) {
+          swiper.touchmove.enable();
+        } else if (event.deltaY > 0) {
+        }
+      });
       }
     });
   </script>
