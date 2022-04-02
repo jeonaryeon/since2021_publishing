@@ -43,7 +43,7 @@
             <strong>새로운 골프 <br class="mobile_only">아카데미의 패러다임을 설계합니다.</strong>
           </figcaption>
         </figure>
-        <figure class="swiper-slide">
+        <figure class="swiper-slide pc_only">
           <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/main_vision2.jpg" alt="골프장">
           <figcaption>
             체계화된 교육 프로그램과 <br class="mobile_only">최적화된 선수관리를 통하여 <br>
@@ -51,7 +51,7 @@
             <strong>세계 무대에 우뚝 서는 <br class="mobile_only">우수한 골프 선수를 만드는 <br class="mobile_only">최적의 시스템.</strong>
           </figcaption>
         </figure>
-        <figure class="swiper-slide">
+        <figure class="swiper-slide pc_only">
           <img src="https://jeonaryeon.github.io/since2021_publishing/golf/images/main_vision3.jpg" alt="골프장">
           <figcaption>
             골프존의 축적된 Know-How와 <br class="mobile_only">인프라를 바탕으로 설계된 <br>
@@ -203,29 +203,6 @@
           } else if (event.deltaY > 0) {
           }
         });
-      }
-    });
-    
-    // mobile버전
-    $(function(){
-      var documentW = $(document).width();
-      if(documentW <= 960){
-      var swiper = new Swiper('.swiper-container', {
-        speed: 500,
-        direction: 'vertical',
-        mousewheel: true,
-        on: {
-          reachEnd: function () {
-            swiper.touchmove.disable();
-          }
-        }
-      });
-      window.addEventListener('touchmove', function (event) {
-        if (event.deltaY < 0) {
-          swiper.touchmove.enable();
-        } else if (event.deltaY > 0) {
-        }
-      });
       }
     });
   </script>
