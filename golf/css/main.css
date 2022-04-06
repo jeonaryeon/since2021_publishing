@@ -30,11 +30,9 @@
 .content li p {font-weight: 600;}
 
 /* article#main_vision */
-#main_vision {overflow: hidden;}
 #main_vision>div {position: relative;}
 #main_vision figure {overflow: hidden; position: relative;}
 #main_vision figure figcaption {position: absolute;}
-
 #main_vision .scroll {position: absolute; left: 50%; bottom: 40px; transform: translate(-50%); font-size: 0.9rem; z-index: 5000;}
 #main_vision .scroll::after {content: ''; position: absolute; left: 50%; bottom: -40px; transform: translate(-50%);  width: 1px; height: 30px; background-color: #fff; animation: mainScrollLine 1.5s infinite ease-in-out reverse;}
 
@@ -86,7 +84,8 @@
   
   #mainpage article h3 {margin-bottom: 30px;}
   
-  #main_vision, #main_vision figure {height: calc(100vh - 80px);}
+  #main_vision {overflow: hidden; height: calc(100vh - 80px);}
+  #main_vision figure {height: calc(100vh - 80px);}
   #main_vision figure figcaption {left: 5vw; top: 50%; transform: translateY(-50%);}
   
   #main_program .content {left: 6vw; top: -30px;}
@@ -137,16 +136,16 @@
   #mainpage article h3, #mainpage article .explain {margin-bottom: 20px;}
   #main_membership .explain a:first-of-type {margin: 20px 0 10px;}
   
-  #main_vision, #main_vision figure {height: calc(100vh - 63.7px);}
+  #main_vision>div {display: block;}
+  #main_vision figure {height: calc(100vh - 63.7px);}
   #main_vision figure img {transform: translateX(-50%); width: auto; height: 100%;}
   #main_vision figure:nth-child(2) img, #main_vision figure:nth-child(3) img {position: relative; left: 50%;}
   #main_vision figure figcaption {left: 5%; top: 22%; width: 90%;}
   #main_vision .scroll {bottom: 47px;}
   
   #main_program .content {left: 5vw; top: -35px;}
-  #main_program .content ul {margin-top: 30px;}
-  #main_program .content ul li {width: 25%;}
-  #main_program .content ul li:nth-child(4), #main_program .content ul li:nth-child(5) {width: 50%; margin-top: 20px;}
+  #main_program .content ul li {width: 25%; margin-top: 20px;}
+  #main_program .content ul li:nth-child(4), #main_program .content ul li:nth-child(5) {width: 50%;}
   
   #mainpage article#main_award {margin-top: 15px;}
   #main_award .content .text {width: 90%; margin: 15px auto 0;}
