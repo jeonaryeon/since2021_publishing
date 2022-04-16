@@ -1,0 +1,147 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+
+@keyframes mainLinePC{
+  from {width: 0;}
+  to {width: calc(100% - 225px);}
+}
+
+@keyframes mainLineM{
+  from {width: 0;}
+  to {width: calc(100% - 124px);}
+}
+
+nav, h2 {font-family: 'Nanum Myeongjo', serif; font-weight: 400;}
+h2 span {display: block;}
+
+nav {position: fixed; z-index: 100;}
+
+#MAIN {display: inline-block; position: relative; left: 50%; transform: translateX(-50%); height: 100vh; font-family: 'Nanum Myeongjo', serif;}
+#MAIN div {display: inline-block; position: relative; top: 50%; transform: translateY(-50%);}
+#MAIN p {position: relative; top: 7px;}
+#MAIN p:nth-child(1) {float: left;}
+#MAIN p:nth-child(2) {float: right;}
+#MAIN h1 {clear: both;}
+#MAIN h1::before {content: ''; display: block; height: 1px; background-color: #666; animation-duration: 1.5s; animation-timing-function: ease-in-out;}
+#MAIN>img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: -1; width: 80%; max-width: 600px; height: auto;}
+
+section {width: 95%; margin: 0 auto;}
+
+#ABOUT .txt>ul>li>h3, #ABOUT .txt>ul>li>ul {float: left;}
+#ABOUT .txt>ul>li>ul .mt {display: block; margin-top: 10px;}
+#ABOUT .ml li strong {margin-left: 10px;}
+
+.work h2 {line-height: initial;}
+.work li:hover {}
+.work li>span {display: block; position: relative;}
+.work li>span a {display: none;}
+.work li:hover>span::after {content:''; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background-color: #000; opacity: 0.7;}
+.work li.no_link:hover>span::after {opacity: 0;}
+.work li:hover>span a {display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1; padding: 10px 20px; color: #fff; border: 1px solid #fff;}
+.work p {padding: 20px;}
+.work strong {display: block; margin-bottom: 10px;}
+
+#WEB ul li>span {display: block; border: 1px solid #cbcbcb; box-sizing: border-box;}
+#WEB ul li img {display: block; width: 80%; max-width: 300px; height: auto; margin: 0 auto;}
+
+/* pc */
+@media screen and (min-width: 961px){
+  nav {left: 50%; bottom: 5%; transform: translateX(-50%); width: 912.11px;}
+  nav.fix {left: inherit; right: 5%; top: 30px; bottom: inherit; transform: none; width: inherit;}
+  nav h1 {display: none;}
+  nav ul {display: flex; flex-direction: row; justify-content: space-between;}
+  nav.fix ul {display: inline;}
+  nav.fix ul li {display: inline; margin-left: 50px;}
+  nav .Hmenu, nav .bg {display: none;}
+
+  #MAIN p {font-size: 24px;}
+  #MAIN h1 {font-size: 120px;}
+  #MAIN h1::before {width: calc(100% - 225px); margin-left: 156.3px; animation-name: mainLinePC;}
+  
+  section {margin-top: 80px;}
+  
+  #ABOUT {position: relative;}
+  #ABOUT::before, #ABOUT::after {position: absolute; font-size: 120px; font-weight: bold; line-height: 1em; opacity: 0.05;}
+  #ABOUT::before {content: 'WEB'; right: -50px; top: 0;}
+  #ABOUT::after {content: 'PUBLISHER'; left: -5%; margin-top: 60%;}
+  #ABOUT h2 {position: absolute; left: 0; top: 280px;}
+  #ABOUT .me_img {overflow: hidden; float: left; width: 25%; height: auto; margin-left: 80px;}
+  #ABOUT .me_img img {position: relative; z-index: -1; width: 100%; height: auto;}
+  #ABOUT .txt {float: right; width: calc(70% - 80px); margin-bottom: 80px;}
+  #ABOUT .txt>h3 {font-size: 36px;}
+  #ABOUT .txt>p {display: flex; flex-direction: row; justify-content: space-between;}
+  #ABOUT .txt>ul>li {float: left; width: calc(50% - 50px); min-width: 300px; margin-top: 50px;}
+  #ABOUT .txt>ul>li>h3 {width: 48px; margin-right: 30px; font-size: 18px;}
+  #ABOUT .txt>ul>li>ul {width: 82%;}
+  #ABOUT .txt>ul>li:nth-child(even) {min-width: 440px;}
+  #ABOUT .txt>ul>li:nth-child(odd)>ul {width: 200px;}
+  
+  
+  h2 {font-size: 72px;}
+  h2 span {font-size: 24px;}
+  .work h2, .work ul li {float: left;}
+  .work ul {float: right; width: calc(100% - 300px);}
+  .work ul li {width: 47.5%; margin-bottom: 50px;}
+  .work ul li:nth-child(even) {margin-left: 5%;}
+  .work ul li span.no_text {color: #fff;}
+  #WEB {clear: both;}
+  #WEB ul li>span {height: 340px;}
+  #WEB ul li>span img {position: relative; top: 50%; transform: translateY(-50%);}
+}
+
+@media screen and (min-width: 1300px){
+  #ABOUT {height: 100vh;}
+  #ABOUT::after {left: 29%; bottom: 10px;}
+  #ABOUT h2 {top: 30px;}
+  #ABOUT .me_img {height: 100%;}
+  #ABOUT .me_img img {left: 50%; top: 50%; transform: translate(-50%, -50%); width: auto; height: 100%;}
+  #ABOUT .txt {position: relative; top: 50%; transform: translateY(-50%); margin-bottom: 0;}
+}
+
+/* mobile */
+@media screen and (max-width: 960px){
+  nav {width: 100%; height: 50px; background-color: #fff;}
+  nav.on {height: 100vh;}
+  nav h1 {margin-left: 10px; line-height: 50px;}
+  nav ul {display: none;}
+  nav.on ul {display: inline; position: absolute; left: 50%; top: 50%; z-index: 1; transform: translate(-50%,-50%); text-align: center;}
+  nav.on ul li:not(:last-child) {margin-bottom: 15px;}
+  nav.on a {color: #fff;}
+  nav .Hmenu {position: absolute; right: 10px; top: 17.5px; z-index: 1; width: 30px; height: 15px; text-indent: -9999px;}
+  nav .Hmenu span {position: absolute; left: 0; width: 100%; height: 1px; background-color: #333;}
+  nav .Hmenu span:nth-child(1) {top: 0;}
+  nav .Hmenu span:nth-child(2) {top: 50%; transform: translateY(-50%);}
+  nav .Hmenu span:nth-child(3) {bottom: 0;}
+  nav.on .Hmenu {}
+  nav.on .Hmenu span {background-color: #fff; transition: all 0.3s;}
+  nav.on .Hmenu span:nth-child(1) {top: 50%; transform: rotate(45deg);}
+  nav.on .Hmenu span:nth-child(2) {display: none;}
+  nav.on .Hmenu span:nth-child(3) {bottom: 50%; transform: rotate(-45deg);}
+  nav .bg {display: none; width: 100%; height: 100vh; text-indent: -9999px; background-color: #000; opacity: 0.95;}
+  
+  #MAIN h1::before {width: calc(100% - 124px); margin-left: 86.88px; animation-name: mainLineM;}
+  
+  section {margin-top: 50px;}
+  h2 {font-size: 32px;}
+  
+  #ABOUT h2 {margin-bottom: 30px;}
+  #ABOUT .me_img {overflow: hidden; height: 500px;}
+  #ABOUT .me_img img {margin-top: -10%;}
+  #ABOUT .txt {padding: 0 25px;}
+  #ABOUT .txt>h3 {margin-top: 30px;}
+  #ABOUT .txt>p>span {margin-right: 15px;}
+  #ABOUT .txt>ul>li {width: 100%; margin-top: 30px;}
+  #ABOUT .txt>ul>li>h3 {width: 43.5px; margin-right: 15px;}
+  #ABOUT .txt>ul>li>ul {width: calc(100% - 58.5px);}
+  
+  h2 span {font-size: 18px;}
+  .work {width: 90%; margin: 50px auto 0;}
+  .work li {margin-top: 30px;}
+  .work ul li span.no_text {display: none;}
+  #WEB ul li>span {padding: 20px 0;}
+}
+
+@media screen and (max-width: 490px){
+  #ABOUT .me_img {height: 300px;}
+  #ABOUT .txt {padding: 0;}
+}
