@@ -33,7 +33,7 @@ header .Allmenu .menu_container a {display: block; color: #222;}
   header #gnb .lnb {position: absolute; left: 0; top: 80px; width: 100vw; line-height: 50px; background-color: #787878;}
   header #gnb .lnb ul {margin-left: 180px;}
   header #gnb .lnb ul li {margin-right: 60px;}
-  header #gnb ul li:hover .lnb {display: block;}
+  header #gnb ul li:hover .lnb {display: block !important;}
   header .Allmenu {width: calc(100vw - 6vw); height: calc(100vh - 10vh); padding: 5vh 3vw;}
   header .Allmenu .menu_container h2 {float: left; width: 50%;}
   header .Allmenu .menu_container h2 a {width: 40%;}
