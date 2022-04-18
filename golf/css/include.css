@@ -12,6 +12,7 @@ header .Hmenu span:nth-child(3){top: initial; bottom: 0; width: 70%;}
 header .Hmenu:hover span{width: 100%; transition: all ease 0.4s 0s;}
 header #rnb>ul>li>p {font-weight: 600; cursor: pointer;}
 header #rnb .lnb ul li {float: inherit; margin-bottom: 20px;}
+header #gnb .lnb ul li:hover {font-weight: 600;}
 
 /* #Allmenu checked*/
 header .Allmenu.show {display: block; overflow: auto; position: fixed; left: 0; top: 0; color: #222; background-color: #fff; z-index: 10005;}
