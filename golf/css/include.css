@@ -94,7 +94,7 @@ footer address span {margin-left: 10px; padding-left: 10px; border-left: 1px sol
   #fnb>ul>li:last-child {margin-right: 0;}
   #fnb>ul>li>p {font-weight: 600; margin-bottom: 15px;}
   #fnb>ul>li:nth-child(3)>p {width: 65px;}
-  #fnb .lnb li {clear:both; margin-bottom: 5px;}
+  #fnb .lnb li {margin-bottom: 5px;}
   #footer_right #fnb>p {margin: 0 3vw;}
   footer address {margin: 45px 0 10px;}
   #back_to_top button {font-size: 12px;} 
