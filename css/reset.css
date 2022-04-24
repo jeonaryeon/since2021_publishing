@@ -13,7 +13,6 @@ caption,legend,hr{display: none;}
 fieldset{border: 0;}
 
 body{
-  overflow-y: scroll;
   color:#333; 
   font-size:16px; 
   letter-spacing: -0.05em;

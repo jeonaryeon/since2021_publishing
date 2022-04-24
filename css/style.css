@@ -28,7 +28,7 @@
 }
 
 /* 공통 */
-html, body {overflow-x: hidden;}
+body {overflow-x: hidden;}
 #MAIN, section h2, section h3 { font-family: 'Nanum Myeongjo', serif;}
 a.outlink:hover, #contact p span, #contact address a:hover {color: #ffae12; transition: all 0.2s;}
 a.outlink::after {content: ''; display: inline-block; position: relative; left: 15px; top: 4px; width: 21px; height: 21px; background-image: url(../images/outlink_B); background-repeat: no-repeat;}
