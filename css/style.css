@@ -11,138 +11,144 @@
   to {width: calc(100% - 124px);}
 }
 
-nav, h2 {font-family: 'Nanum Myeongjo', serif; font-weight: 400;}
-h2 span {display: block;}
+@keyframes Icandoit{
+  from {transform: translateX(-100%);}
+  to {transform: translateX(100%);}
+}
 
-nav {position: fixed; z-index: 100;}
+@keyframes Icandesign{
+  from {left: 15%;}
+  to {left: -30%;}
+}
 
-#MAIN {display: inline-block; position: relative; left: 50%; transform: translateX(-50%); height: 100vh; font-family: 'Nanum Myeongjo', serif;}
-#MAIN div {display: inline-block; position: relative; top: 50%; transform: translateY(-50%);}
+@keyframes Icancoding{
+  from {left: 5%;}
+  to {left: -5%;}
+}
+
+
+/* 비율 */
+@media (max-aspect-ratio: 16 / 9){
+  #MAIN {-webkit-background-size: auto 100vh; background-size: auto 100vh;}
+}
+
+/* 공통 */
+html, body {overflow-x: hidden;}
+#MAIN, section h2, section h3 { font-family: 'Nanum Myeongjo', serif;}
+a.outlink:hover, #contact p span, #contact address a:hover {color: #ffae12; transition: all 0.2s;}
+a.outlink::after {content: ''; display: inline-block; position: relative; left: 15px; top: 4px; width: 21px; height: 21px; background-image: url(../images/outlink_B); background-repeat: no-repeat;}
+a.outlink:hover::after {background-image: url(../images/outlink_Y); transition: all 0.2s;}
+/* 공통end */
+
+#MAIN {position: fixed; left: 0; top: 0; z-index: -1; width: 100%; padding: 7.5vh 6% 18vh; color: #fff; background-image: url(../images/main.jpg); -webkit-background-size: cover; background-size: cover; background-repeat: no-repeat; background-position: bottom;}
+#MAIN div {display: inline-block; padding: 30vh 0 18vh;}
 #MAIN p {position: relative; top: 7px;}
 #MAIN p:nth-child(1) {float: left;}
 #MAIN p:nth-child(2) {float: right;}
 #MAIN h1 {clear: both;}
-#MAIN h1::before {content: ''; display: block; height: 1px; background-color: #666; animation-duration: 1.5s; animation-timing-function: ease-in-out;}
-#MAIN>img {position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: -1; width: 80%; max-width: 600px; height: auto;}
+#MAIN h1::before {content: ''; display: block; height: 1px; background-color: #fff; animation-duration: 1.5s; animation-timing-function: ease-in-out;}
 
-section {width: 95%; margin: 0 auto;}
+section {position: relative; background-color: #fff;}
+section h2 {text-align: center;}
+section h3 {padding: 0 6%;}
 
-#ABOUT .txt>ul>li>h3, #ABOUT .txt>ul>li>ul {float: left;}
-#ABOUT .txt>ul>li>ul .mt {display: block; margin-top: 10px;}
-#ABOUT .ml li strong {margin-left: 10px;}
+#about_cont .me_img {overflow: hidden;}
+#about_cont .txt>li:nth-child(3) {font-weight: bold;}
+#about .Ican p {display: inline-block; position: relative; line-height: 1em; font-weight: bold; opacity: 0.15;}
+#about .Ican .design {animation: Icandoit 18s linear infinite}
+#about .Ican .coding {animation: Icandoit 15s linear infinite reverse;}
 
-.work h2 {line-height: initial;}
-.work li>span {overflow: hidden; display: block; position: relative;}
-.work li>span a {display: none;}
-.work li>span::after {content:''; position: absolute; left: 0; top: 100%; width: 100%; height: 100%; background-color: #000; opacity: 0;}
-.work li:hover>span::after {top: 0; opacity: 0.7; transition: all 0.5s; cursor: pointer;}
-.work li.no_link:hover>span::after {opacity: 0;}
-.work li>span a {display: block; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 1; padding: 0; color: #fff; border: 1px solid #fff; opacity: 0;}
-.work li:hover>span a {padding: 10px 20px; opacity: 1; transition: all 0.5s 0.1s;}
-.work p {padding: 20px;}
-.work strong {display: block; margin-bottom: 10px;}
+#work {position: relative;}
+#work .slick_btn {position: absolute;}
+#work .slick_btn button {width: 13px; height: 23px; text-indent: -9999px; background-image: url(../images/chevron.png); -webkit-background-size: cover; background-size: cover; background-repeat: no-repeat;}
+#work .slick_btn button:last-child {background-position: right 0;}
+#work .slick_slide_wrap {position: relative; left: 6%;}
+#work .slick_slide_wrap .slick-list {overflow: visible;}
+#work figure {opacity: 0.7;}
+#work figure.slick-current {opacity: 1; transition: all 0.5s;}
+#work figure.slick-current img {transition: all 0.5s;}
+#work strong {display: block;}
+#work figcaption .outlink {display: block; margin-top: 20px;}
 
-#WEB ul li>span {display: block; border: 1px solid #cbcbcb; box-sizing: border-box;}
-#WEB ul li img {display: block; width: 80%; max-width: 300px; height: auto; margin: 0 auto;}
+#contact {text-align: center;}
 
 /* pc */
 @media screen and (min-width: 961px){
-  nav {left: 50%; bottom: 5%; transform: translateX(-50%); width: 912.11px;}
-  nav.fix {left: inherit; right: 5%; top: 30px; bottom: inherit; transform: none; width: inherit;}
-  nav h1 {display: none;}
-  nav ul {display: flex; flex-direction: row; justify-content: space-between;}
-  nav.fix ul {display: inline;}
-  nav.fix ul li {display: inline; margin-left: 50px;}
-  nav .Hmenu, nav .bg {display: none;}
-
-  #MAIN p {font-size: 24px;}
+  #MAIN>h2, #MAIN p, section>h2 {font-size: 24px;}
+  #MAIN>p {font-size: 21px;}
   #MAIN h1 {font-size: 120px;}
   #MAIN h1::before {width: calc(100% - 225px); margin-left: 156.3px; animation-name: mainLinePC;}
   
-  section {margin-top: 80px;}
+  section {top: calc(73.5vh + 304px); padding: 30px 0 100px;}
+  section h3 {font-size: 60px; margin-bottom: 50px;}
+  article {margin-top: 120px;}
   
-  #ABOUT {position: relative;}
-  #ABOUT::before, #ABOUT::after {position: absolute; font-size: 120px; font-weight: bold; line-height: 1em; opacity: 0.05;}
-  #ABOUT::before {content: 'WEB'; right: -50px; top: 0;}
-  #ABOUT::after {content: 'PUBLISHER'; left: -5%; margin-top: 60%;}
-  #ABOUT h2 {position: absolute; left: 0; top: 280px;}
-  #ABOUT .me_img {overflow: hidden; float: left; width: 25%; height: auto; margin-left: 80px;}
-  #ABOUT .me_img img {position: relative; z-index: -1; width: 100%; height: auto;}
-  #ABOUT .txt {float: right; width: calc(70% - 80px); margin-bottom: 80px;}
-  #ABOUT .txt>h3 {font-size: 36px;}
-  #ABOUT .txt>p {display: flex; flex-direction: row; justify-content: space-between;}
-  #ABOUT .txt>ul>li {float: left; width: calc(50% - 50px); min-width: 300px; margin-top: 50px;}
-  #ABOUT .txt>ul>li>h3 {width: 48px; margin-right: 30px; font-size: 18px;}
-  #ABOUT .txt>ul>li>ul {width: 82%;}
-  #ABOUT .txt>ul>li:nth-child(even) {min-width: 440px;}
-  #ABOUT .txt>ul>li:nth-child(odd)>ul {width: 200px;}
+  #about_cont {display: inline-block; position: relative; left: 50%; transform: translateX(-50%);}
+  #about_cont .me_img {float: left; max-width: 40%; height: 676.75px;}
+  #about_cont .me_img img {width: auto; height: 114%; margin-top: -14%;}
+  #about_cont .txt {float: left; padding: 100px 0 100px 50px;}
+  #about_cont .txt h4 {margin-bottom: 30px; font-size: 18px;}
+  #about_cont .txt>li:nth-child(2) {margin: 50px 0;}
+  #about_cont .txt>li:nth-child(3) p {display: inline-block;}
+  #about_cont .txt>li:nth-child(3) a:nth-child(2) {margin: 0 50px;}
+  #about_cont .txt>li:last-child {margin-top: 80px;}
+  #about_cont .txt>li:last-child a:first-child {margin-right: 86px;}
+  #about .Ican {clear: both; width: 2680px; margin-top: 100px;}
+  #about .Ican p {font-size: 120px;}
+  #about .Ican .coding {margin-top: 30px;}
+  #about .Ican p span:not(:last-child) {margin-right: 100px;}
   
+  #work .slick_btn {right: 10%; top: 40px;}
+  #work .slick_btn button:first-child {margin-right: 50px;}
+  #work figure {margin-right: 50px;}
+  #work figure:last-child {margin-right: 0;}
+  #work figure img {width: 550px; height: 300px; margin: 15px 0;}
+  #work figure.slick-current img {height: 330px; margin: 0;}
+  #work figcaption {padding: 30px;}
+  #work strong {margin-bottom: 15px; font-size: 21px;}
   
-  h2 {font-size: 72px;}
-  h2 span {font-size: 24px;}
-  .work h2, .work ul li {float: left;}
-  .work ul {float: right; width: calc(100% - 300px);}
-  .work ul li {width: 47.5%; margin-bottom: 50px;}
-  .work ul li:nth-child(even) {margin-left: 5%;}
-  .work ul li span.no_text {color: #fff;}
-  #WEB {clear: both;}
-  #WEB ul li>span {height: 340px;}
-  #WEB ul li>span img {position: relative; top: 50%; transform: translateY(-50%);}
-}
-
-@media screen and (min-width: 1300px){
-  #ABOUT {height: 100vh;}
-  #ABOUT::after {left: 29%; bottom: 10px;}
-  #ABOUT h2 {top: 30px;}
-  #ABOUT .me_img {height: 100%;}
-  #ABOUT .me_img img {left: 50%; top: 50%; transform: translate(-50%, -50%); width: auto; height: 100%;}
-  #ABOUT .txt {position: relative; top: 50%; transform: translateY(-50%); margin-bottom: 0;}
+  #contact {padding: 0 6%;}
+  #contact p {font-size: 21px;}
+  #contact address {display: flex; justify-content: space-between; margin-top: 100px;}
 }
 
 /* mobile */
 @media screen and (max-width: 960px){
-  nav {width: 100%; height: 50px; background-color: #fff;}
-  nav.on {height: 100vh;}
-  nav h1 {margin-left: 10px; line-height: 50px;}
-  nav ul {display: none;}
-  nav.on ul {display: inline; position: absolute; left: 50%; top: 50%; z-index: 1; transform: translate(-50%,-50%); text-align: center;}
-  nav.on ul li:not(:last-child) {margin-bottom: 15px;}
-  nav.on a {color: #fff;}
-  nav .Hmenu {position: absolute; right: 10px; top: 17.5px; z-index: 1; width: 30px; height: 15px; text-indent: -9999px;}
-  nav .Hmenu span {position: absolute; left: 0; width: 100%; height: 1px; background-color: #333;}
-  nav .Hmenu span:nth-child(1) {top: 0;}
-  nav .Hmenu span:nth-child(2) {top: 50%; transform: translateY(-50%);}
-  nav .Hmenu span:nth-child(3) {bottom: 0;}
-  nav.on .Hmenu {}
-  nav.on .Hmenu span {background-color: #fff; transition: all 0.3s;}
-  nav.on .Hmenu span:nth-child(1) {top: 50%; transform: rotate(45deg);}
-  nav.on .Hmenu span:nth-child(2) {display: none;}
-  nav.on .Hmenu span:nth-child(3) {bottom: 50%; transform: rotate(-45deg);}
-  nav .bg {display: none; width: 100%; height: 100vh; text-indent: -9999px; background-color: #000; opacity: 0.95;}
-  
+  html, body {font-size: 14px;}
   #MAIN h1::before {width: calc(100% - 124px); margin-left: 86.88px; animation-name: mainLineM;}
+  section {top: calc(73.5vh + 124px); padding: 20px 6% 50px;}
+  article {margin-top: 50px;}
+  section h3 {font-size: 24px; margin-bottom: 20px;}
   
-  section {margin-top: 50px;}
-  h2 {font-size: 32px;}
+  #about_cont .me_img {width: 80%; min-width: 315px; height: 400px; margin: 0 auto;}
+  #about_cont .me_img img {margin-top: -20%;}
+  #about_cont .txt>li {margin-top: 20px;}
+  #about_cont .txt>li h4 {margin-bottom: 15px; font-size: 16px;}
+  #about_cont .txt>li a:first-child {margin-right: 20px;}
+  #about_cont .txt>li:nth-child(3) a {display: block;}
+  #about_cont .txt>li:nth-child(3) a:nth-child(2) {margin: 5px 0;}
+  #about_cont .txt>li:last-child a:first-child {margin-right: 45px;}
+  #about .Ican {width: 1270px; margin-top: 50px;}
+  #about .Ican p {font-size: 60px;}
+  #about .Ican .design {animation-duration: 10s;}
+  #about .Ican .coding {margin-top: 15px; animation-duration: 8s;}
+  #about .Ican p span:not(:last-child) {margin-right: 30px;}
   
-  #ABOUT h2 {margin-bottom: 30px;}
-  #ABOUT .me_img {overflow: hidden; height: 500px;}
-  #ABOUT .me_img img {margin-top: -10%;}
-  #ABOUT .txt {padding: 0 25px;}
-  #ABOUT .txt>h3 {margin-top: 30px;}
-  #ABOUT .txt>p>span {margin-right: 15px;}
-  #ABOUT .txt>ul>li {width: 100%; margin-top: 30px;}
-  #ABOUT .txt>ul>li>h3 {width: 43.5px; margin-right: 15px;}
-  #ABOUT .txt>ul>li>ul {width: calc(100% - 58.5px);}
+  #work .slick_btn {right: 0; top: 5px;}
+  #work .slick_btn button:first-child {margin-right: 10px;}
+  #work figure {margin-right: 20px;}
+  #work figure img {width: 280px; height: 148px; margin: 10px 0;}
+  #work figure.slick-current img {height: 168px; margin: 0;}
+  #work figcaption {padding: 15px;}
+  #work strong {margin-bottom: 5px; font-size: 18px;}
   
-  h2 span {font-size: 18px;}
-  .work {width: 90%; margin: 50px auto 0;}
-  .work li {margin-top: 30px;}
-  .work ul li span.no_text {display: none;}
-  #WEB ul li>span {padding: 20px 0;}
+  #contact address {margin-top: 50px;}
+  #contact address a {display: block;}
+  #contact address a:nth-child(2) {margin: 10px 0;}
 }
 
 @media screen and (max-width: 490px){
-  #ABOUT .me_img {height: 300px;}
-  #ABOUT .txt {padding: 0;}
+  
 }
+
+

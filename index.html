@@ -10,11 +10,15 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
       
   <!-- css 연결 -->
+<!--  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>-->
+  <link rel="stylesheet" href="css/slick.css">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   
   <!-- js 연결 -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+<!--  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>-->
   <script src="js/common.js"></script>
   
   <!-- HTML5shiv ie6~8 -->
@@ -27,175 +31,137 @@
    -->
 </head>
 <body>
-  <nav>
-    <h1>A RYEON</h1>
-    <ul class="">
-      <li><a href="#MAIN">#MAIN</a></li>
-      <li><a href="#ABOUT">#ABOUT ME</a></li>
-      <li><a href="#WEB">#WEB PUBLISHING</a></li>
-      <li><a href="#DESIGN">#DESIGN</a></li>
-    </ul>
-    <button class="Hmenu">
-      <span>line</span>
-      <span>line</span>
-      <span>line</span>
-    </button>
-    <div class="bg">bg</div>
-  </nav>
- 
   <header id="MAIN">
+   <h2>WEB PUBLISHER</h2>
    <div class="clearfix">
       <p>PORTFOLIO</p>
       <p>2022</p>
       <h1>JEON A RYEON</h1>
     </div>
-    <img src="images/main.jpg" alt="">
+    <p class="scroll">SCROLL DOWN</p>
   </header> <!-- end of header -->
   
-  <section id="ABOUT" class="clearfix">
-    <h2>About me</h2>
-    <div class="me_img"><img src="images/jeonaryeon.jpg" alt="jeonaryeon"></div>
-    <article class="txt">
-      <h3>전아련</h3>
+  <section>
+    <h2>A RYEON’s portfolio</h2>
+    
+    <article id="about">
+      <h3>안녕하세요! 웹 퍼블리셔 전아련입니다 :D</h3>
+      <div id="about_cont" class="clearfix">
+        <div class="me_img"><img src="images/jeonaryeon.jpg" alt="jeonaryeon"></div>
+        <ul class="txt">
+          <li>
+            <h4>핵심역량</h4>
+            <ul>
+              <li>&sdot; 담당 홈페이지의 전반적인 디자인, 퍼블리싱을 담당해왔습니다.</li>
+              <li>&sdot; 웹접근성 갱신을 위한 홈페이지 수정 경험을 보유하고 있습니다.</li>
+              <li>&sdot; 유지보수 업무 중 오류 수정 및 운영 제안을 하며 고객사와 신뢰를 쌓아왔습니다.</li>
+            </ul>
+          </li>
+          <li>
+            <h4>Career</h4>
+            2020 . 02 ~ 현재<br>
+            인터메이저 웹퍼블리셔 (정규직)
+          </li>
+          <li>
+            <p>1996 . 03 .  07</p>
+            <a href="sms:01022665953">+82 10 . 2266 . 5953</a>
+            <a href="mailto:aryeon96@naver.com">aryeon96@naver.com</a>
+          </li>
+          <li>
+            <a href="" class="outlink" target="_blank">이력서</a>
+            <a href="" class="outlink" target="_blank">경력기술서</a>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="Ican">
+        <p class="design">
+          <span>PHOTOSHOP</span>
+          <span>ILLUSTRATOR</span>
+          <span>XD</span>
+          <span>INDESIGN</span>
+        </p>
+        <p class="coding">
+          <span>GITHUB</span>
+          <span>HTML</span>
+          <span>CSS</span>
+          <span>JQUERY</span>
+        </p>
+      </div>
+    </article>
+    
+    <article id="work">
+      <h3>MY WORKS</h3>
+      <div class="slick_btn">
+        <button class="work_left">left</button>
+        <button class="work_right">right</button>
+      </div>
+      
+      <div class="slick_slide_wrap">
+        <div class="slick_slide clearfix">
+          <figure class="slick-current">
+            <img src="images/mywork01.jpg" alt="">
+            <figcaption>
+              <strong>포스코 기업시민</strong>
+              2020 . 02 ~ 현재<br>유지보수<br>웹접근성 경험<br>신규 페이지 디자인 및 퍼블리싱
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="images/mywork02.jpg" alt="">
+            <figcaption>
+              <strong>포스코</strong>
+              2020 . 02 ~ 현재<br>유지보수 지원
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="images/mywork03.jpg" alt="">
+            <figcaption>
+              <strong>포스코홀딩스</strong>
+              2022 . 01 ~ 2022 . 03 1차 구축 지원<br>2022 . 03 ~ 현재 유지보수 지원
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="images/mywork04.jpg" alt="">
+            <figcaption>
+              <strong>포스코 제품</strong>
+              2020 . 02 ~ 현재<br>유지보수 지원
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="images/mywork05.jpg" alt="">
+            <figcaption>
+              <strong>레드베터아카데미</strong>
+              2022 . 03<br>리뉴얼 - 개인작업 100%
+              <a href="https://jeonaryeon.github.io/since2021_publishing/golf/golf.html" class="outlink" target="_blank">사이트 바로가기</a>
+            </figcaption>
+          </figure>
+          <figure>
+            <img src="images/mywork06.jpg" alt="">
+            <figcaption>
+              <strong>이수건설</strong>
+              2019 . 11<br>리뉴얼 - 개인작업 100%
+              <a href="https://jeonaryeon.github.io/port_isu/" class="outlink" target="_blank">사이트 바로가기</a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </article>
+    
+    <article id="contact">
       <p>
-        <span>JEON A RYEON</span>
-        <span>1996 . 03 . 07</span>
-        <span>010 . 2266 . 5953</span>
-        <span>aryeon96@naver.com</span>
+        3년차를 향해 열심히 달려가고 있는 웹 퍼블리셔 <span>전아련</span>입니다.<br><br>
+
+        경력에 어울리는 실력, 그리고 빠르게 변해가는 현실과 <br>
+        사용자 니즈에 충족하기 위해 끝없이 자기개발 중입니다.<br><br>
+
+        함께 성장 스토리를 만들기 원하신다면 메일 혹은 핸드폰으로 연락 부탁드립니다 &#58; &#41;
       </p>
-      <ul class="clearfix">
-        <li class="clearfix">
-          <h3>경력</h3>
-          <ul>
-            <li><strong>인터메이저 웹퍼블리셔 (정직원)<br></strong>2020 . 02 ~ 현재</li>
-            <li><strong class="mt">국풍2000 편집디자인 (아르바이트)<br></strong>2018 . 11 ~ 2019 . 04</li>
-          </ul>
-        </li>
-        <li class="clearfix">
-          <h3>교육</h3>
-          <ul>
-            <li><strong>평택대학교 시각디자인학과<br></strong>2015 . 03 ~ 2019 . 02</li>
-            <li><strong class="mt">모바일 앱 디자인(웹디자인) &amp; 하이브리드 앱 콘텐츠 과정<br></strong>2019 . 06 ~ 2019 . 11</li>
-          </ul>
-        </li>
-        <li class="clearfix">
-          <h3>자격증</h3>
-          <ul class="ml">
-            <li>2021 . 08<strong>컴퓨터활용능력 2급</strong></li>
-            <li>2019 . 10<strong>GTQ그래픽기술자격 1급</strong></li>
-            <li>2019 . 09<strong>웹디자인기능사</strong></li>
-            <li>2019 . 08<strong>시각디자인기사</strong></li>
-            <li>2017 . 05<strong>컬러리스트산업기사</strong></li>
-          </ul>
-        </li>
-        <li class="clearfix">
-          <h3>수상</h3>
-          <ul class="ml">
-            <li>2017 . 12<strong>국제사이버트렌드 디자인(영상광고 스토리보드) 특선</strong></li>
-            <li>2017 . 11<strong>대한민국패키지디자인대전 특선</strong></li>
-            <li>2017 . 09<strong>에너지작품공모전 아이디어부문 최우수상</strong></li>
-            <li>2017 . 08<strong>제 2회 안보홍보공모전 기획부문 우수상</strong></li>
-            <li>2017 . 07<strong>국제사이버트렌드디자인(인쇄광고) 입선</strong></li>
-          </ul>
-        </li>
-        <li class="clearfix">
-          <h3>기술</h3>
-          <ul>
-            <li><strong>퍼블리싱<br></strong>#html #css #jqeury</li>
-            <li><strong class="mt">디자인<br></strong>#Illustrator #Photoshop<br>#Indesign #Xd</li>
-          </ul>
-        </li>
-      </ul>
+      <address>
+        <a href="sms:01022665953">+82 10 . 2266 . 5953</a>
+        <a href="mailto:aryeon96@naver.com">aryeon96@naver.com</a>
+        <span>&copy; 2022 JEONARYEON</span>
+      </address>
     </article>
   </section>
-  
-  <section id="WEB" class="work clearfix">
-    <h2>WORK<span>WEB PUBLISHING</span></h2>
-    <ul class="clearfix">
-      <li class="no_link">
-        <span><img src="images/corporate_logo.png" alt="포스코 기업시민"></span>
-        <p>
-          <strong>포스코 기업시민</strong>
-          2020 . 02 ~ 현재<br>유지보수<br>웹접근성 경험<br>신규 페이지 디자인 및 퍼블리싱
-        </p>
-      </li>
-      <li class="no_link">
-        <span><img src="images/posco_logo.png" alt="포스코"></span>
-        <p>
-          <strong>포스코</strong>
-          2020 . 02 ~ 현재<br>유지보수<br class="no_text"><span class="no_text">X<br class="no_text"></span><span class="no_text">X</span>
-        </p>
-      </li>
-      <li class="no_link">
-        <span><img src="images/holdings_logo.png" alt="포스코홀딩스"></span>
-        <p>
-          <strong>포스코홀딩스</strong>
-          2022 . 01 ~ 2022 . 03 1차 구축<br>2022 . 03 ~ 현재 유지보수
-        </p>
-      </li>
-      <li class="no_link">
-        <span><img src="images/product_logo.png" alt="포스코 제품"></span>
-        <p>
-          <strong>포스코 제품</strong>
-          2020 . 02 ~ 현재<br>유지보수
-        </p>
-      </li>
-      <li>
-        <span><img src="images/leadbetter_logo.png" alt="레드베터아카데미"><a href="https://jeonaryeon.github.io/since2021_publishing/golf/golf.html">사이트 바로가기</a></span>
-        <p>
-          <strong>레드베터아카데미</strong>
-          2022 . 03<br>리뉴얼 - 개인작업 100%
-        </p>
-      </li>
-      <li>
-        <span><img src="images/isu_logo.png" alt="이수건설"><a href="https://jeonaryeon.github.io/port_isu/">사이트 바로가기</a></span>
-        <p>
-          <strong>이수건설</strong>
-          2019 . 11<br>리뉴얼 - 개인작업 100%
-        </p>
-      </li>
-    </ul>
-  </section>
-  
-  <section id="DESIGN" class="work clearfix">
-    <h2>WORK<span>DESIGN</span></h2>
-    <ul class="clearfix">
-      <li>
-        <span><img src="images/dalbodre.png" alt="달보드레"><a href="plan/dalbodre.html">기획서 보기</a></span>
-        <p>
-          <strong>달보드레</strong>
-          2017년도<br>NEW DESIGN - 개인작업 100%
-        </p>
-      </li>
-      <li>
-        <span><img src="images/trip.png" alt="Ancient Palace Trip"><a href="plan/trip.html">기획서 보기</a></span>
-        <p>
-          <strong>Ancient Palace Trip</strong>
-          2018년도<br>NEW DESIGN - 개인작업 100%
-        </p>
-      </li>
-      <li>
-        <span><img src="images/bobsled.png" alt="봅슬레이"><a href="plan/bobsled.html">기획서 보기</a></span>
-        <p>
-          <strong>봅슬레이</strong>
-          2018년도<br>NEW DESIGN - 개인작업 100%
-        </p>
-      </li>
-      <li>
-        <span><img src="images/security.png" alt="111요원 프로젝트"><a href="plan/security.html">기획서 보기</a></span>
-        <p>
-          <strong>‘111요원’ 프로젝트</strong>
-          2017년도<br>공모전 수상 3인 팀작업 - 기획 기여도 20%, 디자인 기여도 70%
-        </p>
-      </li>
-      <li>
-        <span><img src="images/planner.png" alt="독서/학습플래너"><a href="plan/planner.html">기획서 보기</a></span>
-        <p>
-          <strong>독서/학습플래너</strong>
-          2018년도<br>편집디자인 아르바이트 - 기획 기여도 10%, 디자인 기여도 100%
-        </p>
-      </li>
-    </ul>
-  </section>  
 </body>
 </html>

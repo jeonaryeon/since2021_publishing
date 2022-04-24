@@ -1,35 +1,31 @@
 $(function(){
-  var documentW = $(document).width();
-  if(documentW > 960){}
-  
-  $(window).scroll(function(){
-    var t = $("html").scrollTop();
-    var mainH = $('#MAIN').height();
-    if(t > 200){
-      $('nav').addClass('fix');
-    }else{
-      $('nav').removeClass('fix');
-    }
+  $('#about_cont .outlink').on('click',function(e){
+    e.preventDefault();
+    alert("준비중입니다. 조금만 기다려주세요!");
   });
   
-  
-  if(documentW <= 960){
-    $('.Hmenu').on('click',function(){
-      $('nav').toggleClass('on');
-      $('nav h1').toggle();
-      $('nav .bg').toggle();
-    });
-    $('nav a').on('click',function(){
-      $('nav').removeClass('on');
-      $('nav h1').show();
-      $('nav .bg').hide();
-    });
-  }
-  
-//  $('nav.on .Hmenu').on('click',function(){
-//    $('nav').reomveClass('on');
-//    $('nav .bg').hide();
-//  });
+  $('.slick_slide').slick({
+    slidesToShow: 1,
+    infinite: false,
+    draggable:true,
+    accessibility: true,
+    focusOnSelect: true,
+    variableWidth: true,
+    cssEase: 'linear',
+    arrow: true,
+    prevArrow : $('.work_left'),
+    nextArrow : $('.work_right'),
+    responsive: [ 
+        {  
+            breakpoint: 960, 
+            settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            variableWidth: true,
+            } 
+        }
+    ]
+  });
 }); 
 
 
