@@ -16,17 +16,6 @@
   to {transform: translateX(100%);}
 }
 
-@keyframes Icandesign{
-  from {left: 15%;}
-  to {left: -30%;}
-}
-
-@keyframes Icancoding{
-  from {left: 5%;}
-  to {left: -5%;}
-}
-
-
 /* 비율 */
 @media (max-aspect-ratio: 16 / 9){
   #MAIN {-webkit-background-size: auto 100vh; background-size: auto 100vh;}
@@ -55,7 +44,7 @@ section h3 {padding: 0 6%;}
 #about_cont .me_img {overflow: hidden;}
 #about_cont .txt>li:nth-child(3) {font-weight: bold;}
 #about .Ican p {display: inline-block; position: relative; line-height: 1em; font-weight: bold; opacity: 0.15;}
-#about .Ican .design {animation: Icandoit 18s linear infinite}
+#about .Ican .design {animation: Icandoit 18s linear infinite;}
 #about .Ican .coding {animation: Icandoit 15s linear infinite reverse;}
 
 #work {position: relative;}
