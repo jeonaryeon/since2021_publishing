@@ -101,7 +101,7 @@ a.outlink:hover::after {background-image: url(../images/outlink_Y); transition: 
 #career header {background-color: #fff;}
 #career .career_bg {position: sticky; left: 0; top: 0; z-index: -1;}
 #career section {background-color: #fff;}
-#career section>p:nth-of-type(2) {margin-top: 10px;}
+#career section>div>p:nth-of-type(2) {margin-top: 10px;}
 #career h3 {position: relative; font-size: 1.25rem; line-height: initial;}
 #career h4 {position: relative; font-size: 1.15rem; line-height: initial;}
 #career h5 {position: relative; font-size: 1rem;}
@@ -110,10 +110,10 @@ a.outlink:hover::after {background-image: url(../images/outlink_Y); transition: 
 #career article .project {padding-left: 10px;}
 #career article div:nth-of-type(1) h4::before {content: '1)'; position: absolute; left: -20px;}
 #career article div:nth-of-type(2) h4::before {content: '2)'; position: absolute; left: -20px;}
-#career p.list::before, #work ul.list>li::before {content: '-'; margin-right: 5px;}
+#career p.list::before, #career ul.list>li::before {content: '-'; margin-right: 5px;}
 #career ul.list>li small {display: block; margin-top: 5px;}
-#career ul.list>li li, #work ul.list>li small {padding-left: 15px;}
-#career ul.list>li li::before, #work ul.list>li small::before {content: '・'; margin-right: 5px;}
+#career ul.list>li li, #career ul.list>li small {padding-left: 15px;}
+#career ul.list>li li::before, #career ul.list>li small::before {content: '・'; margin-right: 5px;}
 
 /* pc */
 @media screen and (min-width: 961px){
@@ -163,8 +163,8 @@ a.outlink:hover::after {background-image: url(../images/outlink_Y); transition: 
   #resume header figcaption {margin: 15% 0 0 100px;}
   #resume header h2 {font-size: 72px;}
   #resume header h2::before {top: 45px;}
-  #resume dt {width: 72px; margin: 0 30px 5px 0;}
-  #resume dd {width: calc(100% - 102px);}
+  #resume dt {width: 76px; margin: 0 30px 5px 0;}
+  #resume dd {width: calc(100% - 108px);}
   #resume .keyword {margin: 50px 0 100px;}
   #resume section p, #resume tbody {margin-bottom: 100px;}
   #resume tr:first-child, #resume .work .st {margin-bottom: 30px;}
@@ -225,8 +225,8 @@ a.outlink:hover::after {background-image: url(../images/outlink_Y); transition: 
   #resume header img {width: 42%; max-width: 250px; padding-left: 20px;}
   #resume header figcaption {margin: 25% 0 0 5%;}
   #resume header h2::before {top: 13px;}
-  #resume dt {width: 63px; margin: 0 15px 5px 0;}
-  #resume dd {width: calc(100% - 78px);}
+  #resume dt {width: 69px; margin: 0 15px 5px 0;}
+  #resume dd {width: calc(100% - 84px);}
   #resume .keyword {margin: 30px 0 50px;}
   #resume section p, #resume tbody {margin-bottom: 50px;}
   #resume th {font-size: 19px;}
