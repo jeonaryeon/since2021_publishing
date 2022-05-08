@@ -1,5 +1,4 @@
 @charset "utf-8";
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 
 @keyframes mainLinePC{
   from {width: 0;}
@@ -28,15 +27,15 @@
 }
 
 /* 공통 */
-body {overflow-x: hidden;}
-#MAIN, section h2, section h3 { font-family: 'Nanum Myeongjo', serif;}
+#index {overflow-x: hidden;}
+#MAIN, #index section h2, #index section h3 {font-family: 'Nanum Myeongjo', serif;}
 a.outlink:hover, #contact p span, #contact address a:hover {color: #ffae12; transition: all 0.2s;}
 a.outlink::after {content: ''; display: inline-block; position: relative; left: 15px; top: 4px; width: 21px; height: 21px; background-image: url(../images/outlink_B); background-repeat: no-repeat;}
 a.outlink:hover::after {background-image: url(../images/outlink_Y); transition: all 0.2s;}
 /* 공통end */
 
 #MAIN {position: fixed; left: 0; top: 0; z-index: -1; width: 100%; padding: 7.5vh 6% 18vh; color: #fff; background-image: url(../images/main.jpg); -webkit-background-size: cover; background-size: cover; background-repeat: no-repeat; background-position: bottom;}
-#MAIN div {display: inline-block; padding: 30vh 0 18vh;}
+#MAIN div {display: inline-block; padding: 25vh 0 15vh;}
 #MAIN p {position: relative; top: 7px;}
 #MAIN p:nth-child(1) {float: left;}
 #MAIN p:nth-child(2) {float: right;}
@@ -47,13 +46,13 @@ a.outlink:hover::after {background-image: url(../images/outlink_Y); transition: 
 #MAIN .scroll::before {animation: scrollDown 1.5s infinite;}
 #MAIN .scroll::after {animation: scrollDown 1.5s infinite reverse;}
 
-section {overflow-x: hidden; position: relative; background-color: #fff;}
-section h2 {text-align: center;}
-section h3 {padding: 0 6%;}
+#index section {overflow-x: hidden; position: relative; background-color: #fff;}
+#index section h2 {text-align: center;}
+#index section h3 {padding: 0 6%;}
 
 #about_cont .me_img {overflow: hidden;}
 #about_cont .txt>li:nth-child(3) {font-weight: bold;}
-#about .Ican p {display: inline-block; position: relative; line-height: 1em; font-weight: bold; opacity: 0.15;}
+#about .Ican p {display: inline-block; position: relative; line-height: 1em; font-weight: 800; opacity: 0.15;}
 #about .Ican .design {animation: Icandoit 18s linear infinite;}
 #about .Ican .coding {animation: Icandoit 15s linear infinite reverse;}
 
@@ -71,6 +70,51 @@ section h3 {padding: 0 6%;}
 
 #contact {text-align: center;}
 
+/* resume 이력서, career 경력기술서 공통 */
+#resume, #career .cont {width: 95%; max-width: 960px; margin: 0 auto; text-align: justify;}
+#resume footer, #career footer {text-align: center; margin-bottom: 20px;}
+#resume section, #career section {overflow: hidden;}
+#resume a:hover, #resume th, #career h2, #career h3 {color: #ffae12;}
+
+/* resume 이력서 */
+#resume .st {font-weight: bold;}
+#resume header {position: relative; border-bottom: 1.5px solid #333;}
+#resume header::before {content: ''; position: absolute; top: 16%; width: 32%; height: 90%; border: 1px solid #666;}
+#resume header h1 {font-size: 0.8rem; font-weight: normal;}
+#resume header figure {position: relative;}
+#resume header figure::before {content: ''; display: block; position: absolute; left: 6%; top: 4%; z-index: -1; width: 32%; height: 100%; background-color: #ffae12;}
+#resume header img, #resume header figcaption {float: left;}
+#resume header h2 {position: relative; line-height: initial;}
+#resume header h2::before {content: ''; position: absolute; left: -70%; width: 60%; height: 1px; background-color: #333;}
+#resume header h2 span {display: block; font-weight: normal;}
+#resume dt, #resume dd {display: inline-block;}
+#resume table, #resume tbody, #resume tr:not(:first-child) td:first-child, #resume .work td {display: block;}
+#resume tr:first-child {display: block; padding-bottom: 5px; border-bottom: 1px solid #ccc;}
+#resume .keyword li, #resume tr:not(:first-child) {display: table; position: relative; padding-left: 15px; margin-bottom: 5px;}
+#resume .keyword li::before, #resume tr:not(:first-child)::before {content: '・'; position: absolute; left: 0; top: 0;}
+#resume .work tr:first-child {position: relative;}
+#resume .work tr:first-child td {position: absolute; right: 0; bottom: 5px;}
+#resume .work tr:first-child a {padding-right: 20px;}
+#resume .work tr:first-child a::after {content: '>'; position: absolute; right: 0; top: 0;}
+
+/* career 경력기술서 */
+#career header {background-color: #fff;}
+#career .career_bg {position: sticky; left: 0; top: 0; z-index: -1;}
+#career section {background-color: #fff;}
+#career section>p:nth-of-type(2) {margin-top: 10px;}
+#career h3 {position: relative; font-size: 1.25rem; line-height: initial;}
+#career h4 {position: relative; font-size: 1.15rem; line-height: initial;}
+#career h5 {position: relative; font-size: 1rem;}
+#career article {padding-left: 15px;}
+#career article h3::before {content: '・'; position: absolute; left: -15px;}
+#career article .project {padding-left: 10px;}
+#career article div:nth-of-type(1) h4::before {content: '1)'; position: absolute; left: -20px;}
+#career article div:nth-of-type(2) h4::before {content: '2)'; position: absolute; left: -20px;}
+#career p.list::before, #work ul.list>li::before {content: '-'; margin-right: 5px;}
+#career ul.list>li small {display: block; margin-top: 5px;}
+#career ul.list>li li, #work ul.list>li small {padding-left: 15px;}
+#career ul.list>li li::before, #work ul.list>li small::before {content: '・'; margin-right: 5px;}
+
 /* pc */
 @media screen and (min-width: 961px){
   #MAIN>h2, #MAIN p, section>h2 {font-size: 24px;}
@@ -80,9 +124,9 @@ section h3 {padding: 0 6%;}
   #MAIN .scroll::before, #MAIN .scroll::after {right: -51px; width: 21px; height: 12px;}
   #MAIN .scroll::after {top: 16px;}
   
-  section {top: calc(73.5vh + 304px); padding: 30px 0 100px;}
-  section h3 {font-size: 60px; margin-bottom: 50px;}
-  article {margin-top: 120px;}
+  #index section {top: calc(73.5vh + 304px); padding: 30px 0 100px;}
+  #index section h3 {font-size: 60px; margin-bottom: 50px;}
+  #index article {margin-top: 120px;}
   
   #about_cont {display: inline-block; position: relative; left: 50%; transform: translateX(-50%);}
   #about_cont .me_img {float: left; max-width: 40%; height: 676.75px;}
@@ -111,6 +155,29 @@ section h3 {padding: 0 6%;}
   #contact {padding: 0 6%;}
   #contact p {font-size: 21px;}
   #contact address {display: flex; justify-content: space-between; margin-top: 100px;}
+  
+  #resume header {margin: 20px 0 70px;}
+  #resume header::before {left: 3.5%;}
+  #resume header h1 {margin-bottom: 50px;}
+  #resume header img {width: auto; height: 410px; margin-left: 10%;}
+  #resume header figcaption {margin: 15% 0 0 100px;}
+  #resume header h2 {font-size: 72px;}
+  #resume header h2::before {top: 45px;}
+  #resume dt {width: 72px; margin: 0 30px 5px 0;}
+  #resume dd {width: calc(100% - 102px);}
+  #resume .keyword {margin: 50px 0 100px;}
+  #resume section p, #resume tbody {margin-bottom: 100px;}
+  #resume tr:first-child, #resume .work .st {margin-bottom: 30px;}
+  #resume th {font-size: 24px;}
+  #resume tr:not(:first-child) td:first-child {margin-right: 30px;}
+  #resume .work tr:first-child td {font-size: 14px;}
+  
+  #career header {padding: 20px 0;}
+  #career section {padding: 50px 0 100px;}
+  #career h2 {margin-bottom: 40px;}
+  #career h3 {margin: 35px 0 -5px;}
+  #career h4 {margin: 30px 0 10px;}
+  #career h5 {margin-top: 15px;}
 }
 
 /* mobile */
@@ -120,10 +187,11 @@ section h3 {padding: 0 6%;}
   #MAIN .scroll::before, #MAIN .scroll::after{right: -32px; width: 12px; height: 7px;}
   #MAIN .scroll::after {top: 11px;}
 
-  section {top: calc(73.5vh + 124px); padding: 20px 6% 50px;}
-  article {margin-top: 50px;}
-  section h3 {font-size: 24px; margin-bottom: 20px;}
+  #index section {top: calc(73.5vh + 124px); padding: 20px 6% 50px;}
+  #index article {margin-top: 50px;}
+  #index section h3 {font-size: 24px; margin-bottom: 20px;}
   
+  #about_cont {overflow: hidden;}
   #about_cont .me_img {width: 80%; min-width: 315px; height: 400px; margin: 0 auto;}
   #about_cont .me_img img {margin-top: -20%;}
   #about_cont .txt>li {margin-top: 20px;}
@@ -149,10 +217,32 @@ section h3 {padding: 0 6%;}
   #contact address {margin-top: 50px;}
   #contact address a {display: block;}
   #contact address a:nth-child(2) {margin: 10px 0;}
+  
+  #resume header {margin: 20px 0 50px;}
+  #resume header::before {left: 0.5%;}
+  #resume header h1 {margin-bottom: 30px;}
+  #resume header figure::before {left: 2%;}
+  #resume header img {width: 42%; max-width: 250px; padding-left: 20px;}
+  #resume header figcaption {margin: 25% 0 0 5%;}
+  #resume header h2::before {top: 13px;}
+  #resume dt {width: 63px; margin: 0 15px 5px 0;}
+  #resume dd {width: calc(100% - 78px);}
+  #resume .keyword {margin: 30px 0 50px;}
+  #resume section p, #resume tbody {margin-bottom: 50px;}
+  #resume th {font-size: 19px;}
+  #resume td {display: block;}
+  #resume tr:not(:first-child) td:first-child {margin-right: 15px;}
+  #resume .work tr:first-child td {font-size: 12px;}
+  #resume .work .st, #resume section tr:first-child, #resume tbody .st {margin-bottom: 15px;}
+  
+  #career header {padding: 10px 0;}
+  #career header h1 {font-size: 1.7rem;}
+  #career section {margin: 50px 0;}
+  #career h2 {margin-bottom: 20px;}
+  #career h3 {margin-top: 15px;}
+  #career h4 {margin: 15px 0 5px;}
+  #career h5 {margin-top: 5px;}
 }
 
-@media screen and (max-width: 490px){
-  
-}
 
 

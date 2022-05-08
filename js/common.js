@@ -1,5 +1,5 @@
 $(function(){
-  $('#about_cont .outlink').on('click',function(e){
+  $('#about_cont .outlink:nth-child(2)').on('click',function(e){
     e.preventDefault();
     alert("준비중입니다. 조금만 기다려주세요!");
   });
