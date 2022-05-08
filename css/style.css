@@ -51,6 +51,8 @@ a.outlink:hover::after {background-image: url(../images/outlink_Y); transition: 
 #index section h3 {padding: 0 6%;}
 
 #about_cont .me_img {overflow: hidden;}
+#about_cont .txt>li li {padding-left: 10px;}
+#about_cont .txt>li li::before {content: '・'; position: relative; left: -10px;}
 #about_cont .txt>li:nth-child(3) {font-weight: bold;}
 #about .Ican p {display: inline-block; position: relative; line-height: 1em; font-weight: 800; opacity: 0.15;}
 #about .Ican .design {animation: Icandoit 18s linear infinite;}
@@ -110,10 +112,11 @@ a.outlink:hover::after {background-image: url(../images/outlink_Y); transition: 
 #career article .project {padding-left: 10px;}
 #career article div:nth-of-type(1) h4::before {content: '1)'; position: absolute; left: -20px;}
 #career article div:nth-of-type(2) h4::before {content: '2)'; position: absolute; left: -20px;}
-#career p.list::before, #career ul.list>li::before {content: '-'; margin-right: 5px;}
+#career p.list, #career ul.list>li {padding-left: 10px;}
+#career p.list::before, #career ul.list>li::before {content: '-'; position: relative; left: -10px;}
 #career ul.list>li small {display: block; margin-top: 5px;}
 #career ul.list>li li, #career ul.list>li small {padding-left: 15px;}
-#career ul.list>li li::before, #career ul.list>li small::before {content: '・'; margin-right: 5px;}
+#career ul.list>li li::before, #career ul.list>li small::before {content: '・'; position: relative; left: -10px;}
 
 /* pc */
 @media screen and (min-width: 961px){
@@ -143,7 +146,7 @@ a.outlink:hover::after {background-image: url(../images/outlink_Y); transition: 
   #about .Ican .coding {margin-top: 30px;}
   #about .Ican p span:not(:last-child) {margin-right: 100px;}
   
-  #work .slick_btn {right: 10%; top: 40px;}
+  #work .slick_btn {right: 6%; top: 40px;}
   #work .slick_btn button:first-child {margin-right: 50px;}
   #work figure {margin-right: 50px;}
   #work figure:last-child {margin-right: 0;}
@@ -206,7 +209,7 @@ a.outlink:hover::after {background-image: url(../images/outlink_Y); transition: 
   #about .Ican .coding {margin-top: 15px; animation-duration: 8s;}
   #about .Ican p span:not(:last-child) {margin-right: 30px;}
   
-  #work .slick_btn {right: 0; top: 5px;}
+  #work .slick_btn {right: 0; top: 5px; width: 40px;}
   #work .slick_btn button:first-child {margin-right: 10px;}
   #work figure {margin-right: 20px;}
   #work figure img {width: 280px; height: 148px; margin: 10px 0;}
